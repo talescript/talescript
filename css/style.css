@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+}
+
+.features-row,
+.portofolio-row {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    text-align: center;
+}
+
+header, section, nav,
+footer {
+    border: 1px solid orange;
+}
