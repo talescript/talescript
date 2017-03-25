@@ -1,0 +1,203 @@
+/* FONTS */
+@font-face {
+    font-family: 'museo300';
+    src: url('../fonts/webfontkit/museo300-regular-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museo300-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('../fonts/webfontkit/museo500-regular-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museo500-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('../fonts/webfontkit/museosans-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500_italic';
+    src: url('../fonts/webfontkit/museosans_500_italic-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans_500_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans100';
+    src: url('../fonts/webfontkit/museosans-100-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans-100-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans100_italic';
+    src: url('../fonts/webfontkit/museosans-100italic-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans-100italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans300';
+    src: url('../fonts/webfontkit/museosans-300-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans-300-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans300_italic';
+    src: url('../fonts/webfontkit/museosans-300italic-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/museosans-300italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo100';
+    src: url('../fonts/webfontkit/ufonts.com_museo100-regular-opentype-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/ufonts.com_museo100-regular-opentype-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo900';
+    src: url('../fonts/webfontkit/ufonts.com_museo900-regular-opentype-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/ufonts.com_museo900-regular-opentype-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('../fonts/webfontkit/ufonts.com_museo-700-opentype-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit/ufonts.com_museo-700-opentype-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: museo300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: museo_sans700;
+}
+
+section p {
+    font-family: museo500;
+}
+
+a {
+    font-family: museo_sans500;
+}
+
+
+/* COLORS */
+body,
+#contact,
+#client {
+    background-color: black;
+    color: white;
+}
+
+main section .card,
+#market,
+main section {
+    background-color: #424242;
+}
+
+#project {
+    background-color: black;
+}
+
+#services {
+    background-color: transparent;
+}
+
+
+.side-nav a {
+    color: white;
+}
+
+/* Styling */
+nav a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card {
+    margin: 0;
+    box-shadow: 0 0 0 0;
+}
+nav img {
+    width: 192px;
+}
+
+header img {
+    width: 350px;
+}
+
+#services img {
+    width: 160px;
+}
+
+@media (max-width: 600px) {
+    #services img {
+        width: 96px;
+    }
+}
+
+@media (max-width: 992px) {
+    #services img {
+        width: 128px;
+    }
+}
+
+/* Paddings and Margins */
+#about, #services,
+#project, #market,
+#client, #contact,
+#location {
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+
+.background {
+    padding-top: 8%;
+}
+
+.background {
+    background-image: url("../img/splash/jampro_splash_headerX.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    margin: 1rem auto;
+    position: relative;
+}
+
+footer a {
+    margin-right: 15px;
+}
+
+/* navbar-fixed on mobile fix */
+#sidenav-overlay {
+    margin-left: 300px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
