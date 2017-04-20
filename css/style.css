@@ -2,20 +2,63 @@ html, body {
     height: 100%;
 }
 
-.jumbotron {
-    background: url("../img/roofmin.jpg") no-repeat center fixed;
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background: url("../img/roofmin.jpg") center center no-repeat;
     background-size: cover;
-    color: white;
-    text-align: center;
+    /* Set a specific height */
     height: 100%;
+
 }
 
-.jumbotron > div > h1,
-.jumbotron > div > p {
-    color: whitesmoke;
+.hero-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    opacity: .6;
 }
 
-.jumbotron > div > h1,
-.jumbotron > div > p {
-    font-weight: 800;
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
 }
+
+.hero-text > h1 {
+    text-transform: uppercase;
+    font-family: serif;
+}
+
+.hero-text > p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .hero-text > h1 {
+        font-size: 6rem; 
+        }
+    .hero-text > p {
+        font-size: 3.5rem;
+        }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
