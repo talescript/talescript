@@ -1,25 +1,21 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 97vh;
+html, body {
+    height: 100%;
 }
 
-.features-row,
-.portofolio-row {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-}
-
-main {
-    flex: 1;
-}
-
-header {
+.jumbotron {
+    background: url("../img/roofmin.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: white;
     text-align: center;
+    height: 100%;
 }
 
-header, section, nav,
-footer {
-    border: 1px solid orange;
+.jumbotron > div > h1,
+.jumbotron > div > p {
+    color: whitesmoke;
+}
+
+.jumbotron > div > h1,
+.jumbotron > div > p {
+    font-weight: 800;
 }
