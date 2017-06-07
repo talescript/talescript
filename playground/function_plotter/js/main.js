@@ -2,7 +2,7 @@ var parameters = {
     target: '#myFunction',
     data: [{
         fn: 'sin(x)',
-        color: 'blue'
+        color: 'red'
     }],
     grid: true,
     yAxis: {domain: [-1, 1]},

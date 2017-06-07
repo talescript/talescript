@@ -10,8 +10,17 @@ Reset Styles
 Base Styles
 ****************************
 ***************************/
-h1, h2 {
-    text-align: center;
+body {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fffff8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #111;
+}
+
+html {
+    font-size: 24px;
 }
 
 /***************************
@@ -19,11 +28,26 @@ h1, h2 {
 Layout Styles
 ****************************
 ***************************/
+h1, h2 {
+    text-align: center;
+}
 
+// Temporary for under construction
+h1:first-of-type + p {
+    text-align: center;
+    color: red;
+}
 
 /***************************
 ****************************
 Module Styles
+****************************
+***************************/
+
+
+/***************************
+****************************
+Theme Styles
 ****************************
 ***************************/
 
