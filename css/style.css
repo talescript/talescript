@@ -400,7 +400,6 @@ Base Styles
 ****************************
 ***************************/
 body {
-  width: 98%;
   margin-left: auto;
   margin-right: auto;
   background-color: #fffff8;
@@ -415,21 +414,20 @@ html {
 Layout Styles
 ****************************
 ***************************/
-h1, h2 {
+/***************************
+****************************
+Typography styles
+****************************
+***************************/
+h1 {
   text-align: center; }
 
 h1:first-of-type + p {
-  text-align: center;
-  color: red; }
+  text-align: center; }
 
 /***************************
 ****************************
 Module Styles
-****************************
-***************************/
-/***************************
-****************************
-Theme Styles
 ****************************
 ***************************/
 /***************************
@@ -443,13 +441,74 @@ Theme Styles
   flex-wrap: wrap;
   justify-content: space-around; }
 
+/*
 section {
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding: 2.5%; }
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 2.5%;
+}
 
 section:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+*/
+/*
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}*/
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(polina.jpg) no-repeat;
+  background-size: cover; }
 
 @keyframes fadeIn {
   from {
@@ -457,7 +516,7 @@ section:hover {
   to {
     opacity: 1; } }
 
-header, main {
+.fadeIn {
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-fill-mode: forwards;

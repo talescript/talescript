@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 50px;
+                font-size: 20px;
+            }
+            section div {
+                text-align: left;
+                margin-top: 20px;
+                margin-left: 70px;
+                font-family: Courier New, Courier, monospace;
+            }
+
+            #display {
+                width: 90%;
+                min-height: 30%;
+                border: 2px solid bisque;
+
+            }
+            code {
+                display: block;
+                white-space: pre-wrap;
+                font-family: monospace;
+                margin-top: 30px;
+            }
+
+            button {
+                text-align: center;
+                background-color: white;
+                color: black;
+                border: 2px solid #008CBA;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 15px 28px;
+                transition-duration: 0.4s;
+                box-shadow: 0 6px lightblue;
+            }
+            button:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+            button:active {
+                box-shadow: 0 4px #008CBA;
+                transform: translateY(4px);
+            }
+        </style>
+        
+    </head>
+    <body onload="init();">
+        <section>
+            <form>
+                <fieldset>
+                    <legend>:)</legend>
+                
+                    <textarea rows="10" cols="40" name="message" id="textarea" oninput="displayText()"
+                    placeholder="Type some text"></textarea>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <div id="display">
+                
+            </div>
+        </section>
+
+        <section>
+            <code>function displayText() {
+            var textArea = document.getElementById("textarea").value;
+            var setText = document.getElementById("display").innerHTML = textArea;
+            }
+            </code>
+            <p>It uses the 'oninput' attribute in the textarea to detect changes.<br>
+                If you inspect the code, you'll see that I changed the JavaScript, using 
+                the examples from "Handling events" in Module 1.
+            </p>
+            <button type="button" onclick="getText()">Button</button>
+
+        </section>
+    
+    <script>
+        // set the variables so they can be globally available
+        var textArea, setText;
+
+        function init() {
+            // grab the elements to be used
+            textArea = document.getElementById("textarea");
+            setText = document.getElementById("display");
+        }
+
+        function displayText() {
+            setText.innerHTML = textArea.value;
+        }
+
+        function getText() {
+            console.log('Well, the button doesn\'t do anything.\n I tried to write a for loop');
+            console.log('But, then I remembered the value for textArea and setText can\'t be accessed');
+            console.log('But hey, there is a pretty button.');
+            console.log('If you made it till here, the text area accepts html tags.');
+        }
+    </script>
+    </body>
+</html>
