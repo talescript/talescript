@@ -20,6 +20,7 @@
   "homepage": "https://github.com/talescript/talescript#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.0.0"
