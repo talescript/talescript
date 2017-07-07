@@ -36,16 +36,29 @@ window.onclick = function(evt) {
     test = showImage(evt);
     createImage(pictures, test);
 
-    imgId = showImage(evt);
-    //deleteImage(pictures, imgId);
 }; 
 
+window.ondblclick = function(evt) {
+    imgId = showImage(evt);
+    deleteImage(pictures, imgId);
+    console.log("Image has been deleted")
+}
+
+// Reloading of images. How can it be done without placing oninput in the button element?
+function reload() {
+    loadImages(pictures);
+}
+
+    
 // couldn't figure out how to delete the images.
 function deleteImage(pictures, imgId) {
     var pics = document.querySelector(".listImg")
     pictures.forEach(function(pic, index) {
         if (imgId == pic.id) {
-            pics.removeChild(pics.childNodes[index]);
+            var picToRemove = document.getElementById(imgId);
+            //console.log(picToRemove);
+            picToRemove.outerHTML = "";
+            delete picToRemove;
         }
 /* //        pictures.splice(index, 1);
         var elToRemove = "#"  + imgId.toString();
@@ -69,11 +82,14 @@ function deleteImage(pictures, imgId) {
 
 function loadImages(eachPicture) {
 // loop that iterates over the list object
-    eachPicture.forEach(function(currentImage) {
+    eachPicture.forEach(function(currentImage, index) {
         // grabs the element where the images will be placed
         let section = document.querySelector(".listImg");
         // creates the img element
         let image = document.createElement("img");
+        /* 
+        let btn = document.createElement("button");
+        let btn_text = document.createTextNode("Delete"); */
         // sets the attributes for the image element
         image.src = currentImage.url;
         image.alt = currentImage.title;
@@ -81,9 +97,12 @@ function loadImages(eachPicture) {
         // while trying to get this to work I figured out that we can name the properties / attributes
         // anything we want and those will be added to the html. I think.
         image.id = currentImage.id;
+        // btn.class = index;
         // Once we have created the element with all it's attributes
         // we append it to the section that will display the images
         section.appendChild(image);
+        //btn.appendChild(btn_text);
+        //section.appendChild(btn);
     });
 }
 
