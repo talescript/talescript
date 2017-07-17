@@ -10,6 +10,15 @@ Reset Styles
 Base Styles
 ****************************
 ***************************/
+/* Change all elements to use border-box */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+/*******/
+
 body {
     margin-left: auto;
     margin-right: auto;

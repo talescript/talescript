@@ -9,31 +9,25 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <!-- Browser sync command
-./node_modules/browser-sync/bin/browser-sync.js start --server
-
-./node_modules/browser-sync/bin/browser-sync.js start --server --files "playground/gallery/"
-
+./node_modules/browser-sync/bin/browser-sync.js start --server -f index.html
 -->
-
-                                <!-- ADD BACKGROUND IMAGE -->
-<video playsinline autoplay muted loop poster="assets/img/" id="bgvid">
-    <source src="assets/vids/Mp4/Home-work.mp4" type="video/mp4">
-    <source src="assets/vids/Webm/Home-work.webm" type="video/webm">
-</video>
 
 <header>
     <h1>Talescript</h1>
     <p>Getting things done</p>
 </header>
 
-<main class="">
+<main class="services">
     <section>
-        <h3>Limited social media manager</h3>
+        <h3>Social media manager</h3>
     </section>
     <section>
         <h3>Webpage developer</h3>
     </section>
 </main>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.12'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 </body>
 
 </html>
