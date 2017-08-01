@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+:root {
+    /* (.75rem + 1vw); => just about right scaling */
+    /* 1vw + 1vh + .5vmin => bigger at larger, smaller at small */
+    font-size: calc(0.75rem + 1vw);
+}
+
+/**
+ * line height already set in normalize 
+ * html {line-height: 1.15;}
+ */
+
+/**
+ * Butterick's Practical Typography
+ * http://practicaltypography.com/typography-in-ten-minutes.html
+ *
+ * serif font for body text
+ * POINT SIZE: 15-25 pixels for body text
+ * line spacing: line-height: 120-145% of the point size
+ * 45-90 characters per line - page margin: max-width:
+ * 5-12% extra LETTERSPACING with all caps and small caps
+ */
+
+/**
+ * Professional Web Typography
+ * https://prowebtype.com/
+ */
+
+body {
+    /* 1.6 is line height */
+    font: 100%/1.6 'Lora', serif;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: left;
+    /* increase to 40 for less margin */
+    max-width: 38em;
+    font-kerning: normal;
+}
+
+p {
+    margin: 0;
+}
+
+/**
+ * Only use this if you are not separating paragraphs
+ * with a blank line.
+ */
+p + p {
+    text-indent: 1em;
+}
+
+/**
+ * Hanging Bullets
+ * on small screens at least 2em's of left-padding
+ * are needed on the body copy's container.
+ */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Might need to increase on smaller screens
+ */
+li li {
+    margin-right: 1em;
+}
+
+/**
+ * Headings and subheadings
+ * Use your body typeface with double or triple the size.
+ * Experiment with the spacing, weight, alignment and case. 
+ * For a smaller font-size include them AND remove
+ * :root calc on first line.
+
+h1 {font-size: 3.125em;}
+h2 {font-size: 2.618em;}
+h3 {font-size: 1.931em;}
+h4 {font-size: 1.618em;}
+h5 {font-size: 1.194em;}
+h6 {font-size: 1em;}
+
+ * include these for a slightly larger font.
+ * Change the values since they may be too large.
+
+@media only screen and (min-width: 42em) {
+    h1 {font-size: 6.2em;}
+    h2 {font-size: 4em;}
+    h3 {font-size: 3.125em;}
+    h4 {font-size: 2em;}
+    h5 {font-size: 1.563em;}
+    h6 {font-size: 1em;}
+}
+ */ 
+
+/**
+ * Picking a type for UI: buttons, forms, nav, etc.
+ * https://prowebtype.com/picking-ui-type/
+ * Open Sans, Montserrat, Lato, Roboto, Ubuntu
+ */
+
+ /**
+  * Letter spacing for headings and all caps only.
+  */
+ h1, h2, h3,
+ h4, h5, h6 {
+     letter-spacing: 0.05em;
+ }
+
+/**
+ * Drop Cap
+ * Play around with font-size, padding, margin, line-height
+ * to get proper alignment
+
+article p:first-of-type:first-letter {
+    font-size: 4.65em;
+    padding: 0 .1em 0 0;
+    margin: 0;
+    float: left;
+    line-height: .9;
+}
+
+*/
