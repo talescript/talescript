@@ -1,9 +1,31 @@
 @charset "UTF-8";
 
-/**
- * header, nav, section, 
- * main, article, aside,
- * footer
- * ALREADY set to GRID
- */
+header {
+    margin: 1rem 0.5rem;
+    text-align: center;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+main {
+    margin: 0.8rem;
+}
+
+section {
+    margin: 0.8rem 0 3rem 0;
+}
+
+/**
+ * NavBar
+ */
+nav > ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul a {
+    text-decoration: none;
+}

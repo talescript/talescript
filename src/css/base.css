@@ -3,6 +3,8 @@
 /**
  * Understanding the html vs body elements in css
  * http://phrogz.net/css/htmlvsbody.html
+ *
+ * https://css-tricks.com/html-vs-body-in-css/
  */
 html {
     box-sizing: border-box;
@@ -12,25 +14,71 @@ html {
     box-sizing: inherit;
 }
 
+
+/**
+ * hmtl, body -> margin, padding set to 0 in normalize
+ * Allows setting an element to be full height
+ */
+body {
+    min-height: 100vh;
+}
+
 /*
 * + * {
     margin-top: 1.5rem;
 }
+*/
 
-html, body,
-header, nav, article, 
-section, aside, footer,
-img, form, table, 
-span, div, menu, 
-canvas, figure,
-ol, ul
-{
+p {
+    margin: 0 0 1rem 0;
+}
+
+/**
+ * Lists, blockquote and table
+ */
+dl {
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 0 1rem 0;
+}
+
+/**
+ * Hanging Bullets
+ * on small screens at least 2em's of left-padding
+ * are needed on the body copy's container.
+ */
+ul {
     margin: 0;
     padding: 0;
 }
-*/
+
+/*
+ * Might need to increase on smaller screens
+ */
+li li {
+    margin-right: 1em;
+}
+/**
+ * May need to delete these since they are
+ * already mentioned in Hanging Bullets above
+ */
 ol, ul {
     list-style: none;
+    padding-left: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0;
 }
 
 blockquote, q {
@@ -48,23 +96,49 @@ table {
 	border-spacing: 0;
 }
 
-/* Broken images AND responsive images */
+/**
+ * Placeholders
+ */
+::-webkit-input-placeholder {
+    color: #0077aa;
+}
+::-moz-placeholder {
+    color: #0077aa;
+}
+:-ms-input-placeholder {
+    color: #0077aa;
+}
+:-moz-placeholder {
+    color: #0077aa;
+}
+
+/* Responsive images */
 img {
-    font-family: Arial, Helvetica, sans-serif; /* Change later */
-    font-weight: 300;
-    line-height: 2;
-    text-align: center;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+    vertical-align: middle;
     border: 0;
+/** For testing purposes, to be removed later
+    display: block;
+    max-height: 98vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0.6rem auto;
+    padding: 0;
+*/
 }
 
-img:before {
-    content: "The image below is missing";
-    margin-bottom: 10px;
+figure {
+    margin: 0 0 1rem 0;
 }
 
-img:after {
-    content: "(url: " attr(src) ")";
-    font-size: 12px;
+/**
+ * Responsive elements
+ */
+canvas, iframe,
+video, svg, 
+select, textarea,
+input {
+    max-width: 100%;
 }

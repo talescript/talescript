@@ -6,13 +6,13 @@
    ========================================================================== */
 
 /**
- * 1. Correct the line height in all browsers.
+ * 1. Correct the line height in all browsers. REMOVED and placed in
+ *    typography.css
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
 
 html {
-  line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -23,20 +23,23 @@ html {
 /**
  * Remove the margin in all browsers (opinionated).
  */
-
+html, 
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
- * REMOVED in favor of GRID.
  * Add the correct display in IE 9-.
  */
 
-header, nav, section,
-main, article, aside,
-footer {
-  display: grid;
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
 }
 
 /**
@@ -55,11 +58,11 @@ h1 {
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
- * REMOVED MAIN selector in favor of GRID.
  */
 
 figcaption,
-figure { /* 1 */
+figure,
+main { /* 1 */
   display: block;
 }
 
