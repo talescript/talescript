@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+
 :root {
     /* (.75rem + 1vw); => just about right scaling */
     /* 1vw + 1vh + .5vmin => bigger at larger, smaller at small */
