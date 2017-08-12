@@ -11,13 +11,18 @@ header {
 }
 
 main {
-    margin: 0.8rem;
+    /* include to center.
+    increase to 40 for less margin */
+    max-width: 34rem;
+    padding: 0.6em; 
+    margin: 0 auto;
 }
 
 section {
-    margin: 0.8rem 0 3rem 0;
+    margin-bottom: 2rem;
+    border: 1px solid black;
 }
 
-/**
- * NavBar
- */
+section h2 {
+    text-align: center;
+}

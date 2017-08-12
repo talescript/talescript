@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+/* Logo width 100%, needs 150% clear space */
+i {
+    margin: 0.8rem;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
