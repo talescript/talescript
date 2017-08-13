@@ -7,21 +7,22 @@
  * the hover effect
  */
 nav {
-    display: flex;
+    display: grid;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin-top: 0.15rem;
-    margin-bottom: 0.3rem;
-    padding: 0;
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 ul li {
-    flex-grow: 1;
     text-align: center;
+}
+
+ul {
+    margin-top: 0.15rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
 }
 
 li a {
@@ -55,24 +56,9 @@ main {
     margin: 0 auto;
 }
 
-/**
- * Sections / Cards
- 
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    text-align: center;
-}
-
-section p {
-    margin: 2rem;
-} */
-
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40vh, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(49vmin, 1fr));
     grid-gap: 1rem;
     align-items: stretch;
 }
@@ -87,7 +73,7 @@ section p {
  */
 .section-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
 }
 
 .text {
@@ -99,6 +85,6 @@ section p {
     color: #086788;
     border: 0;
     padding: 0.333rem;
-    width: 15vh;
+    width: 15vmin;
 }
 
