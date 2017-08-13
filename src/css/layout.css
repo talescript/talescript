@@ -57,10 +57,9 @@ main {
 
 /**
  * Sections / Cards
- */
+ 
 section {
     margin-bottom: 2rem;
-    border: 1px solid black;
 }
 
 section h2 {
@@ -69,4 +68,37 @@ section h2 {
 
 section p {
     margin: 2rem;
+} */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vh, 2fr));
+    grid-gap: 1rem;
+    align-items: stretch;
 }
+
+.grid > section {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * fontawesome alignment
+ */
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text {
+    padding: 0 20px 20px;
+}
+
+.text > button {
+    background-color: #fabc3c;
+    color: #086788;
+    border: 0;
+    padding: 0.333rem;
+    width: 15vh;
+}
+
