@@ -1,15 +1,52 @@
 @charset "UTF-8";
 
-header {
-    margin: 1rem 0.5rem;
+/**
+ * Navigation
+ * margins and bullets already removed in base.css
+ * padding left in base.css line 71 interferes with 
+ * the hover effect
+ */
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 0.15rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
+}
+
+ul li {
+    flex-grow: 1;
     text-align: center;
-    min-height: 40vh;
+}
+
+li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.44rem;
+    text-transform: uppercase;
+    font-family: Courier New, Courier, monospace;
+}
+
+/**
+ * Header / Hero section
+ */
+header {
+    text-align: center;
+    min-height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+/**
+ * Main body
+ */
 main {
     /* include to center.
     increase to 40 for less margin */
@@ -18,6 +55,9 @@ main {
     margin: 0 auto;
 }
 
+/**
+ * Sections / Cards
+ */
 section {
     margin-bottom: 2rem;
     border: 1px solid black;
@@ -25,4 +65,8 @@ section {
 
 section h2 {
     text-align: center;
+}
+
+section p {
+    margin: 2rem;
 }

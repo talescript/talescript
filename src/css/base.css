@@ -52,11 +52,12 @@ dd {
  * Hanging Bullets
  * on small screens at least 2em's of left-padding
  * are needed on the body copy's container.
- */
+
 ul {
     margin: 0;
     padding: 0;
 }
+*/
 
 /*
  * Might need to increase on smaller screens
@@ -70,8 +71,6 @@ li li {
  */
 ol, ul {
     list-style: none;
-    padding-left: 1rem;
-    margin: 0 0 1rem 0;
 }
 
 ol ol,

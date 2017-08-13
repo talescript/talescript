@@ -1,5 +1,27 @@
 @charset "UTF-8";
 
+body {
+    background-color: #f7f4f3;
+}
+
+/**
+ * Nav
+ */
+nav {
+    background-color: #086788;
+}
+
+li a{
+    color: #fabc3c;
+    line-height: 0;
+}
+
+li a:hover {
+    color: #086788;
+    background-color: #fabc3c;
+}
+
+
 /* Logo width 100%, needs 150% clear space */
 i {
     margin: 0.8rem;
