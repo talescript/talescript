@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Lora');
-
-
 :root {
     /* (.75rem + 1vw); => just about right scaling */
     /* 1vw + 1vh + .5vmin => bigger at larger, smaller at small */
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.75rem + 1vw);
 }
 
 /**
@@ -83,3 +80,51 @@ img:after {
     content: "(url: " attr(src) ")";
     font-size: 12px;
 }
+
+/**
+ * Headings and subheadings
+ * Use your body typeface with double or triple the size.
+ * Experiment with the spacing, weight, alignment and case. 
+ * For a smaller font-size include them.
+ * remove :root calc on first line if using explicit sizing.
+
+h1 {font-size: 3.125em;}
+h2 {font-size: 2.618em;}
+h3 {font-size: 1.931em;}
+h4 {font-size: 1.618em;}
+h5 {font-size: 1.194em;}
+h6 {font-size: 1em;}
+
+ * include these for a slightly larger font.
+ * Change the values since they may be too large.
+
+@media only screen and (min-width: 42em) {
+    h1 {font-size: 6.2em;}
+    h2 {font-size: 4em;}
+    h3 {font-size: 3.125em;}
+    h4 {font-size: 2em;}
+    h5 {font-size: 1.563em;}
+    h6 {font-size: 1em;}
+}
+ */ 
+
+/**
+ * Picking a type for UI: buttons, forms, nav, etc.
+ * https://prowebtype.com/picking-ui-type/
+ * Open Sans, Montserrat, Lato, Roboto, Ubuntu
+ */
+
+/**
+ * Drop Cap
+ * Play around with font-size, padding, margin, line-height
+ * to get proper alignment
+
+article p:first-of-type:first-letter {
+    font-size: 4.65em;
+    padding: 0 .1em 0 0;
+    margin: 0;
+    float: left;
+    line-height: .9;
+}
+
+*/

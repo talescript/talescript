@@ -24,5 +24,6 @@ textarea {
 
 input[type=text]:focus,
 textarea:focus {
-    background-color: lightskyblue;
+    background-color: #0C69A4;
+    color: white;
 }

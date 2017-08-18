@@ -1,90 +1,84 @@
 @charset "UTF-8";
 
 /**
- * Navigation
- * margins and bullets already removed in base.css
- * padding left in base.css line 71 interferes with 
- * the hover effect
+ * container grid
  */
-nav {
+body {
     display: grid;
-}
-
-nav ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-ul li {
-    text-align: center;
-}
-
-ul {
-    margin-top: 0.15rem;
-    margin-bottom: 0.3rem;
-    padding: 0;
-}
-
-li a {
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.44rem;
-    text-transform: uppercase;
-    font-family: Courier New, Courier, monospace;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 40vh auto min-content; /* across*/
+    margin: 0;
 }
 
 /**
- * Header / Hero section
+ * Grid areas for container grid
+ */
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/**
+ * Navigation bar
+ */
+ nav ul {
+     display: grid;
+     grid-template-areas: 
+     "logo a b";
+     grid-template-columns: 2fr 1fr 1fr;
+}
+
+nav li:first-child {
+    grid-area: logo;
+}
+
+nav li:nth-child(2) {
+    grid-area: a;
+}
+
+nav li:nth-child(3) {
+    grid-area: b;
+}
+
+/**
+ * Header
  */
 header {
-    text-align: center;
-    min-height: 45vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 /**
- * Main body
+ * Main
  */
 main {
-    /* include to center.
-    increase to 40 for less margin */
-    max-width: 34rem;
-    padding: 0.6em; 
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(49vmin, 1fr));
-    grid-gap: 1rem;
-    align-items: stretch;
-}
-
-.grid > section {
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+/**
+ * section / cards
+ */
+main section {
+    margin-bottom: 2.5rem;
 }
 
 /**
- * fontawesome alignment
+ * Footer
  */
-.section-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-}
-
-.text {
-    padding: 0 20px 20px;
-}
-
-.text > button {
-    background-color: #fabc3c;
-    color: #086788;
-    border: 0;
-    padding: 0.333rem;
-    width: 15vmin;
-}
-

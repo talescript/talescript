@@ -18,6 +18,10 @@ html {
 /**
  * hmtl, body -> margin, padding set to 0 in normalize
  * Allows setting an element to be full height
+ *
+ * Setting min-height AND grid increases
+ * the height of nav. The trick is to use
+ * min-content when defining the rows
  */
 body {
     min-height: 100vh;
@@ -30,7 +34,7 @@ body {
 */
 
 p {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 1rem 0;
 }
 
 /**
@@ -52,12 +56,11 @@ dd {
  * Hanging Bullets
  * on small screens at least 2em's of left-padding
  * are needed on the body copy's container.
-
+ */
 ul {
     margin: 0;
     padding: 0;
 }
-*/
 
 /*
  * Might need to increase on smaller screens

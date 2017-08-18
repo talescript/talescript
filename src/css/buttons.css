@@ -2,13 +2,3 @@
 /**
  * Stylig buttons
  */
-button {
-    background-color: #005c83;
-    border: none;
-    color: white;
-    text-decoration: none;
-    padding: 0.6em;
-    border-radius: 0.3em;
-    font-weight: 600;
-    
-}
