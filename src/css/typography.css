@@ -1,10 +1,49 @@
 @charset "UTF-8";
 
+/**
+ * https://madebymike.com.au/writing/precise-control-responsive-typography/
+ * If you would like to set an exact minimum font-size in pixels
 :root {
-    /* (.75rem + 1vw); => just about right scaling */
-    /* 1vw + 1vh + .5vmin => bigger at larger, smaller at small */
-    font-size: calc(0.75rem + 1vw);
+    font-size: calc(16px + 2.5vw);
 }
+ */
+
+ /**
+  * You can prevent the text from scaling below a specific treshold 
+  * by using a media query and only apply viewport units above
+  * a vertain device resolution
+  */
+:root {
+    font-size: 18px; /* default below 600px */
+}
+
+@media (min-width: 600px) {
+    :root {
+        font-size: calc(18px + 1.4vw);
+    }
+}
+
+html {
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/**
+ * We can also stop scaling above a specific font-size, but for this we 
+ * need to first work out what the viewport size will be at the font-size
+ * we want to stop scaling.
+
+ * font-size / (number of viewport units / 100)
+ * Example: 24 / ( 3 / 100) = 800px
+
+ * with that result set another media query to change the root font-size 
+ * back to a fixed unit
+@media (min-width: 800px) {
+	:root {
+		font-size: 24px; /* above 800px 
+	}
+}
+ */
 
 /**
  * Butterick's Practical Typography
@@ -26,31 +65,118 @@
 /**
  * Professional Web Typography
  * https://prowebtype.com/
+ * https://www.w3.org/TR/WCAG20-TECHS/C21.html
  */
-body {
-    font-family: 'Lora', serif;
-    font-weight: 400;    
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
     text-align: left;
     font-kerning: normal;
+    line-height: 1.45;
+    /* padding: 0 1.2rem; better to set on main */
 }
 
-/** 
- * Due to accessibility guidelines
- * https://www.w3.org/TR/WCAG20-TECHS/C21.html 
+
+/**
+ * Vertical rhythm, maintaining consistent and 
+ * proportional space between elements on the page.
+ * comfortable line length 45 to 75 characters
+ * we can do this by adjusting the width of a container
+ * set the size of the cotainer to scale at the same rate
+ * as the font
  */
-html {
-    line-height: 1.6rem; /* 1 */
+
+
+/**
+ * Headings and subheadings
+ * Use your body typeface with double or triple the size.
+ * Experiment with the spacing, weight, alignment and case. 
+ * For a smaller font-size include them.
+ * remove :root calc on first line if using explicit sizing.
+
+h1 {font-size: 3.125em;}
+h2 {font-size: 2.618em;}
+h3 {font-size: 1.931em;}
+h4 {font-size: 1.618em;}
+h5 {font-size: 1.194em;}
+h6 {font-size: 1em;}
+
+ * include these for a slightly larger font.
+ * Change the values since they may be too large.
+
+@media only screen and (min-width: 42em) {
+    h1 {font-size: 6.2em;}
+    h2 {font-size: 4em;}
+    h3 {font-size: 3.125em;}
+    h4 {font-size: 2em;}
+    h5 {font-size: 1.563em;}
+    h6 {font-size: 1em;}
+}
+ */ 
+/**
+ * @TODO - SET minimum and maximum for small and large screens.
+ * https://www.smashingmagazine.com/2016/05/fluid-typography/
+ * Modular Scale
+ * Pick a ration for small screens and a different ratio for large
+ * screens
+ * Take the base font size and mutiply it by the desired ration
+ * to get larger numbers. For smaller numbers, devide.
+ * Larger
+ * 1em * 1.125em = 1.125em
+ * 1.125em * 1.125em = 1.266em
+ * 1.266em * 1.125em = 1.424em
+ * 1.424em * 1.125em = 1.602em
+ * Smaller
+ * 1em / 1.125em = 0.889em
+ * 0.889em / 1.125em = 0.790em
+ * 0.790em / 1.125em = 0.702em
+ * 0.702em / 1.125em = 0.624em
+ */
+/* Scale: 1.250 */
+h1 {font-size: 2.441em;}
+h2 {font-size: 1.953em;}
+h3 {font-size: 1.563em;}
+h4 {font-size: 1.25em;}
+h5 {font-size: 1em;}
+h6 {font-size: 0.8em;}
+
+p {
+    margin-bottom: 1.3em;
+    line-height: 1.5rem;
 }
 
- /**
-  * Letter spacing for headings and all caps only.
-  */
- h1, h2, h3,
- h4, h5, h6 {
-     letter-spacing: 0.02em;
-     margin-top: 0;
-     margin-bottom: .3rem;
- }
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    font-weight: inherit;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
+}
+
+/* Scale: 1.414 
+h1 {font-size: 3.157em;}
+h2 {font-size: 2.369em;}
+h3 {font-size: 1.777em;}
+h4 {font-size: 1.333em;}
+h5 {font-size: 1em;}
+h6 {font-size: 0.75em;}
+*/
+
+/**
+ * Normalize.css
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+} */
+
+/**
+ * Picking a type for UI: buttons, forms, nav, etc.
+ * https://prowebtype.com/picking-ui-type/
+ * Open Sans, Montserrat, Lato, Roboto, Ubuntu
+ */
 
 /**
  * Only use this if you are not separating paragraphs
@@ -80,39 +206,6 @@ img:after {
     content: "(url: " attr(src) ")";
     font-size: 12px;
 }
-
-/**
- * Headings and subheadings
- * Use your body typeface with double or triple the size.
- * Experiment with the spacing, weight, alignment and case. 
- * For a smaller font-size include them.
- * remove :root calc on first line if using explicit sizing.
-
-h1 {font-size: 3.125em;}
-h2 {font-size: 2.618em;}
-h3 {font-size: 1.931em;}
-h4 {font-size: 1.618em;}
-h5 {font-size: 1.194em;}
-h6 {font-size: 1em;}
-
- * include these for a slightly larger font.
- * Change the values since they may be too large.
-
-@media only screen and (min-width: 42em) {
-    h1 {font-size: 6.2em;}
-    h2 {font-size: 4em;}
-    h3 {font-size: 3.125em;}
-    h4 {font-size: 2em;}
-    h5 {font-size: 1.563em;}
-    h6 {font-size: 1em;}
-}
- */ 
-
-/**
- * Picking a type for UI: buttons, forms, nav, etc.
- * https://prowebtype.com/picking-ui-type/
- * Open Sans, Montserrat, Lato, Roboto, Ubuntu
- */
 
 /**
  * Drop Cap

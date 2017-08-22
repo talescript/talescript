@@ -3,58 +3,49 @@
 /**
  * container grid
  */
-body {
-    display: grid;
-    grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "main main main"
-    "footer footer footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content 40vh auto min-content; /* across*/
-    margin: 0;
 
-}
 
 /**
  * Grid areas for container grid
  */
-nav {
-    grid-area: nav;
-}
 
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
 
 /**
  * Navigation bar
  */
- nav ul {
-     display: grid;
-     grid-template-areas: 
-     "logo a b";
-     grid-template-columns: 2fr 1fr 1fr;
+nav {
+    background-color: #fff;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav a {
+    padding: 0.3em;
+}
+.nav {
+    display: grid;
+    /* Explicitly sets the rows of the grid */
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vw;
 }
 
-nav li:first-child {
-    grid-area: logo;
+.nav a {
+    text-decoration: none;
+    color: #26547c;
+    font-weight: 600;
 }
 
-nav li:nth-child(2) {
-    grid-area: a;
+.nav a:hover {
+    background-color: #26547c;
+    color: #fff;
+    border-radius: 0.6em;
 }
 
-nav li:nth-child(3) {
-    grid-area: b;
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:40.063em) {  
+    .nav {
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
 }
 
 /**
@@ -62,6 +53,7 @@ nav li:nth-child(3) {
  */
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -70,19 +62,25 @@ header {
  * Main
  */
 main {
-    margin: 0 auto;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35vw, 1fr));
+        grid-gap: 0.5vw;
+        max-width: 960px;
+        margin: 0 auto;
+    }
 }
 
 /**
  * section / cards
  */
-main section:first-child {
-    margin-top: 2rem;
-}
 
-main section {
-    margin-bottom: 2.5rem;
-}
 
 /**
  * Footer
