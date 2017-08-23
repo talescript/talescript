@@ -47,9 +47,14 @@ nav ul li a {
 @media screen and (max-width: 40em) {
     .openbtn {
         padding-left: 0.3em;
+        font-size: 1.4em;
+        color: #26547c;
     }
     .openbtn:hover {
         cursor: pointer;
+    }
+    .closebtn i {
+        font-size: 1.4em;
     }
     .nav {
         grid-template-columns: 1fr;
