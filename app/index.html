@@ -6,15 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../src/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/fontawesome/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navBar overlay">
+        <a href="javascript:void(0)" class="closebtn">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <ul class="nav overlay-content">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="app/forms/contact.html">Post your job</a></li>
+            <li><a href="blog/blog.html">Blog</a></li>
+            <li><a href="app/forms/contact.html">Sign&nbsp;in</a></li>
         </ul>
     </nav>
+    <span class="openbtn"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Menu</span>
     <header>
         <h1>Influencer Analytics</h1>
     </header>
@@ -33,7 +38,7 @@
             </ol>
         </section>
     </main>
-
+    <script type="text/javascript" src="../src/js/main.js"></script>
 </body>
 
 </html>

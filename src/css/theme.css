@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/**
+ * Navbar
+ */
 nav {
     background-color: #fff;
     text-align: center;
@@ -23,7 +26,7 @@ nav a {
 .nav a:hover {
     background-color: #26547c;
     color: #fff;
-    border-radius: 0.6em;
+    border-radius: 0.3em;
 }
 /*color: #fffcf9; */
 
@@ -102,12 +105,24 @@ nav a {
  * Header
  */
 header {
-    background-color: #26547c;
+    height: 65vh;
+    background: #26547c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #26547c, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #26547c, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fffcf9;
     border-bottom-right-radius: 90% 45%; 
-    box-shadow: 0 4px 3px 0 #043040;
+    box-shadow: 2px 4px 3px 0 #000;
 }
 
+/* Works in firefox 54 and up 
+header {
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 5vw)
+    );
+} */
 
 
 footer {
