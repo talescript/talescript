@@ -34,7 +34,27 @@ nav ul li a {
 /**
  * Navbar overlay Overlay
  */
+/* smartphones, iPhone, portrait 480x320 phones */ 
+@media screen and (min-width: 40.01em) {
+    .openbtn {
+        display: none;
+    }
+    .closebtn {
+        display: none;
+    }
+}
 
+@media screen and (max-width: 40em) {
+    .openbtn {
+        padding-left: 0.3em;
+    }
+    .openbtn:hover {
+        cursor: pointer;
+    }
+    .nav {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1em;
+    }
     .overlay {
         /* Height and width on how to reveal overlay*/
         height: 0%;
@@ -51,7 +71,7 @@ nav ul li a {
     /* Position the content inside the overlay */
     .overlay-content {
         position: relative;
-        top: 50vh; /* 25% from the top */
+        top: 25vh; /* 25% from the top */
         width: 100%;
         text-align: center;
         margin-top: 30px;
@@ -73,17 +93,7 @@ nav ul li a {
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 2em;
-    }
-
-
-@media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px;}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
+        font-size: 1.3em;
     }
 }
 
