@@ -15,7 +15,7 @@ nav a {
 
 .closebtn,
 .nav a {
-    color: black;
+    color: #26547c;
     text-decoration: none;
     font-weight: 600;
 }
@@ -24,10 +24,6 @@ nav a {
     background-color: #26547c;
     color: #fff;
     border-radius: 0.6em;
-}
-
-nav ul li a {
-    color: black;
 }
 /*color: #fffcf9; */
 
@@ -48,7 +44,7 @@ nav ul li a {
     .openbtn {
         padding-left: 0.3em;
         font-size: 1.4em;
-        color: #26547c;
+        color: #13315c;
     }
     .openbtn:hover {
         cursor: pointer;
