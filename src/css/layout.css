@@ -13,25 +13,25 @@
 /**
  * Navigation bar
  */
-.nav {
+.l-nav {
     display: grid;
     /* Explicitly sets the rows of the grid */
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 2vw;
 }
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width: 30.063em) {  
-    .nav {
+    .l-nav {
         grid-template-columns: repeat(5, 1fr);
-        
     }
 }
 
 /**
  * Header
  */
-header {
+.l-header {
+    min-height: 45vh; 
+    padding: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;

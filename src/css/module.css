@@ -1,7 +1,15 @@
 @charset "UTF-8";
 /**
- * Stylig buttons
+ * Modules are the reusable, modular parts. They are
+ * the callouts, the sidebar sections, product lists
+ * and so on.
+ */ 
+
+/**
+ * Styling buttons
  */
+
+
 /**
  * CTA
  * Best practice links at the bottom
@@ -28,4 +36,33 @@
     background: #EB3349;
     background: -webkit-linear-gradient(to bottom, #EB3349, #8F0313);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #EB3349, #8F0313); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+/**
+ * Forms
+ * Change the values after testing.
+ */
+form {
+    width: 70%;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 0.4rem;
+    margin: 0.25rem;
+}
+
+input[type=submit] {
+    width: 90%;
+}
+
+textarea {
+    width: 90%;
+    padding: 0.3em;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    background-color: #0C69A4;
+    color: white;
 }

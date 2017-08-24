@@ -1,118 +1,67 @@
 @charset "UTF-8";
+/**
+ * Web Design Page Header
+ */
+.showcase {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #926239;
+    height: 90vh;
+    background-image: url('../assets/img/beach.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-shadow: 0px 4px 3px 0 #000;
+}
 
+.show-button {
+    font-size: 1em;
+    text-decoration: none;
+    color: #926239;
+    border: 1px solid #926239;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
 
+.show-button:hover {
+    background: #926239;
+    color: #fff;
+    transition: .4s;
+    box-shadow: 2px 4px 3px 0 #000;
+}
 
 /**
- * Navbar
+ * Navbar & main Page Header color
+ */
+nav, .header-color {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+/**
+ * Navbar 
  */
 nav {
+    padding: 0.15em;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-nav, header {
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-}
-
-nav, 
-nav a {
-    padding: 0.3em;
-}
-/*background-color: #26547c;*/
-/* box-shadow: inset 0 -1px 2px 1px #043040; */
-
 .closebtn,
-.nav a {
+.l-nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.nav a:hover {
+.l-nav a:hover {
     background-color: #243949;
     color: #fff;
     border-radius: 0.3em;
 }
 
-/*color: #fffcf9; */
-
-/**
- * Navbar overlay Overlay
- */
-/* smartphones, iPhone, portrait 480x320 phones */ 
-@media screen and (min-width: 40.01em) {
-    .openbtn {
-        display: none;
-    }
-    .closebtn {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .openbtn {
-        padding-left: 0.3em;
-        font-size: 1.4em;
-        color: #243949;
-    }
-    .openbtn:hover {
-        cursor: pointer;
-    }
-    .closebtn i {
-        font-size: 1.4em;
-    }
-    .nav {
-        grid-template-columns: 1fr;
-        grid-row-gap: 1em;
-    }
-    .overlay {
-        /* Height and width on how to reveal overlay*/
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1; /* stay in place */
-        top: -3vh;
-        left: 0;
-        background-color: rgb(36, 57, 73); /* Fallback */
-        background-image: linear-gradient(180deg, #13547a 0%, #80d0c7 100%);
-        overflow-y: hidden;
-        transition: 0.5s;
-    }
-    /* Position the content inside the overlay */
-    .overlay-content {
-        position: relative;
-        top: 25vh; /* 25% from the top */
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-    /* navigation links inside the overlay */
-    .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 1.3em;
-        color: #fff;
-        transition: 0.3s; /* transition effect on hover */
-    }
-    /* Mousing over the navigation links */
-    .overlay a:hover, .overlay a:focus {
-        color: #f1f1f1;
-    }
-    /* Position the close button (top right corner) */
-    .overlay .closebtn {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 1.3em;
-    }
-}
-
 /**
  * Header
  */
-header {
-    min-height: 45vh; 
-    padding: 1.5em;
+.l-header-style {
     /*
     background: #26547c;  /* fallback for old browsers 
     background: -webkit-linear-gradient(to bottom, #26547c, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 

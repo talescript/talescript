@@ -13,8 +13,6 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
-
 /**
  * hmtl, body -> margin, padding set to 0 in normalize
  * Allows setting an element to be full height
