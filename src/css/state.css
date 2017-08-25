@@ -29,7 +29,7 @@
     .openbtn {
         padding-left: 0.3em;
         font-size: 1.4em;
-        color: #243949;
+        color: #000;
     }
     .openbtn:hover {
         cursor: pointer;
