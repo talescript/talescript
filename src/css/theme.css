@@ -67,7 +67,7 @@
     color: #fffcf9;
 }
 
-
+/* only works with firefox 52ish and above 
 .l-header-style {
     clip-path: polygon(
     0 0,
@@ -75,12 +75,14 @@
     100% 100%,
     0 calc(100% - 8vw)
     );
-}
+} */
 
 svg {
     bottom: 0;
     width: 100%;
     height: 10vw;
+    /* mobile view border removal */
+    margin-bottom: -1px;
 }
 
 /**
