@@ -100,16 +100,16 @@ table {
  * Placeholders
  */
 ::-webkit-input-placeholder {
-    color: #0077aa;
+    color: #091b2a;
 }
 ::-moz-placeholder {
-    color: #0077aa;
+    color: #091b2a;
 }
 :-ms-input-placeholder {
-    color: #0077aa;
+    color: #091b2a;
 }
 :-moz-placeholder {
-    color: #0077aa;
+    color: #091b2a;
 }
 
 /* Responsive images */

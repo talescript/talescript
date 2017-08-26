@@ -42,27 +42,16 @@
  * Forms
  * Change the values after testing.
  */
-form {
-    width: 70%;
-}
-
-input[type=text] {
-    width: 90%;
+textarea,
+input[type=text],
+input[type=email] {
     padding: 0.4rem;
     margin: 0.25rem;
-}
-
-input[type=submit] {
-    width: 90%;
-}
-
-textarea {
-    width: 90%;
-    padding: 0.3em;
-}
+ }
 
 input[type=text]:focus,
+input[type=email]:focus,
 textarea:focus {
-    background-color: #0C69A4;
+    background-color: #517fa4;
     color: white;
 }
