@@ -1,79 +1,66 @@
 @charset "UTF-8";
 
 /**
- * container grid
+ * CSS GRID
  */
 
 
 /**
- * Grid areas for container grid
  * Influencer Section
  */
-.grid-header {
+.l-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: min-content min-content min-content min-content min-content;
-    grid-template-areas:
-        ". box1 . . ."
-        ". center center center box2"
-        "box5 . box3 . ."
-        ". . . box4 . ";
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    min-height: 45vh;
 }
 
-.grid-header h1 {
-    color: white;
-    grid-area: center;
-    align-self: end;
+.l-grid h1 {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
 }
 
-.box-1 {
-    grid-area: box1;
-    background-color: #26466d;
+.l-grid p {
+    padding: 0 4rem;
+    max-width: 40rem;
+    align-self: center;
+    justify-self: center;
 }
 
-.box-2 {
-    grid-area: box2;
-    background-color: #36648b;
+@media screen and (max-width: 40em) {
+    .l-grid p {
+        padding: 0 1rem;
+    }
 }
 
-.box-3 {
-    grid-area: box3;
-    background-color: #3a5062;
+/**
+ * Blog Header section
+ */
+.l-header-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 15vh);
 }
 
-.box-4 {
-    grid-area: box4;
-    background-color: #3a5062;
+.l-header-blog h1 {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
 }
 
-.box-5 {
-    grid-area: box5;
-    background-color: #26466d;
-}
-
-.box-1, .box-2,
-.box-3, .box-4,
-.box-5 {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    opacity: 0.2;
+/**
+ * Blog Main body section
+ */
+.l-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows: minmax(max-content, 1fr);
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */ 
 @media screen and (max-width: 40em) {
-    .box-4, .box-5 {
-        display: none;
-    
-    }
-    .box-1,
-    .box-2,
-    .box-3 {
-        height: 50px;
-        width: 50px;
-        border-radius: 25px;
-        opacity: 0.6;
+    .l-blog {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -112,6 +99,10 @@
     justify-content: center;
 }
 
+.l-header h1 {
+    margin-top: 2.5rem;
+}
+
 /**
  * Main
  */
@@ -136,7 +127,7 @@ main {
  */
 
 /**
- * Form
+ * Contact Form
  */
 .container {
     max-width: 1170px;
@@ -234,7 +225,7 @@ main {
 }
 
 
-/* Large screens for form */
+/* Large screens for Contact Form*/
 @media (min-width: 700px) {
     .grid-wrapper {
         display: grid;

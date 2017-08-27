@@ -52,6 +52,6 @@ input[type=email] {
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-    background-color: #517fa4;
-    color: white;
+    background-color: #c4e0e5;
+    color: #091b2a;
 }
