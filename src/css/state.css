@@ -11,6 +11,9 @@
 /**
  * Active links
  */
+.l-nav li .active {
+    color: #c0e0de;
+}
 
 /**
  * Navbar overlay Overlay

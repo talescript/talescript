@@ -22,6 +22,12 @@
         font-size: calc(18px + 1.4vmin);
     }
 }
+/*
+@media (min-width:60.063em) { 
+    header.l-grid h1 {
+        font-size: 1.5rem;
+    }
+} */
 
 html {
     text-rendering: optimizeLegibility;
