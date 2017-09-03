@@ -1,0 +1,134 @@
+/**
+ * Navigation
+ */
+.g-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.g-nav .nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.logo,
+.nav-links {
+    margin: 0.5rem;
+}
+
+/**
+ * Header
+ */
+.g-header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+/**
+ * Main - body
+ */
+.g-showcase {
+    margin: 1.5em;
+}
+
+/**
+ * Showcase
+ */
+.g-showcase {
+    display: grid;
+    grid-template-rows: min-content min-content;
+}
+
+.g-showcase h2 {
+    text-align: center;
+    height: 15vh;
+}
+
+.g-product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-rows: min-content min-content;
+}
+
+.card h3 {
+    grid-row: 1;
+    grid-column: span 2 ;
+    justify-self: center;
+    align-self: center;
+}
+
+.card p {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.card i {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+/**
+ * Customer section
+ */
+.customer-bg {
+    display: grid;
+    height: 40vh;
+}
+
+.customer-bg h2 {
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.g-customer {
+    display: grid;
+    grid-gap: 1.3em;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
+}
+
+.profile-card {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/**
+ * Product features
+ */
+
+.g-features {
+    display: grid;
+    grid-template-rows: min-content;
+}
+
+.g-features-h {
+    display: grid;
+    height: 40vh;
+    color: #0288d1;
+}
+
+.g-features-h h2 {
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
