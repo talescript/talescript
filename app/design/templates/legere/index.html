@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora:700|Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero-image clip">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-left">
+                    <a href="/" class="nav-item">Legere</a>
+                </ul>
+                <label for="menu-toggle" class="nav-toggle">&equiv;</label>
+                <input type="checkbox" id="menu-toggle" class="is-hidden">
+                <ul class="nav-right nav-menu">
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Showcase</a></li>
+                    <li class="nav-item"><a href="#">Portofolio</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="nav-item"><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container center half-height">
+            <h1>Legere</h1>
+        </div>
+
+    </div>
+    <main class="container">
+        <section>
+            <blockquote cite="https://rachelandrew.co.uk/archives/2015/09/02/css-grid-and-the-box-alignment-module/">
+                <p>Having good control over alignment and justification is one of the major benefits of modern layout methods
+                    such as Flexbox and CSS Grid Layout. These alignment properties are specified in the CSS Box Alignment
+                    Level 3 Module.</p>
+            </blockquote>
+        </section>
+        <div class="powder-blue container-full">
+            <div class="container">
+                <section class="sub-grid-col-2">
+                    <h2>Hello, lets test this</h2>
+                    <p>Having good control over alignment and justification is one of the major benefits of modern layout methods
+                        such as Flexbox and CSS Grid Layout. These alignment properties are specified in the CSS Box Alignment
+                        Level 3 Module.</p>
+                </section>
+            </div>
+        </div>
+
+        <section class="sub-grid-col-3">
+            <div class="card">
+                <img src="assets/img/s-mountains.jpg" alt="">
+                <div class="card-title">
+                    <h4>John Does</h4>
+                    <p>Person description on what the card is about.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/s-v-mountain.jpeg" alt="">
+                <div class="card-title">
+                    <h4>John Does</h4>
+                    <p>Person description on what the card is about.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/s-mountains.jpg" alt="">
+                <div class="card-title">
+                    <h4>John Does</h4>
+                    <p>Person description on what the card is about.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container center">
+            <div class="slider">
+                <blockquote class="quote">
+                    <p>Carpe diem. Seize the day, boys. Make your lives extraordinary</p>
+                    <footer>&mdash; Dead Poets Society</footer>
+                </blockquote>
+                <blockquote class="quote">
+                    <p>Open the pod bay doors, please, HAL.</p>
+                    <footer>&mdash; 2001: A Space Odyssey</footer>
+                </blockquote>
+                <blockquote class="quote">
+                    <p>Round up the usual suspects.</p>
+                    <footer>&mdash; Casablanca</footer>
+                </blockquote>
+                <button class="button left-b" onclick="plusQuote(-1)">&#10094;</button>
+                <button class="button right-b" onclick="plusQuote(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        var slideIndex = 1;
+        showQuote(slideIndex);
+
+        function plusQuote(n) {
+            showQuote(slideIndex += n);
+        }
+
+        function showQuote(n) {
+            var i;
+            var x = document.querySelectorAll(".quote");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

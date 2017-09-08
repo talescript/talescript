@@ -37,12 +37,15 @@
     margin: 1.5em;
 }
 
+
 /**
  * Showcase
  */
 .g-showcase {
     display: grid;
     grid-template-rows: min-content min-content;
+    max-width: 35em;
+    margin: 0 auto;
 }
 
 .g-showcase h2 {
@@ -54,6 +57,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.5em;
+    max-width: 35em;
+    margin: 0 auto;
 }
 
 .card {
@@ -101,6 +106,8 @@
     grid-gap: 1.3em;
     grid-template-columns: repeat(3, 1fr);
     padding: 1em;
+    max-width: 35em;
+    margin: 0 auto;
 }
 
 .profile-card {
@@ -131,4 +138,37 @@
     align-self: center;
     font-size: 2rem;
     font-weight: 600;
+}
+
+.features-l {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 35em;
+    margin: 0 auto;
+}
+
+.features-l i {
+    justify-self: center;
+    align-self: center;
+}
+
+.features-right h3 {
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #808080;
+}
+
+.g-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: 20vmin;
+    padding: 1em;
+}
+
+.g-footer ul a:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+.g-footer nav a {
+    text-decoration: none;
+    font-size: .6em;
 }

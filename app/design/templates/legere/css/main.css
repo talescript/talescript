@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
+
+/*
+ * Font families
+ */
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+main {
+    font-family: 'Lato', sans-serif;
+}
+
+/**
+ * Base Styles
+ */
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+main section:not(:first-child) {
+    margin: 2em 0;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    font-weight: inherit;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.4;
+    background: #ceddef;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/**
+ * Nav styles
+ */
+ nav ul li,
+ nav ul a {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+nav ul li a,
+nav ul a,
+.header-img a  {
+    text-decoration: none;
+}
+
+.is-hidden {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+        }
+}
+
+.nav-toggle {
+    font-size: 3.25rem;
+    align-items: center;
+    display: flex;
+    padding-right: 0.75rem;
+}
+@media (min-width: 768px) {
+.nav-toggle {
+    display: none;
+    }
+}
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+.nav-item {
+    align-items: center;
+    display: flex;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav-left, .nav-right {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .nav-menu.nav-right {
+            display: none;
+            left: 0;
+            right: 0;
+            top: 100%;
+            position: absolute;
+            background-color: #5fbbe5;
+            box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
+}
+.nav-menu.nav-right .nav-item {
+    border-top: 1px solid rgba(219, 219, 219, 0.5);
+    padding: 0.75rem;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: stretch;
+    min-height: 3.25rem;
+    position: relative;
+}  
+
+/**
+ * Readable limit
+ */
+.container {
+    display: grid;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
+}
+
+.container > * {
+    grid-column: main;
+}
+
+.container-full {
+    grid-column: full;
+}
+
+.sub-grid-col-2 {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-gap: 0.5em;
+}
+
+.sub-grid-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+@media all and (max-width: 480px) { 
+    .sub-grid-col-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 480px) { 
+    .sub-grid-col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.center {
+    align-items: center;
+    justify-items: center;
+}
+
+.hero-image {
+    background-image: url('../assets/img/l-iceberg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    color: #045690;
+}
+
+.inherit-height {
+    height: inherit;
+}
+
+.half-height {
+    height: 40vh;
+}
+/*
+ * background: linear-gradient(rgba(102, 125, 182, .2),
+    rgba(0, 130, 200, 0.3)), url('../assets/img/mountain-path.jpeg');
+ */
+
+
+/**
+ * Product Card
+ */
+.card {
+    display: grid;
+    grid-template-rows: .4fr .8fr;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    padding: 0.2em;
+    background-color: #0460a4;
+    color: #ceddef;
+}
+
+.card-title > h4 {
+    text-align: center;
+}
+
+/**
+ * Theme
+ */
+.nav a {
+    color: #0460a4;
+}
+
+.powder-blue {
+    background-color: #ceddef;
+    color: #045690;
+}
+
+.card-title {
+    background-color: #ceddef;
+    color: #045690;
+}
+
+/**
+ * Clip-header
+ */
+.clip {
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 70%,
+    0 calc(100% - 4vw)
+    );
+}
+
+@media all and (max-width: 768px) 
+{
+    .clip {
+        clip-path: polygon(
+        0 0, /*top left x/y */
+        100% 0, /*top right x/y */
+        100% 85%, /*bottom right x/y */
+        0 calc(100% - 4vw) /*bottom left x/y */
+        );
+    }
+}

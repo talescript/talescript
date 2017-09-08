@@ -1,0 +1,64 @@
+/**
+ * Parallax
+ */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+}
+
+/**
+ * Header bg
+ */
+.header-img,
+.two {
+    background-image: url('../assets/img/m-coffee.jpeg');
+    color: #d5cdc0;
+}
+
+.one {
+    background-image: url('../assets/img/m-coffee-cup.jpeg');
+    min-height: 40vh;
+    color: #d5cdc0;
+}
+
+@media (min-width: 750px) {
+    .header-img,
+    .two {
+        background-image: url('../assets/img/l-coffee.jpeg');
+    }
+    .one {
+        background-image: url('../assets/img/l-coffee-cup.jpeg');
+    }
+}
+
+
+/**
+ * Header font
+ */
+header h1 {
+    background-color: #d9cbbb;
+    padding: 4px 8px;
+    color: #855333;
+    border-radius: 2px;
+}
+
+/**
+ * Nav Styles
+ */
+ nav, ul {
+    padding: .5em;
+}
+
+nav ul li a {
+    color: #855333;
+    background-color: #d9cbbb;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+/**
+ * Responsive card grid
+ */

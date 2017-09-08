@@ -105,10 +105,7 @@ header.l-grid h1 {
 /**
  * Main
  */
-main {
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-}
+
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -123,6 +120,11 @@ main {
 /**
  * section / cards
  */
+
+section {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
 
 /**
  * Contact Form
@@ -244,3 +246,15 @@ main {
 /**
  * Footer
  */
+
+/**
+ * WebDesign Section
+ */
+.portofolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.portofolio a {
+    border: 1px solid #000;
+}

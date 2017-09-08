@@ -1,0 +1,73 @@
+/**
+ * Nav layout
+ */
+
+.g-navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 5px;
+}
+
+@media (max-width: 374px) {
+    .g-navigation {
+        display: none;
+    }
+}
+
+.g-end {
+    justify-self: end;
+}
+
+/**
+ * Remove padding from h2
+ */
+.one h2,
+.two h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Header
+ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+/**
+ * Responsive card grid
+ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1.5fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+    align-items: end;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    background-color: #d9cbbb;
+}
+
+.text {
+    padding: 0 20px 20px;
+    color: #855333;
+}
+
+.text > button {
+    background: #855333;
+    border: 0;
+    border-radius: 2px;
+    color: #d9cbbb;
+    padding: 4px 8px;
+    width: 100%;
+}
