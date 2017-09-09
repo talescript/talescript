@@ -18,6 +18,10 @@ h4, h5, h6 {
     font-family: 'Lora', serif;
 }
 
+.slider {
+    font-family: 'Lora', serif;
+}
+
 main {
     font-family: 'Lato', sans-serif;
 }
@@ -69,6 +73,10 @@ img {
 
 p {
     margin-bottom: 1.3em;
+}
+
+section {
+    margin-bottom: 3em;
 }
 
 h1, h2, h3, 
@@ -266,7 +274,76 @@ nav ul a,
 }
 
 /**
- * Theme
+ * Slider
+ */
+ .slider {
+    display: grid;
+    grid-template-columns: 
+    [left-arrow] 0.05fr
+    [main-content] minmax(20vw, 50vw) 
+    [right-arrow] 0.05fr;
+}
+
+.left-b {
+    grid-column-start: left-arrow;
+    grid-row-start: 1;
+}
+
+.slider div {
+    grid-column-start: main-content;
+}
+
+.right-b {
+    grid-column-start: right-arrow;
+    grid-row-start: 1;
+}
+
+/* Bloquote */
+.slider {
+    overflow: auto;
+}
+
+.slider {
+    min-height: 35vh;
+}
+
+/* Small devices, Tablets */
+@media all and (max-width: 768px) 
+{
+    .slider {
+        min-height: 40vh;
+    }
+}
+
+/*
+ * Theming
+ */
+
+
+/* Slider Theme */
+.slider {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ceddef;
+}
+
+.quote {
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/**
+ * Nav theme
  */
 .nav a {
     color: #0460a4;
@@ -282,18 +359,30 @@ nav ul a,
     color: #045690;
 }
 
+/* Bloquote color */
+.sienna {
+    color: #e0562b;
+}
+
 /**
  * Clip-header
  */
 .clip {
+    -webkit-clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 70%,
+        0 calc(100% - 4vw)
+        );
     clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 70%,
-    0 calc(100% - 4vw)
+        0 0,
+        100% 0,
+        100% 70%,
+        0 calc(100% - 4vw)
     );
 }
 
+/* Small devices, Tablets */
 @media all and (max-width: 768px) 
 {
     .clip {

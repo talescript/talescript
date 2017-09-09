@@ -33,13 +33,27 @@
 
     </div>
     <main class="container">
-        <section>
-            <blockquote cite="https://rachelandrew.co.uk/archives/2015/09/02/css-grid-and-the-box-alignment-module/">
-                <p>Having good control over alignment and justification is one of the major benefits of modern layout methods
-                    such as Flexbox and CSS Grid Layout. These alignment properties are specified in the CSS Box Alignment
-                    Level 3 Module.</p>
-            </blockquote>
+        <section class="container center">
+            <div class="slider center sienna">
+                <div>
+                    <blockquote class="quote">
+                        <p>Carpe diem. Seize the day, boys. Make your lives extraordinary</p>
+                        <footer>&mdash; Dead Poets Society</footer>
+                    </blockquote>
+                    <blockquote class="quote is-hidden">
+                        <p>Open the pod bay doors, please, HAL.</p>
+                        <footer>&mdash; 2001: A Space Odyssey</footer>
+                    </blockquote>
+                    <blockquote class="quote is-hidden">
+                        <p>Round up the usual suspects.</p>
+                        <footer>&mdash; Casablanca</footer>
+                    </blockquote>
+                </div>
+                <button class="button left-b">&#10094;</button>
+                <button class="button right-b">&#10095;</button>
+            </div>
         </section>
+
         <div class="powder-blue container-full">
             <div class="container">
                 <section class="sub-grid-col-2">
@@ -77,44 +91,62 @@
                 </div>
             </div>
         </section>
-
-        <section class="container center">
-            <div class="slider">
-                <blockquote class="quote">
-                    <p>Carpe diem. Seize the day, boys. Make your lives extraordinary</p>
-                    <footer>&mdash; Dead Poets Society</footer>
-                </blockquote>
-                <blockquote class="quote">
-                    <p>Open the pod bay doors, please, HAL.</p>
-                    <footer>&mdash; 2001: A Space Odyssey</footer>
-                </blockquote>
-                <blockquote class="quote">
-                    <p>Round up the usual suspects.</p>
-                    <footer>&mdash; Casablanca</footer>
-                </blockquote>
-                <button class="button left-b" onclick="plusQuote(-1)">&#10094;</button>
-                <button class="button right-b" onclick="plusQuote(1)">&#10095;</button>
-            </div>
+        <section>
+            <blockquote class="sienna" cite="https://rachelandrew.co.uk/archives/2015/09/02/css-grid-and-the-box-alignment-module/">
+                <p>Having good control over alignment and justification is one of the major benefits of modern layout methods
+                    such as Flexbox and CSS Grid Layout. These alignment properties are specified in the CSS Box Alignment
+                    Level 3 Module.</p>
+            </blockquote>
         </section>
     </main>
     <script>
-        var slideIndex = 1;
-        showQuote(slideIndex);
+        var leftB = document.querySelector(".left-b");
+        var rightB = document.querySelector(".right-b");
+        var quotes = document.querySelectorAll(".quote");
+        var lenQuotes = quotes.length - 1;
 
-        function plusQuote(n) {
-            showQuote(slideIndex += n);
+        function getI(i) {
+            var pos;
+            pos = i;
+            return i;
         }
 
-        function showQuote(n) {
+        leftB.addEventListener('click', function (event) {
+            for (let i = 0; i < quotes.length; i++) {
+                if (!quotes[i].classList.contains("is-hidden")) {
+                    quotes[i].classList.add("is-hidden");
+                    pos = getI(i);
+                }
+            }
+            quotes[lenQuotes - pos].classList.remove("is-hidden");
+        });
+
+        rightB.addEventListener('click', function (event) {
+            for (let i = 0; i < quotes.length; i++) {
+                if (!quotes[i].classList.contains("is-hidden")) {
+                    quotes[i].classList.add("is-hidden");
+                    pos = getI(i);
+                }
+            }
+            quotes[lenQuotes - pos].classList.remove("is-hidden");
+        });
+
+ /*
+
+        carousel();
+        function carousel() {
             var i;
+            var slider = document.querySelector(".quote");
             var x = document.querySelectorAll(".quote");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+
             x[slideIndex - 1].style.display = "block";
-        }
+            setTimeout(carousel, 3000);
+        } */
     </script>
 </body>
 
