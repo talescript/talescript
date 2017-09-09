@@ -237,7 +237,7 @@ nav ul a,
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 60vh;
     color: #045690;
 }
 
@@ -296,6 +296,47 @@ nav ul a,
 .right-b {
     grid-column-start: right-arrow;
     grid-row-start: 1;
+}
+
+/*
+ * Hide the slider controls when
+ * JS isn't available
+ */
+.hide-controls {
+    display: none;
+}
+
+/**
+ * Slider button styles
+ */
+.left-b, .right-b,
+.pause {
+    font-family: 'Ubuntu', sans-serif;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    line-height: normal;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    border-radius: 5px;
+    background-color: #045690;
+    color: #ceddef;
+}
+
+.left-b, .right-b {
+    padding: .2em 1em;
+    
+}
+
+.pause {
+    padding: .2em 1em;
+    font-size: .8em;
+
+}
+
+.pause {
+    margin-top: 1em;
 }
 
 /* Bloquote */
