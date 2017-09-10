@@ -98,6 +98,33 @@
             </blockquote>
         </section>
     </main>
+    <footer class="container style-footer">
+        <div class="g-footer">
+            <section>
+                <ul>
+                    <li>&copy; Legere</li>
+                </ul>
+            </section>
+            <section>
+                <h4>About</h4>
+                <ul>
+                    <li>F.A.Q.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Showcase</h4>
+                <ul>
+                    <li>Legere</li>
+                    <li>Purus</li>
+                    <li>Roevo</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Contact</h4>
+                <ul><li>support@hello.com</li></ul>
+            </section>
+        </div>
+    </footer>
     <script>
         // Code for slider
         // slider automatic play
@@ -109,26 +136,26 @@
         var slideInterval = setInterval(nextSlide, interval);
 
         function nextSlide() {
-            goToSlide(currentSlide+1);
+            goToSlide(currentSlide + 1);
         }
 
-        function previousSlide(){
-            goToSlide(currentSlide-1);
+        function previousSlide() {
+            goToSlide(currentSlide - 1);
         }
 
-        function goToSlide(n){
+        function goToSlide(n) {
             slides[currentSlide].className = 'slides is-hidden';
             currentSlide = (n + slides.length) % slides.length;
             slides[currentSlide].className = 'slides';
         }
 
 
-        next.addEventListener('click', function(event){
+        next.addEventListener('click', function (event) {
             pauseSlideShow();
             nextSlide();
         });
 
-        previous.addEventListener('click', function(event){
+        previous.addEventListener('click', function (event) {
             pauseSlideShow();
             previousSlide();
         });
@@ -149,8 +176,8 @@
             slideInterval = setInterval(nextSlide, interval);
         }
 
-        pauseButton.addEventListener('click', function(event){
-            if(playing) {
+        pauseButton.addEventListener('click', function (event) {
+            if (playing) {
                 pauseSlideShow();
             }
             else {
@@ -161,10 +188,9 @@
         // Show the slider controls only if
         // JS is available.
         var controls = document.querySelectorAll(".hide-controls");
-        for (var i=0; i < controls.length; i++) {
+        for (var i = 0; i < controls.length; i++) {
             controls[i].classList.remove("hide-controls")
         }
-
     </script>
 </body>
 
