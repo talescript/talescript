@@ -14,13 +14,7 @@
   * a vertain device resolution
   */
 :root {
-    font-size: 18px; /* default below 600px */
-}
-
-@media (min-width: 600px) {
-    :root {
-        font-size: calc(18px + 1.4vmin);
-    }
+    font-size: calc(18px + 0.8vw);
 }
 /*
 @media (min-width:60.063em) { 
@@ -32,6 +26,23 @@
 html {
     text-rendering: optimizeLegibility;
 }
+
+/*
+ * Font families
+ */
+ nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+.slider {
+    font-family: 'Lora', serif;
+}
+
+
+main {
+    font-family
 
 /**
  * We can also stop scaling above a specific font-size, but for this we 

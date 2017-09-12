@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
 /**
+ * Body
+ */
+.bg-image {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    background-image: url('../../src/assets/img/bg.jpeg');
+}
+
+
+/**
  * Box shadow on influencer, blog Header
  */
 .header-shadow {
@@ -47,12 +60,12 @@ footer {
 /**
  * Header styling for main page, influencer
  */
-.l-header-style h1,
-.l-header-style p {
-    font-family: raleway, sans-serif;
-}
-
-.header-color {
+ .l-header-style h1,
+ .l-header-style p {
+     font-family: raleway, sans-serif;
+ }
+ 
+ .header-color {
     /*
     background: #26547c;  /* fallback for old browsers 
     background: -webkit-linear-gradient(to bottom, #26547c, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 
@@ -84,7 +97,7 @@ svg {
 .showcase {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    height: 90vh;
+    min-height: 90vh;
     background-image: url('../assets/img/beach.jpg');
     background-size: cover;
     background-position: center;
@@ -101,24 +114,27 @@ svg {
     padding: 10px 20px;
 }
 
+@media all and (max-width: 768px) 
+{
+    .showcase {
+        min-height: 60vh;
+    }
+    .show-button {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
 .show-button:hover {
     transition: .4s;
     box-shadow: 2px 4px 3px 0 #000;
 }
 
-/**
- * Section / card grid 
- */
-.card {
-    border-top: 1px solid black;
-    margin-top: 2em;
-    padding: 1em;
-    box-shadow: 17px 17px 10px -10px rgba(0, 0, 0, 0.4);
-}
-
 footer {
     margin-top: 2em;
-    min-height: 10vh;
+    min-height: 20vh;
     color: #fffcf9;
     box-shadow: 0 -4px 3px 0 #043040;
+    -webkit-clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
 }
