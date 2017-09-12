@@ -12,7 +12,6 @@
     background-image: url('../../src/assets/img/bg.jpeg');
 }
 
-
 /**
  * Box shadow on influencer, blog Header
  */
@@ -32,10 +31,17 @@ footer {
  * Navbar 
  */
 .navBar {
-    padding: 0.15em;
+    padding: 1em;
     text-align: center;
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 0.9em;
+}
+
+@media all and (max-width: 768px) 
+{
+    .navBar {
+        padding: 0.15em;
+    }
 }
 
 .closebtn,
@@ -137,4 +143,11 @@ footer {
     box-shadow: 0 -4px 3px 0 #043040;
     -webkit-clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+}
+
+/**
+ * Card Theme
+ */
+.card {
+    background-color: #ceddef;
 }

@@ -30,33 +30,17 @@ header.l-grid h1 {
  */
 .l-header-blog {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 15vh);
 }
 
-.l-header-blog h1 {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: center;
+.articles,
+.l-header-blog {
+    min-height: 40vh;
 }
 
-/**
- * Blog Main body section
- */
-.l-blog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-    grid-auto-rows: minmax(max-content, 1fr);
+.center {
+    align-items: center;
+    justify-items: center;
 }
-
-/* smartphones, iPhone, portrait 480x320 phones */ 
-@media screen and (max-width: 40em) {
-    .l-blog {
-        grid-template-columns: 1fr;
-    }
-}
-
 /**
  * Navigation bar
  */
@@ -119,8 +103,8 @@ header.l-grid h1 {
 
 .sub-grid-col-2 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
 }
 
 @media all and (max-width: 768px) { 

@@ -100,7 +100,6 @@ body {
     max-width: 35em;
     padding: 1em;
     margin: 0 auto;
-    background: #fdf9f9;
 }
 
 /**
@@ -116,6 +115,28 @@ nav ul li a,
 nav ul a,
 .header-img a  {
     text-decoration: none;
+}
+
+.header {
+    margin: 4rem;
+}
+
+main {
+    margin: 2rem;
+}
+
+body {
+    color: #034D6F;
+    background: #D8E2F1;
+}
+
+h1 {
+    color: #023582;
+    text-align: center;
+}
+
+h2 {
+    color: #259CD6;
 }
 
 /*
