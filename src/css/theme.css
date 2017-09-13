@@ -55,12 +55,20 @@ footer {
     color: #ececec;
 }
 
+.articles {
+    min-height: 60vh;
+}
+
 /**
  * Blog Header
  */
  .l-header-blog {
     background: linear-gradient(to right, #243949 0%, #517fa4 100%);
     color: #fff;;
+}
+
+.l-header-blog {
+    min-height: 25vh;
 }
 
 /**
@@ -130,7 +138,6 @@ svg {
     }
 }
 
-
 .show-button:hover {
     transition: .4s;
     box-shadow: 2px 4px 3px 0 #000;
@@ -150,4 +157,12 @@ footer {
  */
 .card {
     background-color: #ceddef;
+}
+
+/*
+ * Header clip
+ */
+.clip {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 61%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 61%, 0% 100%);
 }

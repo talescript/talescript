@@ -8,11 +8,21 @@
     min-height: 60vh;
 }
 
+
+.l-grid div {
+    position: relative;
+    top: -50px;
+}
+
+
+.l-grid h1 {
+    margin-top: 0;
+}
+
 .l-grid h1,
 header.l-grid p {
     align-self: center;
     justify-self: center;
-    text-align: center;
 }
 
 header.l-grid h1,
@@ -21,20 +31,11 @@ header.l-grid p {
     padding: 0 1rem;
 }
 
-header.l-grid h1 {
-    margin-top: 3rem;
-}
-
 /**
  * Blog Header section
  */
 .l-header-blog {
     display: grid;
-}
-
-.articles,
-.l-header-blog {
-    min-height: 40vh;
 }
 
 .center {
@@ -129,11 +130,13 @@ header.l-grid h1 {
 /**
  * section / cards
  */
-
-section {
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+ @media all and (min-width: 768px) {
+     section {
+         margin-left: 1.2rem;
+         margin-right: 1.2rem;
+        }
 }
+
 
 /**
  * Contact Form
