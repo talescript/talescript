@@ -258,12 +258,12 @@ nav ul a,
  */
 .card {
     display: grid;
-    grid-template-rows: .4fr .8fr;
+    grid-template-rows: min-content 1fr;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-title {
-    padding: 0.2em;
+    padding: 0.4em;
     background-color: #0460a4;
     color: #ceddef;
 }
@@ -475,4 +475,11 @@ nav ul a,
         0 calc(100% - 4vw) /*bottom left x/y */
         );
     }
+}
+
+/*
+ * Styles
+ */
+span.sienna {
+    font-weight: 800;
 }
