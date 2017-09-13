@@ -86,13 +86,11 @@ header.l-grid p {
     .l-header-style div h1 {
         font-size: 1.3rem;
     }
-    
+}
 
 /**
  * Main
  */
-
-
 .container {
     display: grid;
     grid-template-columns: 
