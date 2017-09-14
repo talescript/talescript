@@ -4,12 +4,16 @@
  * Body
  */
 .bg-image {
+    background: linear-gradient(
+        rgba(89, 165, 216, 0.45),
+        rgba(89, 165, 216, 0.45)
+    ),
+    url(../../app/design/img/desk.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
-    background-image: url('../../src/assets/img/bg.jpeg');
+    min-height: 60vh;
 }
 
 /**
@@ -108,6 +112,10 @@ svg {
 /**
  * Web Design Page Header
  */
+section.container-full {
+    margin: 0;
+}
+
 .showcase {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
@@ -158,6 +166,27 @@ footer {
 .card {
     background-color: #ceddef;
 }
+
+/**
+ * Portofolio Cards
+ */
+.p-card > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.p-card > article img {
+    max-width: 100%;
+}
+
+.p-card article img {
+    border-radius: 5px 5px 0 0;
+}
+.p-card-content {
+    padding: 0.4rem 0.8rem;
+    background-color: #ceddef;
+}
+
 
 /*
  * Header clip

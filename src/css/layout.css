@@ -122,7 +122,7 @@ header.l-grid p {
 
 .sub-grid-col-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1em;
 }
 
@@ -258,7 +258,6 @@ header.l-grid p {
     }
 }
 
-
 /**
  * Footer
  */
@@ -266,29 +265,44 @@ header.l-grid p {
 /**
  * WebDesign Section
  */
-.portofolio {
+.gap {
+    grid-gap: 1em;
+}
+
+.card-width {
+    max-width: 20em;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.p-card {
     display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1em;
+    align-items: stretch;
 }
 
-.portofolio > .img-half,
-.portofolio  > a {
-    justify-self: center;
+@media all and (max-width: 768px) { 
+    .p-card {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }
 
-.portofolio  > a {
-    margin-top: 1em;
+.p-card-content {
+    display: grid;
+}
+
+.p-card-content  > a {
     text-align: center;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     text-decoration: none;
     background-color: #045690;
     color: #ceddef;
-}
-
-.img-half {
-    width: 75%;
 }
 
 /**
