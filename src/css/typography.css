@@ -30,7 +30,7 @@ html {
 /*
  * Font families
  */
- nav {
+nav {
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -39,10 +39,6 @@ h4, h5, h6,
 .slider {
     font-family: 'Lora', serif;
 }
-
-
-main {
-    font-family
 
 /**
  * We can also stop scaling above a specific font-size, but for this we 
@@ -89,7 +85,6 @@ main {
     text-align: left;
     font-kerning: normal;
     line-height: 1.45;
-    /* padding: 0 1.2rem; better to set on main */
 }
 
 

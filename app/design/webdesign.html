@@ -26,7 +26,7 @@
 
     <header class="l-header l-header-style showcase">
         <div class="container">
-            <h1>Helping you build a solid web to jump&dash;start your business.</h1>
+            <h1>Build a solid web to jump&dash;start your business.</h1>
         </div>
         <a class="show-button" href="../forms/contact.html">Get in touch</a>
     </header>
@@ -35,16 +35,12 @@
         <div class="container gap">
             <section>
                 <div class="card card-width">
-                    <div>
-                        <p>Attractive, interesting, functional, user&dash;friendly, secure; easy to access. We deliver &dash;
-                            You Benefit.</p>
-                    </div>
+                    <h2>Custom&dash;built Templates</h2>
                 </div>
             </section>
 
             <section class="bg-image container-full">
                 <div class="container">
-                    <h2 class="center-text">Templates</h2>
                     <div class="p-card item-center">
                         <article>
                             <img src="img/legere-header.png" alt="">
@@ -57,7 +53,98 @@
                 </div>
             </section>
         </div>
+
+        <section class="container">
+            <h2></h2>
+            <form class="wd-form" action="">
+                <p>Required fields are followed by <abbr title="required">*</abbr></p>
+                <div class="form-input">
+                    <label for="first_name">Name <abbr title="required">*</abbr></label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-input">
+                    <label for="surname">Surame <abbr title="required">*</abbr></label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="form-input">
+                    <label for="email">Email <abbr title="required">*</abbr></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-input">
+                    <label for="message">Message <abbr title="required">*</abbr></label>
+                    <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                </div>
+                <div class="form-button">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </section>
     </main>
+    <!--
+    <div class="flip-container">
+        <div class="flip-card">
+            <div class="front">
+                <img src="img/legere-header.png" alt="">
+                <div class="p-card-content center ">
+                    <h3>Legere</h3>
+                    <a href="templates/legere/index.html">Demo</a>
+                </div>
+            </div>
+            <div class="back">
+                <div class="p-card-content center ">
+                    <p>The web was built using HTML, CSS and Javascript.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .flip-container {
+            perspective: 1000px;
+        }
+
+        .flip-container:hover .flip-card {
+            transform: rotateY(180deg);
+        }
+
+        .flip-container,
+        .flip-card,
+        .front,
+        .back {
+            width: 320px;
+            height: 380px;
+        }
+
+        .flip-card {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front,
+        .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background-color: #ceddef;
+        }
+
+        .front,
+        .back {
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+-->
     <footer>
         <div class="g-footer">
             <section class="item-center">

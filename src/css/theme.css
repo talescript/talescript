@@ -9,11 +9,31 @@
         rgba(89, 165, 216, 0.45)
     ),
     url(../../app/design/img/desk.jpeg);
+}
+
+@media all and (max-width: 768px) 
+{
+    .bg-image {
+        background: linear-gradient(
+            rgba(89, 165, 216, 0.45),
+            rgba(89, 165, 216, 0.45)
+        ),
+        url(../../app/design/img/s-desk.jpeg);
+    }
+}
+
+.bg-image {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 50vh;
+}
+
+@media all and (max-width: 768px) { 
+    .bg-image {
+        min-height: 45vh;
+    }
 }
 
 /**
@@ -187,6 +207,39 @@ footer {
     background-color: #ceddef;
 }
 
+/**
+ * Web Design
+ * FORM
+ */
+.wd-form {
+    padding: 0.5em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    background-color: #ceddef;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.form-button button {
+    background-color: #045690;
+    color: #ceddef;;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.form-button button,
+.form-input textarea,
+.form-input input[type=text],
+.form-input input[type=email] {
+    border-radius: 5px;
+} 
+
+.form-input input[type=text]:focus,
+.form-input input[type=email]:focus,
+.form-input textarea:focus {
+    background-color: #e6ebe0;
+}
 
 /*
  * Header clip
