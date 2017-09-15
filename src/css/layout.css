@@ -267,6 +267,7 @@ header.l-grid p {
  */
 .gap {
     grid-gap: 1em;
+    margin-bottom: 2em;
 }
 
 .card-width {
@@ -314,7 +315,7 @@ header.l-grid p {
  * FORM
  */
 .wd-form {
-    margin-top: 2em;
+    margin: 0 auto;
 }
 
 .form-input {
@@ -338,11 +339,7 @@ header.l-grid p {
         grid-template-columns: 1fr;
         margin-bottom: 1em;
     }
-    input {
-        max-width: 80%;
-    }
 }
-
 
 /**
  * Footer layout

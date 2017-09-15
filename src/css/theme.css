@@ -221,6 +221,13 @@ footer {
     font-weight: 700;
 }
 
+@media all and (max-width: 768px) { 
+    .wd-form, .form-input,
+    .form-button {
+        font-size: 16px;
+    }
+}
+
 .form-button button {
     background-color: #045690;
     color: #ceddef;;
