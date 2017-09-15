@@ -305,6 +305,10 @@ header.l-grid p {
     color: #ceddef;
 }
 
+.p-card > article {
+    margin-bottom: 2em;
+}
+
 /**
  * Footer layout
  */
