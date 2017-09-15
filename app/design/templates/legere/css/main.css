@@ -236,7 +236,7 @@ nav ul a,
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 70vh;
     color: #045690;
 }
 
@@ -247,11 +247,6 @@ nav ul a,
 .half-height {
     height: 40vh;
 }
-/*
- * background: linear-gradient(rgba(102, 125, 182, .2),
-    rgba(0, 130, 200, 0.3)), url('../assets/img/mountain-path.jpeg');
- */
-
 
 /**
  * Product Card
@@ -469,6 +464,21 @@ nav ul a,
         100% 85%, /*bottom right x/y */
         0 calc(100% - 4vw) /*bottom left x/y */
         );
+    }
+
+    /*
+    * main section additional top margin
+    */
+    .m-top {
+    margin-top: 2.5em;
+    }
+
+    .slider {
+        min-height: 80vh;
+    }
+
+    .hero-image {
+        height: 80vh;
     }
 }
 
