@@ -265,8 +265,8 @@ header.l-grid p {
 /**
  * WebDesign Section
  */
-.gap {
-    grid-gap: 1em;
+.gap,
+.gap > section {
     margin-bottom: 2em;
 }
 
@@ -281,9 +281,13 @@ header.l-grid p {
 
 .p-card {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 0.5fr 0.5fr;
     grid-gap: 1em;
     align-items: stretch;
+}
+
+.p-card-item-start {
+    align-self: flex-start;
 }
 
 @media all and (max-width: 768px) { 
@@ -313,9 +317,9 @@ header.l-grid p {
 /**
  * Web Design
  * FORM
- */
+
 .wd-form {
-    margin: 0 auto;
+    margin-top: 2em;
 }
 
 .form-input {
@@ -339,7 +343,7 @@ header.l-grid p {
         grid-template-columns: 1fr;
         margin-bottom: 1em;
     }
-}
+}  */
 
 /**
  * Footer layout

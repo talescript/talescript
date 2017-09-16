@@ -210,7 +210,7 @@ footer {
 /**
  * Web Design
  * FORM
- */
+
 .wd-form {
     padding: 0.5em;
     border-radius: 5px;
@@ -246,7 +246,7 @@ footer {
 .form-input input[type=email]:focus,
 .form-input textarea:focus {
     background-color: #e6ebe0;
-}
+}  */
 
 /*
  * Header clip
