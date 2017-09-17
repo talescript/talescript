@@ -3,6 +3,10 @@
 /**
  * Body
  */
+.b-color {
+    background: #F1EBEC;
+}
+
 .bg-image {
     background: linear-gradient(
         rgba(89, 165, 216, 0.45),
@@ -104,10 +108,6 @@ footer {
  }
  
  .header-color {
-    /*
-    background: #26547c;  /* fallback for old browsers 
-    background: -webkit-linear-gradient(to bottom, #26547c, #1CB5E0);  /* Chrome 10-25, Safari 5.1-6 
-    background: linear-gradient(to bottom, #26547c, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fffcf9;
 }
 
@@ -144,7 +144,7 @@ section.container-full {
     background-size: cover;
     background-position: center;
     text-align: center;
-    box-shadow: 0px 4px 3px 0 #000;
+    box-shadow: 0px 2px 3px 0 #000;
 }
 
 .show-button {
@@ -184,12 +184,22 @@ footer {
  * Card Theme
  */
 .card {
-    background-color: #ceddef;
+    background-color: #4f7d9e;
+    color: #fff;
+}
+
+.card-color {
+    color: #4f7d9e
 }
 
 /**
  * Portofolio Cards
  */
+.p-card-title {
+    text-align: center;
+    color: #fff;
+}
+
 .p-card > article {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -202,10 +212,12 @@ footer {
 .p-card article img {
     border-radius: 5px 5px 0 0;
 }
+
 .p-card-content {
     padding: 0.4rem 0.8rem;
     background-color: #ceddef;
 }
+
 
 /**
  * Web Design

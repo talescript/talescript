@@ -77,7 +77,8 @@ header.l-grid p {
     justify-content: center;
 }
 
-.l-header h1 {
+.l-header h1,
+.top-margin {
     margin-top: 2.5rem;
 }
 
@@ -270,8 +271,17 @@ header.l-grid p {
     margin-bottom: 2em;
 }
 
+.main-gap {
+    margin-bottom: 10em;
+}
+
 .card-width {
     max-width: 30em;
+    margin: 0 auto;
+}
+
+.m-width {
+    max-width: 25em;
     margin: 0 auto;
 }
 

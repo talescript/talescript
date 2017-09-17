@@ -31,16 +31,14 @@
 .cta-button {
     text-decoration: none;
     text-transform: uppercase;
-    color: #fffcf9;
-    background: #EB3349;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #F45C43, #EB3347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    color: #000;
+    background: #F4F3F0;  /* fallback for old browsers */
+  
 }
 
 .cta-button:hover {
-    background: #EB3349;
-    background: -webkit-linear-gradient(to bottom, #EB3349, #8F0313);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #EB3349, #8F0313); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #000;
+    color: #F4F3F0;
 }
 
 /**
@@ -68,7 +66,7 @@ textarea:focus {
     display: grid;
     margin-top: 2em;
     padding: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 3px 0 #000;
     justify-items: center;
 }
 
