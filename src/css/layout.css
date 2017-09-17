@@ -291,9 +291,8 @@ header.l-grid p {
 
 .p-card {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
     grid-gap: 1em;
-    align-items: stretch;
 }
 
 .p-card-item-start {
