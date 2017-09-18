@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
+
+/*
+ * Font families
+ */
+
+
+
+/**
+ * Base Styles
+ */
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+main section:not(:first-child) {
+    margin: 2em 0;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+section {
+    margin: 3em;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    font-weight: inherit;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.2;
+}
+
+/**
+ * Nav styles
+ */
+ul li,
+ul a {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+ul li a,
+ul a,
+.header-img a  {
+    text-decoration: none;
+}
+
+/**
+ * Readable limit
+ */
+ .container {
+    display: grid;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
+}
+
+.container > * {
+    grid-column: main;
+}
+
+.container-full {
+    grid-column: full;
+}
+
+.sub-grid-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+@media all and (max-width: 768px) { 
+    .sub-grid-col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+}
+
+.center {
+    align-items: center;
+    justify-items: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.hero-color {
+    background: rgba(58, 119, 113, 0.4);
+    min-height: 100vh;
+}
+
+.hero-image {
+    background-image: url('img/l-jane.jpeg');
+}
+
+@media all and (max-width: 768px) { 
+    .hero-image {
+        background-image: url('img/s-jane.jpeg');
+    }
+}
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/**
+ * Container theme
+ */
+.one {
+    background: #b48272;
+    color: #2a3637;
+}
+
+@media all and (max-width: 768px) { 
+    .one {
+        grid-row: 1 / 2;
+    }
+}
+
+header, h1, p {
+    max-width: inherit;
+}
+
+.one header {
+    margin-top: 4em;
+    padding: 1em;
+}
+
+.one header h1 {
+    margin-bottom: 0;
+}
+
+@media all and (max-width: 768px) { 
+    .one header {
+        margin-top: 1.5em;
+    }
+}
+
+.subheading {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+}
+
+.lighter-font {
+    opacity: 0.6;
+}
+
+.divider {
+    margin: 1.25rem 0;
+    padding: 0;
+    border: 0.5px solid #2a3637;
+}
+
+a {
+    display: block;
+    margin: 0 auto;
+}
+
+.fa {
+    color: #2a3637;
+}
+
+/********************/
+.container {
+    min-height: 90vh;
+}
+
+.max-width {
+    max-width: 18em;
+    margin-top: 4em;
+}
+
+.max-width p {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    color: #fff;
+    font-weight: 100;
+}
+
+
+ul li a {
+    white-space: nowrap;
+}
+
+ul li a:hover {
+    color: #42261a;
+    border: 1.5px solid #42261a;
+    transition: all 0.5s, border, color;
+}
