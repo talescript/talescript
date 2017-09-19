@@ -220,37 +220,3 @@ a {
 .fa {
     color: #2a3637;
 }
-
-/********************/
-.container {
-    min-height: 90vh;
-}
-
-.max-width {
-    max-width: 18em;
-    margin-top: 4em;
-}
-
-.max-width p {
-    text-align: left;
-}
-
-.center {
-    text-align: center;
-}
-
-body {
-    color: #fff;
-    font-weight: 100;
-}
-
-
-ul li a {
-    white-space: nowrap;
-}
-
-ul li a:hover {
-    color: #42261a;
-    border: 1.5px solid #42261a;
-    transition: all 0.5s, border, color;
-}
