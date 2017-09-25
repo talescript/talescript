@@ -45,21 +45,24 @@
 
             <div class="contact">
                 <h3>Get in touch</h3>
-                <form action="">
+                <form name="Contact Form" action="thank-you" netlify netlify-honeypot="bot-field">
                     <div class="web-form-grid">
                         <label for="name">
-                            <input type="text" id="name" placeholder="Full name" required>
+                            <input type="text" name="name" id="name" placeholder="Full name" required>
                         </label>
 
                         <label for="email">
-                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </label>
 
                         <label for="message">
-                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                            <textarea name="message" name="message" id="message" placeholder="Message" required></textarea>
                         </label>
 
                         <button class="btn btn-width" type="submit">Submit</button>
+                        <p style="display:none;">
+                                <label>You shouldn't fill this out: <input name="bot-field"></label>
+                            </p>
                     </div>
                 </form>
             </div>

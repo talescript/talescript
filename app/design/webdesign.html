@@ -180,7 +180,7 @@
 
             <section class="top-margin">
                 <div class="web-form">
-                    <form action="">
+                    <form name="Web Design" action="thank-you" netlify netlify-honeypot="bot-field">
                         <h2 class="center-text">Contact</h2>
                         <div class="form-header-theme">
                             <p class="form-text">We are stoked to see you exploring Talescript. To start, pick a topic from the drop down list.
@@ -198,20 +198,19 @@
                                     <option value="business">Business Website</option>
                                 </select>
                             </label>
-
                             <label for="name">
-                                <input type="text" id="name" placeholder="Your name" required>
+                                <input type="text" name="name" id="name" placeholder="Your name" required>
                             </label>
-
                             <label for="email">
-                                <input type="email" id="email" placeholder="Your email" required>
+                                <input type="email" name="email" id="email" placeholder="Your email" required>
                             </label>
-
                             <label for="message">
-                                <textarea name="message" id="message" placeholder="Your message" required></textarea>
+                                <textarea name="message" name="message" id="message" placeholder="Your message" required></textarea>
                             </label>
-
                             <button type="submit">Submit</button>
+                            <p style="display:none;">
+                                <label>You shouldn't fill this out: <input name="bot-field"></label>
+                            </p>
                         </div>
                     </form>
                 </div>
