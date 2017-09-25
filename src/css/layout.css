@@ -127,7 +127,12 @@
 }
 
 .card-b {
-    grid-template-rows: min-content;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: center;
 }
 
 .card-i {
