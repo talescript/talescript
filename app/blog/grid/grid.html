@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora:700|Ubuntu" rel="stylesheet">
+    <title>CSS Grid layout</title>
+
+</head>
+
+<body>
+    <nav class="container">
+        <ul><li><a href="../blog.html">Back to blog</a></li></ul>
+    </nav>
+    <header class="header">
+        <h1>CSS Grid Support and why I chose it.</h1>
+        <p>W.I.P.</p>
+    </header>
+    <main>
+        <section>
+            <!--
+            <article>
+                <code>&lt;div class="wrapper"&gt;hello&lt;/div&gt;</code>
+            </article>
+            -->
+        </section>
+        <section>
+            <article>
+                <h2>CSS Grid Support</h2>
+                <p>One of the advantages of css Grid is the ease it provides web developers to lay out items on a website. As
+                    of today, the current browser support for CSS Grid is at 68.14%. However, this does not reflect the current
+                    browser market share, nor does it reflect which versions users currently have installed.</p>
+                <p>We are only interested in the browser versions that support CSS Grid.</p>
+                <blockquote cite="https://caniuse.com/#search=css%20grid">
+                    <ul>
+                        <li>Edge 16 - 0%</li>
+                        <li>Firefox 54 - 2.94%</li>
+                        <li>Chrome 59 - 5.74%</li>
+                        <li>Safari 10.1 - 0.21%</li>
+                        <li>Opera 47 - 0.36%</li>
+                        <li>iOS Safari 10.3 - 8.41%</li>
+                        <li>Android Browser 56 - 0%</li>
+                        <li>Chrome for Android 59 - 29.53%</li>
+                    </ul>
+                </blockquote>
+
+                <p>Each of those represent the earliest version that has support for CSS grid.</p>
+
+                <p>Looking at the current trends, as of Setpember 2017, 23.79% of the market is using Google Chrome 60.0. But
+                    in second place of the market share we have Safari Mobile 10 that does not support CSS Grid, at 16.31%.
+                    It shouldn't be a problem since we should be designing for mobile first. And mobiles have less real estate
+                    area.
+                </p>
+                <p>Finally, we have Firefox 55 at 13.6%;</p>
+            </article>
+
+            <section class="first-example">
+                <div class="wrapper">
+                    <div class="one">One</div>
+                    <div class="two">Two</div>
+                    <div class="three">Three</div>
+                    <div class="four">Four</div>
+                    <div class="five">Five</div>
+                    <div class="six">Six</div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <article>
+                <h2>What is Grid</h2>
+                <ul>
+                    <li>Fixed and flexible track sizes: % or fr</li>
+                    <li>Item placement: You can place items using line number, names or by targeting an area of the grid.
+                    </li>
+                    <li>Creation of additional tracks to hold content</li>
+                    <li>Alignment control: We can control how items are aligned once placed on the grid area, and how the entire
+                        grid is aligned.
+                    </li>
+                    <li>Control of overlapping content: More than one items can be placed into a grid cell, or areas can partially
+                        overla each other. This layering may then be controlled with z-index.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="second-example">
+            <h2>Basic Grid</h2>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="third-example">
+            <h2>Grid Tracks</h2>
+            <p>To define rows and columns on the grid we use grid-template-columns and grid-template-rows properties. These
+                define grid tracks. A grid track is the space between any two lines on the grid.
+            </p>
+            <p>In this example we are using fixed sized tracks.</p>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="fourth-example">
+            <p>In this example we are using flexible grid tracks.</p>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="fifth-example">
+            <p>In this example we are using flexible grid tracks.</p>
+            <p>The track is split into four parts. 2 for the first one and one part for each of the following items.
+            </p>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="sixth-example">
+            <h2>Track listing with repeat</h2>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="seventh-example">
+            <h2>Track listing with repeat</h2>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+            </div>
+        </section>
+
+        <section class="eight-example">
+            <p>The repeat notation can be used to create a repeating pattern of tracks.
+            </p>
+            <div class="wrapper">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+                <div class="four">Four</div>
+                <div class="five">Five</div>
+                <div class="six">One</div>
+                <div class="seven">Two</div>
+                <div class="eight">Three</div>
+                <div class="nine">Four</div>
+                <div class="ten">Five</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

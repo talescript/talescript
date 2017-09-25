@@ -1,0 +1,247 @@
+/**
+ * Body Color
+ */
+body {
+    background: #FBFAF9;
+}
+
+/*
+ * Header clip
+ */
+.clip {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 61%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 61%, 0% 100%);
+}
+
+/**
+ * Hero / Header theme
+ */
+.header-theme {
+    background: #2d6fa6;
+    text-align: center;
+    min-height: 60vh;
+}
+
+blockquote {
+    background: #EDEAEE;
+    padding: 0.5em;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media all and (max-width: 768px) { 
+    blockquote {
+        margin: 0;
+    }
+}
+
+/**
+ * Nav theme
+ */
+.nav-theme {
+    margin-top: 0.5em;
+    background: #25547b;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.header-theme div .nav
+ul li a,
+.header-theme {
+    color: #fff;
+}
+
+.header-theme div .nav
+ul li .active,
+.footer-nav-theme ul
+li .active {
+    color: #9EADB7;
+}
+
+/**
+ * Buttons
+ */
+.btn {
+    font-family: "Robot", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    border: none;
+    padding: 12px 30px;
+    margin: 10px 1px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    background: #F5F6F5;
+    color: #000;
+    transition: 400ms ease;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover {
+    background: #25547b;
+    color: #F5F6F5;
+}
+
+.card .btn:hover {
+    background: #2d6fa6;
+}
+
+.btn-round {
+    border-radius: 15px;
+}
+
+/**
+ * Cards
+ */
+.card-b a {
+    color: #ea849c;
+}
+
+.card-b a:visited {
+    color: #c74f6b;
+}
+/**
+ * Hero Image theme
+ */
+.hero-bg-color {
+    background: rgba(194, 163, 149, 0.67);
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.hero-image {
+    background-image: url('../assets/img/bg.jpeg');
+}
+
+@media all and (max-width: 500px) { 
+    .hero-image {
+        background-image: url('../assets/img/bg.jpeg');
+    }
+}
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/**
+ * WebDesign Pricing Table
+ * Reason table
+ */
+
+.pricing-table {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.price-header {
+    border-radius: 6px;
+}
+
+.personal-price,
+.grand-price,
+.business-price {
+    margin: 0.35em;
+}
+
+.personal-price ul,
+.grand-price ul,
+.business-price ul {
+    list-style: none;
+    margin-top: 1.5em;
+    font-size: 0.7em;
+}
+
+.personal-price ul li,
+.grand-price ul li,
+.business-price ul li {
+    padding: 0.4em;
+    border-radius: 6px;
+}
+
+@media all and (max-width: 768px) {
+
+    .mobile-full {
+        grid-column: full;
+    }
+
+    .personal-price,
+    .grand-price,
+    .business-price {
+        margin: 0;
+    }
+
+    .grand-price,
+    .business-price {
+        margin-top: 0.5em;
+    }
+
+    .price-header {
+        border-radius: 0;
+        box-shadow:  0 0 4px #000000;
+        padding: 0.25em;
+    }
+
+    .personal-price ul li,
+    .grand-price ul li,
+    .business-price ul li {
+        border-radius: 0;
+    }
+
+    .personal-price ul li:last-child,
+    .grand-price ul li:last-child,
+    .business-price ul li:last-child
+    {
+        margin-bottom: 1em;
+    }
+}
+
+.price-header,
+.personal-price ul li:nth-child(odd),
+.grand-price ul li:nth-child(odd),
+.business-price ul li:nth-child(odd) {
+    background: #E6E9EC
+}
+
+.price-header {
+    color: #133A57;
+}
+
+.disclaimer {
+    font-size: 0.55rem;
+    text-align: center;
+}
+
+/**
+ * Footer Theme
+ */
+.footer-theme {
+    background: #2d6fa6;
+    color: #FBFAF9;
+    min-height: 30vh;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer-theme section h4 {
+    text-align: center;
+}
+
+.footer-nav-theme {
+    padding: 0.5rem;
+
+}
+
+.footer-nav-theme ul
+li a {
+    color: #fff;
+}

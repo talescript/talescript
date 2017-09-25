@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora:700|Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero-image clip">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-left">
+                    <a href="/" class="nav-item">Legere</a>
+                </ul>
+                <label for="menu-toggle" class="nav-toggle">&equiv;</label>
+                <input type="checkbox" id="menu-toggle" class="is-hidden">
+                <ul class="nav-right nav-menu">
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Showcase</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container center half-height">
+            <h1>Landing page &ndash; a class of it's own.</h1>
+        </div>
+    </div>
+    
+    <main class="container m-top">
+        <section class="container center">
+            <div class="slider center sienna">
+                <div>
+                    <blockquote class="slides">
+                        <p>Carpe diem. Seize the day, boys. Make your lives extraordinary</p>
+                        <footer>&mdash; Dead Poets Society</footer>
+                    </blockquote>
+                    <blockquote class="slides is-hidden">
+                        <p>Open the pod bay doors, please, HAL.</p>
+                        <footer>&mdash; 2001: A Space Odyssey</footer>
+                    </blockquote>
+                    <blockquote class="slides is-hidden">
+                        <p>Round up the usual suspects.</p>
+                        <footer>&mdash; Casablanca</footer>
+                    </blockquote>
+                </div>
+                <button class="hide-controls left-b">&#10094;</button>
+                <button class="hide-controls right-b">&#10095;</button>
+            </div>
+            <button class="hide-controls pause">Pause</button>
+        </section>
+
+        <div class="powder-blue container-full">
+            <div class="container">
+                <section class="sub-grid-col-2">
+                    <h2>Why a Landing Page is a must</h2>
+                    <p>Effective landing pages guides the visitor through a website and
+                        how to get what they need.</p>
+                </section>
+            </div>
+        </div>
+
+        <section class="sub-grid-col-3">
+            <div class="card">
+                <img src="assets/img/s-mountains.jpg" alt="">
+                <div class="card-title">
+                    <h4>Local Content</h4>
+                    <p>SEO is a long, complicated exercise that few actually
+                        get right. One recommendation across the board repeatedly
+                        states quality content is a must on your website.
+                        Quality content combined with semantic markup &ndash;
+                        machine readable semantics &ndash; is the best way
+                        to have your pages reach the top tier of the search index.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/s-v-mountain.jpeg" alt="">
+                <div class="card-title">
+                    <h4>Smart Content</h4>
+                    <p>Creating clear and concise content for your
+                        landing page addresses customers key concerns.
+                        It effectively funnels customer conversion.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/s-mountains.jpg" alt="">
+                <div class="card-title">
+                    <h4>Lead Capture</h4>
+                    <p>Your landing page combined with clear
+                        copy&dash;editing displays the benefits
+                        of your product. This helps your brand’s identity.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container style-footer">
+        <div class="g-footer">
+            <section class="item-center">
+                <ul>
+                    <li>&copy; Legere</li>
+                </ul>
+            </section>
+            <section class="item-center">
+                <h4>About</h4>
+                <ul>
+                    <li>F.A.Q.</li>
+                </ul>
+            </section>
+            <section class="item-center">
+                <h4>Showcase</h4>
+                <ul>
+                    <li>Legere</li>
+                    <li>Purus</li>
+                    <li>Roevo</li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script>
+        // Code for slider
+        // slider automatic play
+        var next = document.querySelector(".left-b");
+        var previous = document.querySelector(".right-b");
+        var slides = document.querySelectorAll(".slides");
+        var currentSlide = 0;
+        var interval = 3000;
+        var slideInterval = setInterval(nextSlide, interval);
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        function goToSlide(n) {
+            slides[currentSlide].className = 'slides is-hidden';
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].className = 'slides';
+        }
+
+
+        next.addEventListener('click', function (event) {
+            pauseSlideShow();
+            nextSlide();
+        });
+
+        previous.addEventListener('click', function (event) {
+            pauseSlideShow();
+            previousSlide();
+        });
+
+        // Pause the slider
+        var playing = true;
+        var pauseButton = document.querySelector(".pause");
+
+        function pauseSlideShow() {
+            pauseButton.innerHTML = 'Play';
+            playing = false;
+            clearInterval(slideInterval);
+        }
+
+        function playSlideShow() {
+            pauseButton.innerHTML = 'Pause';
+            playing = true;
+            slideInterval = setInterval(nextSlide, interval);
+        }
+
+        pauseButton.addEventListener('click', function (event) {
+            if (playing) {
+                pauseSlideShow();
+            }
+            else {
+                playSlideShow();
+            }
+        });
+
+        // Show the slider controls only if
+        // JS is available.
+        var controls = document.querySelectorAll(".hide-controls");
+        for (var i = 0; i < controls.length; i++) {
+            controls[i].classList.remove("hide-controls")
+        }
+    </script>
+</body>
+
+</html>
