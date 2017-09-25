@@ -90,6 +90,9 @@
 /**
  * Section layout
  */
+.footer-margin {
+    margin-top: 2em;
+}
 
 .top-margin {
     margin-top: 2em;
