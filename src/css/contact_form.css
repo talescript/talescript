@@ -166,6 +166,15 @@ textarea {
         padding: 0;
         margin: 0;
     }
+
+    .contact form .web-form-grid
+    input[type="text"],
+    .contact form .web-form-grid
+    input[type="email"],
+    .contact form .web-form-grid
+    textarea {
+        max-width: 100%;
+    }
 }
 
 input[type="text"]:focus,
