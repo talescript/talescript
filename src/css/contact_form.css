@@ -143,6 +143,7 @@ input[type="email"]:focus,
 .contact form .web-form-grid
 textarea:focus {
     color: #000;
+    min-width: 100%;
 }
 
 input[type="text"],
