@@ -87,7 +87,6 @@ form {
 @media all and (max-width: 768px) { 
     .web-form-grid {
         grid-template-columns: 1fr;
-        margin: 0;
     }
 }
 
