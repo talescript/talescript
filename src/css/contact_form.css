@@ -88,6 +88,9 @@ form {
     .web-form-grid {
         grid-template-columns: 1fr;
     }
+    .remove-margin {
+        margin: 0;
+    }
 }
 
 /**

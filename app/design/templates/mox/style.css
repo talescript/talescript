@@ -278,6 +278,12 @@ textarea:focus {
         padding: 0 1.225rem;
         font-size: 0.75em;
     }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border-radius: 0;
+    }
 }
 
 /**
