@@ -251,17 +251,23 @@ nav ul a {
     .nav-menu.nav-right {
         display: none;
         position: fixed;
-        height: 90%;
-        width: 110%;
+        height: 100%;
+        width: 0;
         top: 0;
-        left: -2%;
+        left: 0;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
-        padding-top: 7em;
+        padding-top: 60px;
+        overflow-x: hidden;
+        z-index: 1;
     }
-    .nav-menu.nav-right a {
+    .nav-menu.nav-right li a {
         width: 100%;
     }
+}
+
+body {
+    transition: margin-left .3s ease-in;
 }
 /**
  * Header
