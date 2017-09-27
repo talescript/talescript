@@ -21,10 +21,10 @@
                 <label for="menu-toggle" class="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Menu</label>
                 <input type="checkbox" id="menu-toggle" class="is-hidden">
                 <ul class="nav-right nav-menu">
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Services</a></li>
-                    <li class="nav-item"><a href="#">Portofolio</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#services">Services</a></li>
+                    <li class="nav-item"><a href="#portofolio">Portofolio</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <main>
-        <section class="about">
+        <section id="about" class="about">
             <div class="container">
                 <div class="grid-col-2">
                     <div class="margin-t">
@@ -56,7 +56,7 @@
             </div>
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <div class="container">
                 <div class="grid-col-3 margin-t">
                     <div class="card">
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section class="portofolio">
+        <section id="portofolio" class="portofolio">
             <div class="container grid-center">
                 <h2>Portofolio</h2>
                 <div class="grid-col-autofit margin-t">
@@ -98,12 +98,37 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="container grid-center margin-t">
                
             </div>
         </section>
     </main>
+    <script>
 
+        var nav = document.querySelector(".nav-toggle");
+        var menu = document.querySelector(".nav-menu");
+
+        nav.addEventListener('click', function(event){
+            if (menu.style.display == "") {
+                menu.style.display = "block";
+                console.log("on");
+            }
+            else {
+                menu.style.display = "";
+                console.log("off");
+            }
+        });
+
+        menu.addEventListener('click', function(event){
+            if (menu.style.display == "block") {
+                menu.style.display = "";
+            }
+        })
+            
+
+
+
+    </script>
 </body>
 </html>

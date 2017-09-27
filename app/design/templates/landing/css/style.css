@@ -215,15 +215,8 @@ nav ul a {
     padding: 0.25rem 0.5rem;
 }
 
-
 .is-hidden {
     display: none;
-}
-
-@media screen and (max-width: 768px) {
-    #menu-toggle:checked + .nav-menu {
-        display: block;
-    }
 }
 
 .nav-toggle {
@@ -248,14 +241,26 @@ nav ul a {
     padding: 0.25rem 0.5rem;
 }
 
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu.nav-right {
         display: none;
-        left: 0;
-        right: 0;
-        top: 100%;
-        position: absolute;
-        z-index: 1;
+        position: fixed;
+        height: 90%;
+        width: 110%;
+        top: 0;
+        left: -2%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding-top: 7em;
+    }
+    .nav-menu.nav-right a {
+        width: 100%;
     }
 }
 /**
