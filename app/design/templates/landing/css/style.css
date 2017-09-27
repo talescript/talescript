@@ -284,6 +284,7 @@ nav ul a {
 @media all and (max-width: 40em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
+        min-height: 80vh;
     }
 }
 
