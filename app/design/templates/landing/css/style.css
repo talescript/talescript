@@ -30,8 +30,12 @@ nav, ul {
     padding: 0;
 }
 
-html, body {
+html {
     height: 100%;
+}
+
+body {
+    min-height: 100%;
 }
 
 /**
@@ -271,7 +275,7 @@ nav ul a {
  */
 .parallax {
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
