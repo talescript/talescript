@@ -16,9 +16,11 @@
         <div class="container">
             <nav class="nav">
                 <ul class="nav-left">
-                    <li class="logo"><a href="#">Brand</a></li>
+                    <li class="logo nav-item"><a href="#">Brand</a></li>
                 </ul>
-                <ul class="nav-right">
+                <label for="menu-toggle" class="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Menu</label>
+                <input type="checkbox" id="menu-toggle" class="is-hidden">
+                <ul class="nav-right nav-menu">
                     <li class="nav-item"><a href="#">About</a></li>
                     <li class="nav-item"><a href="#">Services</a></li>
                     <li class="nav-item"><a href="#">Portofolio</a></li>
@@ -26,6 +28,7 @@
                 </ul>
             </nav>
         </div>
+
         <div class="container hero">
             <header class="hero-overlay">
                 <h1>Start simple</h1>
@@ -76,19 +79,19 @@
             <div class="container grid-center">
                 <h2>Portofolio</h2>
                 <div class="grid-col-autofit margin-t">
-                    <figure class="images">
+                    <figure class="img-blue">
                         <img src="assets/blue.jpeg" alt="House in ruins">
                     </figure>
-                    <figure class="images">
+                    <figure class="img-monkey">
                         <img src="assets/monkey.jpeg" alt="Graffiti wall with a face of a monkey">
                     </figure>
-                    <figure class="images">
+                    <figure class="img-park">
                         <img src="assets/park.jpeg" alt="A girl sitting on a bench at the park">
                     </figure>
-                    <figure class="images">
+                    <figure class="img-portrait">
                         <img src="assets/portrait.png" alt="A hand drawn face emphasizing the eye">
                     </figure>
-                    <figure class="images">
+                    <figure class="img-mozaic">
                         <img src="assets/mozaic.jpeg" alt="Colored tiles on the side of a building with the view of the sky">
                     </figure>
                 </div>
