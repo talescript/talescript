@@ -275,10 +275,17 @@ nav ul a {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
+    min-height: 100vh;
 }
 
 .parallax {
     background-image: url('../assets/guy.jpeg');
+}
+
+@media all and (max-width: 45em) { 
+    .parallax {
+        background-image: url('../assets/s-guy.jpeg');
+    }
 }
 
 
