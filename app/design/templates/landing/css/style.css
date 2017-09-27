@@ -270,22 +270,18 @@ nav ul a {
  * Background image / Paralax
  */
 .parallax {
-    background-image: url('../assets/guy.jpeg');
-}
-
-@media only screen and (max-width: 500px) {
-    .parallax {
-        background-image: url('../assets/s-guy.jpeg');
-    }
-}
-
-.parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
 }
+
+.parallax {
+    background-image: url('../assets/guy.jpeg');
+}
+
+
 
 /**
  * Portofolio images
