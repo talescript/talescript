@@ -271,7 +271,7 @@ nav ul a {
  */
 .parallax {
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -284,7 +284,6 @@ nav ul a {
 @media all and (max-width: 40em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
-        min-height: 80vh;
     }
 }
 
