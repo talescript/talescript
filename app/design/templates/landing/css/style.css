@@ -289,7 +289,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    min-height: 100%;
 }
 
 .hero-img {
@@ -299,10 +299,7 @@ html {
 @media all and (max-width: 40em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
-        min-width: 100%;
-        min-height: 100%;
-        top: 0;
-        left: 0;
+        background-size: 100% 100%;
     }
 }
 
