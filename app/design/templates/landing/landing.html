@@ -80,19 +80,19 @@
                 <h2>Portofolio</h2>
                 <div class="grid-col-autofit margin-t">
                     <figure class="img-blue">
-                        <img src="assets/blue.jpeg" alt="House in ruins">
+                        <img data-src="assets/blue.jpeg" alt="House in ruins">
                     </figure>
                     <figure class="img-monkey">
-                        <img src="assets/monkey.jpeg" alt="Graffiti wall with a face of a monkey">
+                        <img data-src="assets/monkey.jpeg" alt="Graffiti wall with a face of a monkey">
                     </figure>
                     <figure class="img-park">
-                        <img src="assets/park.jpeg" alt="A girl sitting on a bench at the park">
+                        <img data-src="assets/park.jpeg" alt="A girl sitting on a bench at the park">
                     </figure>
                     <figure class="img-portrait">
-                        <img src="assets/portrait.png" alt="A hand drawn face emphasizing the eye">
+                        <img data-src="assets/portrait.png" alt="A hand drawn face emphasizing the eye">
                     </figure>
                     <figure class="img-mozaic">
-                        <img src="assets/mozaic.jpeg" alt="Colored tiles on the side of a building with the view of the sky">
+                        <img data-src="assets/mozaic.jpeg" alt="Colored tiles on the side of a building with the view of the sky">
                     </figure>
                 </div>
             </div>
@@ -149,14 +149,16 @@
         // Change backgroundAttachment to SCROLL on IOS
         function iOS() {
             var iDevices = [
+                // If the issue happen in other devices,
+                // add to list.
                 'iPhone Simulator',
                 'iPhone'
             ];
+
             var parallax = document.querySelector(".parallax");
             if (!!navigator.platform) {
                 while (iDevices.length) {
                     if (navigator.platform == iDevices.pop()) {
-                        // not detecting iOS
                         parallax.style.backgroundAttachment = "scroll";
                        
                     }
@@ -166,6 +168,15 @@
         }
 
         iOS();
+
+        // Load images
+        [].forEach.call(document.querySelectorAll('img[data-src]'),
+        function(img) {
+            img.setAttribute('src', img.getAttribute('data-src'));
+            img.onload = function() {
+                img.removeAttribute('data-src');
+            };
+        });
 
         
     </script>
