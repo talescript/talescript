@@ -1,8 +1,16 @@
-document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM fully loaded and parsed");
+    // Load images
+    [].forEach.call(document.querySelectorAll('img[data-src]'),
+        function (img) {
+            img.setAttribute('src', img.getAttribute('data-src'));
+            img.onload = function () {
+                img.removeAttribute('data-src');
+            };
+        });
 });
 
-window.addEventListener("load", function(event){
+window.addEventListener("load", function (event) {
     console.log("All resources finished loading");
 });
 

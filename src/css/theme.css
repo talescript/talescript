@@ -135,6 +135,15 @@ li .active {
     min-height: 100vh;
 }
 
+img {
+    opacity: 1;
+    transition: opacity 0.7s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
 /**
  * WebDesign Pricing Table
  * Reason table
