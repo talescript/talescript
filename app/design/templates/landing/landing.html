@@ -150,22 +150,24 @@
         function iOS() {
             var iDevices = [
                 'iPhone Simulator',
-                'Iphone'
+                'iPhone'
             ];
             var parallax = document.querySelector(".parallax");
             if (!!navigator.platform) {
                 while (iDevices.length) {
                     if (navigator.platform == iDevices.pop()) {
+                        // not detecting iOS
                         parallax.style.backgroundAttachment = "scroll";
                        
                     }
                     console.log("I've only noticed the issue on iOS. Works on Android");
-                    parallax.style.backgroundAttachment = "scroll";
                 }
             }
         }
 
         iOS();
+
+        
     </script>
 </body>
 
