@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
+
+/*
+ * Font families
+ */
+
+
+
+/**
+ * Base Styles
+ */
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+main section:not(:first-child) {
+    margin: 2em 0;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+section {
+    margin: 3em;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    font-weight: inherit;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.2;
+}
+
+/**
+ * Nav styles
+ */
+ul li,
+ul a {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+ul li a,
+ul a,
+.header-img a  {
+    text-decoration: none;
+}
+
+/**
+ * Readable limit
+ */
+.container {
+    display: grid;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
+}
+
+.container > * {
+    grid-column: main;
+}
+
+.container-full {
+    grid-column: full;
+}
+
+.sub-grid-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+@media all and (max-width: 768px) { 
+    .sub-grid-col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+}
+
+.center {
+    align-items: center;
+    justify-items: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.hero-color {
+    /* background: rgba(52, 152, 219, 0.4); */
+    background: rgba(194, 163, 149, 0.67);
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.hero-image {
+    background-image: url('img/l-work-desk.jpeg');
+}
+
+@media all and (max-width: 500px) { 
+    .hero-image {
+        background-image: url('img/s-work-desk.jpeg');
+    }
+}
+
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/**
+ * Container theme
+ */
+.container {
+    min-height: 90vh;
+}
+
+.max-width {
+    max-width: 18em;
+    margin-top: 4em;
+}
+
+.max-width p {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    color: #fff;
+    font-weight: 100;
+}
+
+ul li a {
+    color: #44619B;
+    background: #fff;
+    width: 13em;
+    height: 3em;
+    padding: 0.36rem 1.56rem;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border-radius: 0.375rem;
+}
+
+ul li a {
+    white-space: nowrap;
+}
+
+ul li a:hover {
+    color: #fff;
+    background: #44619B;
+    transition: all 0.5s, border, color;
+}
+
+.icon-grid a {
+    color: #fff;
+}
+
+/**
+ * FORM
+ */
+.form-container {
+    max-width: 30em;
+    padding: 4em;
+    background: #9CB1DA;
+    color: #fff;
+    border-radius: 6px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.form-input {
+    display: grid;
+    grid-template-columns: 2fr;
+    text-align: left;
+    margin: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    padding: 0.5em;
+    border-radius: 6px;
+}
+
+input[type="button"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    padding: 0 1.625rem;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 6px;
+    color: #000;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    padding: 1em;
+    transition: padding 200ms ease-in;
+}
+
+@media all and (max-width: 768px) { 
+    .form-input {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 0.5em;
+    }
+
+    input[type="button"] {
+        padding: 0 1.225rem;
+        font-size: 0.75em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border-radius: 0;
+    }
+}
+
+/**
+ * Form Modal
+ */
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    max-height: 100%;
+    animation: fadeIn 450ms ease;
+}
+
+.closed {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.50;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+}
+
+/**
+ * THEME
+ */
+body {
+    color: #252525;
+    font-weight: 700;
+}

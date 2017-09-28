@@ -1,246 +1,405 @@
-@charset "UTF-8";
+/**
+ * Browsers that don't support grid
+ */
+@supports not (display: grid) {
+    .container {
+      max-width: 38em;
+      margin: 0 auto;
+      padding: 0.8em;
+    }
+
+    .top-margin {
+        margin-top: 2em;
+    }
+}
 
 /**
- * CSS GRID
+ * Readable limit
  */
-
-
-/**
- * Influencer Section
- */
-.l-grid {
+.container {
     display: grid;
-    min-height: 45vh;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
 }
 
-.l-grid h1,
-header.l-grid p {
-    align-self: center;
-    justify-self: center;
-    text-align: center;
+.container > * {
+    grid-column: main;
 }
 
-header.l-grid h1,
-header.l-grid p {
-    max-width: 30rem;
-    padding: 0 1rem;
+.container-full {
+    grid-column: full;
 }
 
-header.l-grid h1 {
-    margin-top: 3rem;
-}
-
-
-/**
- * Blog Header section
- */
-.l-header-blog {
+.sub-grid-col-2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 15vh);
+    grid-template-columns: 1fr 1fr;
 }
 
-.l-header-blog h1 {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: center;
+@media all and (max-width: 768px) { 
+    .sub-grid-col-2 {
+        grid-template-columns: 1fr;
+    }
 }
 
-/**
- * Blog Main body section
- */
-.l-blog {
+.grid-center {
+    align-items: center;
+    justify-items: center;
+}
+
+.sub-grid-card-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-    grid-auto-rows: minmax(max-content, 1fr);
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 1.5em;
 }
 
-/* smartphones, iPhone, portrait 480x320 phones */ 
-@media screen and (max-width: 40em) {
-    .l-blog {
+@media all and (max-width: 768px) { 
+    .sub-grid-card-2 {
         grid-template-columns: 1fr;
     }
 }
 
 /**
- * Navigation bar
+ * Header layout
  */
-.l-nav {
+.header {
+    margin-top: 2em;
+    margin-bottom: 4.5em;
+    min-height: 40vh;
+}
+
+@media all and (max-width: 450px) { 
+    .header {
+        margin-top: 0;
+        margin-bottom: 5.5em;
+        padding-bottom: 1em;
+    }
+    .extra-m {
+        margin-bottom: 6.5em;
+    }
+}
+
+@media all and (max-width: 600px) { 
+    .header {
+        min-height: 60vh;
+    }
+
+}
+
+/**
+ * Section layout
+ */
+.footer-margin {
+    margin-top: 2em;
+}
+
+.top-margin {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.text-container {
+    margin: 0 auto;
+    max-width: 28em;
+}
+
+@media all and (max-width: 768px) { 
+    .section-margin {
+        margin-top: 1em;
+    }
+}
+
+/**
+ * Card layout
+ */
+.card-grid {
     display: grid;
-    /* Explicitly sets the rows of the grid */
-    grid-template-columns: 2fr repeat(4, 1fr);
-    grid-column-gap: 0.4em;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-gap: 1em;
 }
 
-@media screen and (min-width: 40.01em) {
-    .l-nav li:first-child {
-        text-align: left;
-        margin-left: 0.5em;
-    }
+.card {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
 }
 
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-@media (min-width: 30.063em) {  
-    .l-nav {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}  
- * Why do I have this? */
-
-/**
- * Header
- */
-.l-header {
+.card-b {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: center;
 }
 
-.l-header h1 {
-    margin-top: 2.5rem;
+.card-i {
+    display: grid;
+    grid-template-rows: 0.95fr 1fr;
+}
+
+@media all and (max-width: 768px) { 
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card,
+.card-i {
+     margin-bottom: 30px;
+     border-radius: 6px;
+     padding: 15px 30px;
+}
+
+.card-i {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    margin-bottom: 1em;
+}
+
+.card-footer,
+.center-text {
+    text-align: center;
+}
+
+.card-description {
+    margin: 0 0 10px;
+}
+
+.card-footer {
+    margin-top: 15px;
+}
+
+.card,
+.card-i {
+     background: #25547b;
+     color: #fff;
+     font-weight: 300;
 }
 
 /**
- * Main
+ * Template grid
  */
-main {
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 8em);
+    grid-gap: 32px;
+    background: #25547b;
+    padding: 2em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
 }
 
-/* Larger than tablet */
-@media (min-width: 750px) {
-    main {
+@media all and (max-width: 768px) { 
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-outer {
+    list-style-type: none;
+}
+
+.card-outer a {
+    text-decoration: none;
+}
+
+.card-t {
+    background: #fff;
+    color: #25547b;
+}
+
+.card-title-t {
+
+    padding: 6px 12px;
+    text-align: center;
+}
+
+/**
+ * Template grid Internet Explorer 
+ * EDGE
+ */
+ @supports not (display: grid) {
+    .template-grid {
+        margin: 0;
         display: grid;
-        grid-gap: 0.5vw;
-        max-width: 960px;
+        grid-template-columns: repeat(auto-fit, 224px);
+        grid-gap: 32px;
+    }
+
+    .card-outer {
+        display: inline-block;
+        margin-inline-end: 32px;
+        width: 224px;
+        border-radius: 3px;
+        height: 266px;
+        position: relative;
+    }
+
+    .card-outer a {
+        display: block;
+        height: 100%;
+        outline: none;
+        position: absolute;
+        width: 224px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .card-t {
+        height: 100%;
+        border-radius: 3px;
+        box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+        color: #25547b;
+    }
+
+    .card-outer .card-preview-image-outer {
+        position: relative;
+        height: 122px;
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+    }
+
+    .card-outer .card-preview-image-outer
+    .card-preview-image.loaded {
+        opacity: 1;
+    }
+
+    .card-outer .card-preview-image-outer
+    .card-preview-image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 1s;
+    }
+
+    .card-outer .card-details-t {
+        padding: 15px 16px 12px;
+    }
+
+    .card-outer .card-host-name {
+        color: #737373;
+        font-size: 10px;
+        padding-bottom: 4px;
+        text-transform: uppercase;
+    }
+
+    .card-outer .card-text-t {
+        overflow: hidden;
+        max-height: 78px;
+    }
+
+    .card-outer .card-title-t {
+        max-height: 57px;
+        overflow: hidden;
+    }
+
+    .card-outer .card-title-t {
+        margin: 0 0 2px;
+        font-size: 14px;
+        word-wrap: break-word;
+        line-height: 19px;
+    }
+
+    .card-outer .card-description-t {
+        font-size: 12px;
+        margin: 0;
+        word-wrap: break-word;
+        overflow: hidden;
+        line-height: 19px;
+    }
+}
+
+/**
+ * WebDesign Pricing Table
+ * Reason table
+ */
+ @supports not (display: grid) {
+    .pricing-table, 
+    .reason-table {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    .pricing-table div {
+        min-width: 30%;
+        padding: 0.5em;
+    }
+    .pricing-table .disclaimer {
+        padding: 0;
         margin: 0 auto;
     }
 }
 
-/**
- * section / cards
- */
-
-/**
- * Contact Form
- */
-.container {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-}
-
-.brand {
-    text-align: center;
-}
-
-.brand span {
-    color: white;
-}
-
-.grid-wrapper {
-    box-shadow: 0 0 20px 0 rgba(84, 106, 123, 0.7);
-}
-
-.grid-wrapper > * {
-    padding: 1em;
-}
-
-.company-info {
-    background-image: linear-gradient(to bottom, #243949 0%, #517fa4 100%);
-    color: white;
-}
-
-.company-info h3,
-.company-info ul {
-    text-align: center;
-    margin: 0 0 1rem 0;
-}
-
-.contact {
-    background: #f9feff;
-}
-
-.contact h3 {
-    color: #091b2a;
-}
-
-/* Form styles */
-.contact form fieldset {
+.pricing-table {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.contact form fieldset label {
-    display: block;
+@media all and (max-width: 768px) { 
+    .pricing-table {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
 }
 
-.contact form fieldset span {
+.personal-price h3,
+.grand-price h3,
+.business-price h3,
+.personal-price h5,
+.grand-price h5,
+.business-price h5 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/**
+ * Footer grid
+ */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.footer-grid section {
+    justify-self: center;
+}
+
+.footer-grid section h4 {
     margin: 0;
 }
 
-.contact form fieldset .full {
-    grid-column: 1 / 3;
-}
-
-.contact form fieldset button,
-.contact form fieldset input,
-.contact form fieldset textarea {
-    width: 100%;
-    border: 1px solid #546a7b;
-}
-
-.contact form fieldset button {
-    background: #517fa4;
-    color: #fff;
-    border: 0;
-    text-transform: uppercase;
-    padding: 0.5em;
-    font-weight: 600;
-}
-
-.contact form fieldset button:hover,
-.contact form fieldset button:focus {
-    background: #243949;
-    color: #fff;
-    outline: 0;
-    transition: background-color 1s ease-out;
-}
-
-#remove-style {
-    color: #fff;
-    text-decoration: none;
-}
-
-.company-info ul li i {
-    margin-right: 0.3rem;
-    margin-bottom: 0.5rem;
-}
-
-
-/* Large screens for Contact Form*/
-@media (min-width: 700px) {
-    .grid-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-    .grid-wrapper > * {
-        padding: 2em;
-    }
-
-    .company-info h3,
-    .company-info ul,
-    .brand {
-        text-align: left;
+@supports not (display: grid) {
+    .footer-grid {
+      display: flex;
+      justify-content: space-around;
     }
 }
-
 
 /**
- * Footer
+ * Form thanks
  */
+.form-thanks {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.form-thanks p {
+    max-width: 30em;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}

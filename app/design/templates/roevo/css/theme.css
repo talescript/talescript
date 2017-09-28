@@ -160,4 +160,16 @@
     .g-features-h {
         background-attachment: scroll;
     }
+<<<<<<< HEAD
+=======
+}
+
+.g-footer {
+    background-color: #eee;
+    color: #666666;
+}
+
+.g-footer ul a {
+    color: #000;
+>>>>>>> 1ad159e919e0e560a6ae6f5672c3e8f9464297b4
 }

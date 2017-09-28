@@ -1,115 +1,54 @@
-@charset "UTF-8";
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
 
 /**
- * Understanding the html vs body elements in css
- * http://phrogz.net/css/htmlvsbody.html
- *
- * https://css-tricks.com/html-vs-body-in-css/
+ * Base Styles
  */
 html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
     box-sizing: border-box;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
-/**
- * hmtl, body -> margin, padding set to 0 in normalize
- * Allows setting an element to be full height
- *
- * Setting min-height AND grid increases
- * the height of nav. The trick is to use
- * min-content when defining the rows
- */
-body {
-    min-height: 100vh;
-}
 
-/*
-* + * {
-    margin-top: 1.5rem;
-}
-*/
-
-p {
-    margin: 0 0 1rem 0;
-}
-
-/**
- * Lists, blockquote and table
- */
-dl {
-    margin-bottom: 1rem;
-}
-
-dt {
-    font-weight: 700;
-}
-
-dd {
-    margin: 0 0 1rem 0;
-}
-
-/**
- * Hanging Bullets
- * on small screens at least 2em's of left-padding
- * are needed on the body copy's container.
- */
-ul {
+html, body,
+nav, ul {
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.45;
+}
+
 /*
- * Might need to increase on smaller screens
+ * Font families
  */
-li li {
-    margin-right: 1em;
-}
+
+
 /**
- * May need to delete these since they are
- * already mentioned in Hanging Bullets above
+ * Add the correct font size in all browsers.
  */
-ol, ul {
-    list-style: none;
-}
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-    margin-bottom: 0;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+small {
+    font-size: 80%;
 }
 
 /**
- * Placeholders
+ * Remove the border on images inside links in IE 10-.
  */
-::-webkit-input-placeholder {
-    color: #091b2a;
-}
-::-moz-placeholder {
-    color: #091b2a;
-}
-:-ms-input-placeholder {
-    color: #091b2a;
-}
-:-moz-placeholder {
-    color: #091b2a;
+img {
+    border-style: none;
 }
 
 /* Responsive images */
@@ -118,27 +57,112 @@ img {
     max-width: 100%;
     vertical-align: middle;
     border: 0;
-/** For testing purposes, to be removed later
-    display: block;
-    max-height: 98vh;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    margin: 0.6rem auto;
-    padding: 0;
-*/
 }
 
-figure {
-    margin: 0 0 1rem 0;
+p {
+    margin-bottom: 1.3em;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
 }
 
 /**
- * Responsive elements
+ * Nav styles
  */
-canvas, iframe,
-video, svg, 
-select, textarea,
-input {
-    max-width: 100%;
+nav ul li,
+nav ul a {
+    list-style-type: none;
+    white-space: nowrap;
 }
+
+nav ul li a,
+nav ul a {
+    text-decoration: none;
+}
+
+/**
+ * Remove copyrigth list
+ */
+footer div section ul li {
+    list-style: none;
+}
+
+/**
+ * Navigation menu
+ */
+
+.is-hidden {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+        }
+} 
+
+.nav-toggle {
+    align-items: center;
+    display: flex;
+    padding-right: 0.75rem;
+}
+
+@media (min-width: 768px) {
+.nav-toggle {
+    display: none;
+    }
+}
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+.nav-item {
+    align-items: center;
+    display: flex;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav-left, .nav-right {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .nav-menu.nav-right {
+            display: none;
+            left: 0;
+            right: 0;
+            top: 100%;
+            position: absolute;
+            background-color: #25547b;
+            box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
+            z-index: 1;
+}
+
+.nav-menu.nav-right .nav-item {
+    border-top: 1px solid rgba(219, 219, 219, 0.5);
+    padding: 0.75rem;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: stretch;
+    min-height: 3.25rem;
+    position: relative;
+}  

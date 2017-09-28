@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
+
+/*
+ * Font families
+ */
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+/**
+ * Base Styles
+ */
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+main section:not(:first-child) {
+    margin: 2em 0;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    padding: 0;
+    line-height: 1.2;
+    font-weight: inherit;
+    margin-top: calc((1.414rem - 2rem) + 1.414rem);
+    margin-bottom: 0.5em;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.4;
+}
+
+body {
+    max-width: 35em;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/**
+ * Nav styles
+ */
+nav ul li,
+nav ul a {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+nav ul li a,
+nav ul a,
+.header-img a  {
+    text-decoration: none;
+}
+
+.header {
+    margin-top: 2rem;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+.more-space {
+    margin-top: 4em;
+}
+
+/**
+ * THEME
+ */
+body {
+    background: #234099;
+}
+
+/**
+ * GRID
+ */
+.container {
+    display: grid;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
+}
+
+.container > * {
+    grid-column: main;
+}
+
+.container-full {
+    grid-column: full;
+}
+
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.double-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+    grid-gap: 0.5em;
+    align-content: stretch;
+}
+
+@media all and (max-width: 768px) { 
+    .double-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/**
+ * PROFILE CARD
+ */
+.profile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 35%;
+    margin: auto;
+    text-align: center;
+    border-radius: 100px 0 100px 0;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    background-color: #23997b;
+}
+
+@media all and (max-width: 768px) { 
+    .profile {
+        max-width: 200px;
+    }
+}
+
+.div-b-marging {
+    margin-bottom: 2em;
+}
+
+.profile img {
+    border-radius: 100px 0 0 0;
+}
+
+.title {
+    color: #1e272f;
+}
+
+.card {
+    align-self: center;
+    justify-self: center;
+}
+
+.g-card {
+    background: #23997b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card img {
+    border-radius: 5px;
+}
+
+.card-bg {
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+/**
+ * Form
+ */
+form p {
+    text-align: center;
+    font-size: 1.4em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.form-input {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-gap: 1em;
+    margin: 1em;
+}
+
+.form-button {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+}
+
+.form-button button {
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+@media all and (max-width: 768px) { 
+    .form-input {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-button button,
+.form-input textarea,
+.form-input input[type=text],
+.form-input input[type=email] {
+    border-radius: 5px;
+    padding: 0.7em;
+} 
+
+.form-input input[type=text]:focus,
+.form-input input[type=email]:focus,
+.form-input textarea:focus {
+    background-color: #e6ebe0;
+}  

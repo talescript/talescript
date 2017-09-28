@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay closed"></div>
+    <div class="hero-image">
+        <div class="hero-color">
+            <header>
+                <div class="container center">
+                    <div>
+                        <h1>Without a Title</h1>
+                        <p>Click "Get in Touch" to see the form fade in.</p>
+                        <ul>
+                            <li><a href="#" class="open-b" id="open-b">Get in touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="modal close closed" id="modal">
+        <form action="" class="form-container center">
+            <h2>Get in Touch</h2>
+            <div class="form-input">
+                <label for="first_name"></label>
+                <input type="text" id="first_name" name="first_name" required placeholder="First name">
+            </div>
+            <div class="form-input">
+                <label for="surname"></label>
+                <input type="text" id="surname" name="surname" required placeholder="Last name">
+            </div>
+            <div class="form-input">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="email">
+            </div>
+            <div class="form-input">
+                <label for="message"></label>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+            </div>
+            <div class="form-button">
+                <input type="button" value="Submit">
+                <input type="button" value="Cancel" class="close-b">
+            </div>
+        </form>
+    </div>
+    <script>
+        var modal = document.querySelector("#modal");
+        var close = document.querySelector(".close-b");
+        var open = document.querySelector("#open-b");
+        var overlay = document.querySelector(".overlay");
+
+        close.addEventListener("click", function () {
+            modal.classList.toggle("closed");
+            overlay.classList.toggle("closed");
+        });
+
+        open.addEventListener("click", function () {
+            modal.classList.toggle("closed");
+            overlay.classList.toggle("closed");
+        })
+    </script>
+</body>
+
+</html>
