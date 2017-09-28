@@ -122,6 +122,8 @@
         </section>
     </main>
     <script>
+
+        // Navigation overlay - slide in left
         var nav = document.querySelector(".nav-toggle");
         var menu = document.querySelector(".nav-menu");
 
@@ -144,16 +146,17 @@
             }
         });
 
+        // Change backgroundAttachment to SCROLL on IOS
         function iOS() {
             var iDevices = [
                 'iPhone Simulator',
                 'Iphone'
             ];
-            var nav = document.querySelector(".parallax");
+            var parallax = document.querySelector(".parallax");
             if (!!navigator.platform) {
                 while (iDevices.length) {
                     if (navigator.platform == iDevices.pop()) {
-                        nav.style.backgroundAttachment = 'scroll';
+                        parallax.style.backgroundAttachment = "scroll";
                        
                     }
                     console.log("I've only noticed the issue on iOS. Works on Android");

@@ -298,7 +298,7 @@ html {
     background-image: url('../assets/guy.jpeg');
 }
 
-@media all and (max-width: 50em) { 
+@media only screen and (max-width: 50em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
     }
