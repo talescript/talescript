@@ -142,7 +142,26 @@
                 menu.style.display = "";
                 document.documentElement.style.marginLeft = "0";
             }
-        })
+        });
+
+        function iOS() {
+            var iDevices = [
+                'iPhone Simulator',
+                'Iphone'
+            ];
+            var nav = document.querySelector(".parallax");
+            if (!!navigator.platform) {
+                while (iDevices.length) {
+                    if (navigator.platform == iDevices.pop()) {
+                        nav.style.backgroundAttachment = 'scroll';
+                       
+                    }
+                    console.log("I've only noticed the issue on iOS. Works on Android");
+                }
+            }
+        }
+
+        iOS();
     </script>
 </body>
 
