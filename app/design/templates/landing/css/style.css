@@ -299,9 +299,9 @@ html {
 @media all and (max-width: 40em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
+        background-attachment: scroll;
     }
 }
-
 
 
 /**
