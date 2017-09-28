@@ -266,7 +266,7 @@ nav ul a {
     }
 }
 
-body {
+html {
     transition: margin-left .3s ease-in;
 }
 /**
@@ -349,6 +349,11 @@ body {
     background: #fafafa;
 }
 
+.contact {
+    min-height: 60%;
+    background: #2c4687;
+}
+
 figure {
     margin: 0;
 }
@@ -389,14 +394,50 @@ figure {
 
 .contact-form {
     width: 80%;
+    background: #F9F8F7;
+    border-radius: 6px;
+    color: #2C4687;
+}
+
+.g-gap {
+    margin-bottom: 0.5em;
+}
+
+fieldset {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 6px;
+}
+
+form button {
+    margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin: 0 2em;
+    padding: 0.5em;
+    border-radius: 2px;
+
 }
 
 @media only screen and (max-width: 50em) {
     .contact-form {
         width: 100%;
     }
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    legend {
+        display: none;
+    }
+    form {
+        padding: 1em;
+    }
 }
-
 
 .btn,
 .hero form label input[type="email"] {
@@ -407,6 +448,11 @@ figure {
     .btn.flat {
         margin-top: 1.5em;
     }
+}
+
+button.btn-color {
+    background: #2C4687;
+    color: #fff;
 }
 
 /**

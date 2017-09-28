@@ -99,39 +99,51 @@
         </section>
 
         <section id="contact" class="contact">
-            <div class="container grid-center margin-t">
-               
+            <div class="container grid-center">
+                <form action="" class="contact-form margin-t">
+                    <fieldset>
+                        <legend>Get in touch</legend>
+                        <div class="grid-col-2 g-gap">
+                            <label for="name">Name </label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="grid-col-2 g-gap">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="grid-col-2 g-gap">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
+                    </fieldset>
+                    <button class="btn flat btn-color" type="submit">Submit</button>
+                </form>
             </div>
         </section>
     </main>
     <script>
-
         var nav = document.querySelector(".nav-toggle");
         var menu = document.querySelector(".nav-menu");
 
-        nav.addEventListener('click', function(event){
+        nav.addEventListener('click', function (event) {
             if (menu.style.display == "") {
                 menu.style.display = "block";
                 menu.style.width = "250px";
-                document.body.style.marginLeft = "250px";
-                console.log("on");
+                document.documentElement.style.marginLeft = "250px";
             }
             else {
                 menu.style.display = "";
-                console.log("off");
+                document.documentElement.style.marginLeft = "0";
             }
         });
 
-        menu.addEventListener('click', function(event){
+        menu.addEventListener('click', function (event) {
             if (menu.style.display == "block") {
                 menu.style.display = "";
-                document.body.style.marginLeft = "0";
+                document.documentElement.style.marginLeft = "0";
             }
         })
-            
-
-
-
     </script>
 </body>
+
 </html>
