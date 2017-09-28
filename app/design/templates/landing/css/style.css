@@ -298,7 +298,7 @@ html {
     background-image: url('../assets/guy.jpeg');
 }
 
-@media all and (max-width: 40em) { 
+@media all and (max-width: 25em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
         background-attachment: scroll;
