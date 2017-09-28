@@ -299,7 +299,10 @@ html {
 @media all and (max-width: 40em) { 
     .hero-img {
         background-image: url('../assets/s-guy.jpeg');
-        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        top: 0;
+        left: 0;
     }
 }
 
