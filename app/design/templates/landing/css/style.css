@@ -396,14 +396,6 @@ img[data-src] {
     text-align: center;
 }
 
-
-@media only screen and (max-width: 50em) { 
-    .about,
-    .customer {
-        margin: 0.5em 0;
-    }
-}
-
 figure {
     margin: 0;
 }
