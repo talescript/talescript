@@ -98,6 +98,35 @@
             </div>
         </section>
 
+        <section class="customer">
+            <div class="container">
+                <h2>Customers</h2>
+                <div class="card-wrapper">
+                    <div class="card-item card-theme">
+                        <img src="http://i.pravatar.cc/300?img=11" alt="avatar">
+                        <div class="card-text">
+                            <h3>John Doe</h3>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="card-item card-theme">
+                        <img src="http://i.pravatar.cc/300?img=47" alt="avatar">
+                        <div class="card-text">
+                            <h3>Jane Doe</h3>
+                            <p>Photographer</p>
+                        </div>
+                    </div>
+                    <div class="card-item card-theme">
+                        <img src="http://i.pravatar.cc/300?img=5" alt="avatar">
+                        <div class="card-text">
+                            <h3>Kathy Doe</h3>
+                            <p>Programmer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div class="container grid-center">
                 <form action="" class="contact-form margin-t">
@@ -122,7 +151,6 @@
         </section>
     </main>
     <script>
-
         // Navigation overlay - slide in left
         var nav = document.querySelector(".nav-toggle");
         var menu = document.querySelector(".nav-menu");
@@ -160,7 +188,7 @@
                 while (iDevices.length) {
                     if (navigator.platform == iDevices.pop()) {
                         parallax.style.backgroundAttachment = "scroll";
-                       
+
                     }
                     console.log("I've only noticed the issue on iOS. Works on Android");
                 }
@@ -171,13 +199,12 @@
 
         // Load images
         [].forEach.call(document.querySelectorAll('img[data-src]'),
-        function(img) {
-            img.setAttribute('src', img.getAttribute('data-src'));
-            img.onload = function() {
-                img.removeAttribute('data-src');
-            };
-        });
-        
+            function (img) {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                img.onload = function () {
+                    img.removeAttribute('data-src');
+                };
+            });
     </script>
 </body>
 
