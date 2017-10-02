@@ -5,6 +5,15 @@
     font-size: calc(18px + 0.8vw);
 }
 
+body {
+    font-family: Courier New, Courier, monospace;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: Helvetica, sans-serif, Arial;
+}
+
 /**
  * Base Styles
  */
@@ -25,7 +34,6 @@ nav, ul {
 }
 
 body {
-    font-family: sans-serif;
     font-weight: 400;
     text-align: left;
     font-kerning: normal;
