@@ -212,7 +212,6 @@
 }
 
 .card-title-t {
-
     padding: 6px 12px;
     text-align: center;
 }
@@ -382,6 +381,29 @@
       display: flex;
       justify-content: space-around;
     }
+}
+
+/**
+ * Contact form, webdesign
+ * uppercase words
+ */
+.upperCase {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/**
+ * Contact Form, influencer, webdesign
+ */
+.flex-align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-align-center i {
+    margin-top: 1.5em;
 }
 
 /**
