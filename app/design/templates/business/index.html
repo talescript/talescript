@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="">Brand</a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Features</a>
+            </li>
+            <li>
+                <a href="">Showcase</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <header class="parallax hero-img">
+        <div class="overlay">
+            <div class="container inherit-height">
+                <div class="flex-col flex-center inherit-height">
+                    <h1 class="align-left">Create your landing page</h1>
+                    <p class="align-left">Build, publish and convert</p>
+                    <form class="align-left" action="">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="email">
+                        <button type="submit" class="button-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="background-secondary">
+                <div class="container">
+                    <div class="flex-col flex-center">
+                        <h2 class="text-center">We've created the product that will help your business look even better.</h2>
+                        <button class="button-callout">Buy Now</button>
+                        <p class="text-center">An increase in website loading time from 2 to 10 seconds, increased page abandonment rate by 38%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="text-center">
+                    <h2>Features picked to fit</h2>
+                    <p class="half-width">We've created the product that will help your business look even better.</p>
+                </div>
+
+                <div class="flex-row text-center">
+                    <div class="feature-list">
+                        <i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
+                        <h4>Responsive Design</h4>
+                        <p class="card-font">2.3 Billion smartphone users world wide.</p>
+                    </div>
+                    <div class="feature-list">
+                        <i class="fa fa-code fa-3x" aria-hidden="true"></i>
+                        <h4>Custom Code</h4>
+                        <p class="card-font">No frameworks. Written with love.</p>
+                    </div>
+                    <div class="feature-list">
+                        <i class="fa fa-html5 fa-3x" aria-hidden="true"></i>
+                        <h4>HTML, CSS and JS</h4>
+                        <p class="card-font">The building blocks of every Website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Personal</h3>
+            <h3>Grand</h3>
+            <h3>Business</h3>
+        </section>
+        <section>
+            templates
+        </section>
+        <form action="">
+            contact form
+        </form>
+    </main>
+    <footer>
+        footer
+    </footer>
+    <script>
+        // Change backgroundAttachment to SCROLL on IOS
+        function iOS() {
+            var iDevices = [
+                // If the issue happen in other devices,
+                // add to list.
+                'iPhone Simulator',
+                'iPhone'
+            ];
+
+            var parallax = document.querySelector(".parallax");
+            if (!!navigator.platform) {
+                while (iDevices.length) {
+                    if (navigator.platform == iDevices.pop()) {
+                        parallax.style.backgroundAttachment = "scroll";
+
+                    }
+                    console.log("I've only noticed the issue on iOS. Works on Android");
+                }
+            }
+        }
+
+        iOS();
+    </script>
+</body>
+
+</html>

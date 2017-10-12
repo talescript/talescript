@@ -1,0 +1,426 @@
+@charset 'utf-8';
+/***************************
+****************************
+Reset Styles
+****************************
+***************************/
+@import 'normalize.css';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+/**
+ * Typography
+ */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* sans serif */
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Serif */
+}
+
+nav ul li a {
+    font-family: Courier New, Courier, monospace;
+}
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+@media (max-width: 48em) {
+    h1 {
+        line-height: 1.1;
+    }
+}
+
+a {
+    color: #8dc63f;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(18px + 0.8vw);
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+.text-center {
+    text-align: center;
+}
+
+.inherit-height {
+    min-height: inherit;
+}
+
+.container {
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+@media (max-width: 48em) {
+    .container {
+        padding: 0.5em;
+    }
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 48em) {
+    .flex-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.align-left {
+    align-self: flex-start;
+}
+
+
+/***************************
+****************************
+Module Styles
+****************************
+***************************/
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+/**
+ * Background image / Paralax
+ */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80%;
+}
+
+.overlay {
+    background: rgba(93, 74, 68, 0.5);
+    min-height: 80vh;
+}
+
+.hero-img {
+    background-image: url('../assets/m-utah-mountain.jpeg');
+    min-height: 80vh;
+    color: #d7a875;
+}
+
+@media only screen and (max-width: 48em) { 
+    .hero-img {
+        background-image: url('../assets/s-utah-mountain.jpeg');
+    }
+}
+
+.feature-list {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.card-font {
+    font-size: 0.65em;
+}
+
+.half-width {
+    max-width: 20em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+/***************************
+****************************
+Theme Styles
+****************************
+***************************/
+
+/*Color List:
+- light blue = 00AEEF;
+- dark blue = 1C75BC
+- green = 8DC63F
+- dark green = 009444
+- orange = F7941E
+- dark orange = F15A29
+- brown = 594a42; */
+
+.background-primary {
+    background: #A46C5B;
+    color: #fff;
+}
+
+.background-secondary {
+    background: #2C3B57;
+    color: #fff;
+}
+
+.background-tertiary {
+    background: #D29065;
+    color: #fff;
+}
+
+.background-quaternary {
+    background: #a56cc1;
+}
+
+/**
+ * Font awesome icons
+ */
+.fa-mobile, .fa-html5 {
+    color: #ec7f37;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+.button.button-callout,
+button.button-callout,
+input[type="submit"].button-callout,
+input[type="reset"].button-callout,
+input[type="button"].button-callout {
+color: #fff;
+background-color: #ec7f37;
+border-color: #ec7f37; }
+.button.button-callout:hover,
+button.button-callout:hover,
+input[type="submit"].button-callout:hover,
+input[type="reset"].button-callout:hover,
+input[type="button"].button-callout:hover,
+.button.button-callout:focus,
+button.button-callout:focus,
+input[type="submit"].button-callout:focus,
+input[type="reset"].button-callout:focus,
+input[type="button"].button-callout:focus {
+color: #fff;
+background-color: #FF5A09;
+border-color: #FF5A09; }
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+@media (max-width: 48em) {
+    input {
+        margin-bottom: 1em;
+    }
+}
