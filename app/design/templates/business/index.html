@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
 </head>
 
 <body>
@@ -86,19 +87,96 @@
         </section>
 
         <section>
-            <h3>Personal</h3>
-            <h3>Grand</h3>
-            <h3>Business</h3>
+            <div class="flex-row space-between price-theme text-center">
+                <div class="columns">
+                    <ul class="price">
+                        <li class="price-header text-center">Personal</li>
+                        <li class="price-color">&dollar;9.99 &#47; month</li>
+                        <li>10GB Storage</li>
+                        <li>10 Emails</li>
+                        <li>5 Domains</li>
+                        <li>1GB Bandwidth</li>
+                        <li class="text-center">
+                            <a href="" class="button button-price">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul class="price">
+                        <li class="price-header text-center">Grand</li>
+                        <li class="price-color">&dollar;29.99 &#47; month</li>
+                        <li>25GB Storage</li>
+                        <li>100 Emails</li>
+                        <li>25 Domains</li>
+                        <li>5GB Bandwidth</li>
+                        <li class="text-center">
+                            <a href="" class="button button-price">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul class="price">
+                        <li class="price-header text-center">Business</li>
+                        <li class="price-color">&dollar;59.99 &#47; month</li>
+                        <li>100GB Storage</li>
+                        <li>500 Emails</li>
+                        <li>50 Domains</li>
+                        <li>10GB Bandwidth</li>
+                        <li class="text-center">
+                            <a href="" class="button button-price">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <section>
-            templates
+
+        <section class="form">
+            <div class="container">
+                <div class="form-col">
+                    <div class="form-help">
+                        <h3>Need Help?</h3>
+                        <p class="footer-text">Don't hesitate to ask us something.
+                            Email us directly at john@doe.com
+                            or call us at 1-555-5555.
+                        </p>
+                        <h3>FAQ</h3>
+                        <p class="footer-text">Dating back to the 1600's,
+                            thermometers were filled with Brandy instead of
+                            mercury.</p>
+                    </div>
+                    <form action="" class="form">
+                        <label for="name">Name</label>
+                        <input type="text">
+                        <label for="email">E&dash;mail</label>
+                        <input type="email" name="email" id="email">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                        <button type="submit" class="button button-callout"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
         </section>
-        <form action="">
-            contact form
-        </form>
     </main>
     <footer>
-        footer
+        <div class="background-secondary">
+            <div class="container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li>Brand</li>
+                    </ul>
+                    <ul class="footer-items">
+                        <li>Home</li>
+                        <li>Blog</li>
+                        <li>Portofolio</li>
+                    </ul>
+                    <ul class="footer-items">
+                        <li><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </footer>
     <script>
         // Change backgroundAttachment to SCROLL on IOS

@@ -67,12 +67,16 @@ h1, h2, h3 {
 }
 
 a {
-    color: #8dc63f;
+    color: #2b2937;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.nav {
+    background: #f6f2f2;
 }
 
 nav ul {
@@ -140,7 +144,7 @@ Layout Styles
 
 .flex-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 @media (max-width: 48em) {
@@ -174,6 +178,19 @@ Module Styles
 .nav-links {
     display: flex;
     justify-content: space-around;
+}
+
+li  {
+    padding: 0 0.5em;
+}
+
+@media (max-width: 48em) {
+    .nav-links  {
+        flex-wrap: wrap;
+    }
+    li {
+        padding: 0 0.2em;
+    }
 }
 
 /**
@@ -219,6 +236,92 @@ Module Styles
     margin-bottom: 2em;
 }
 
+/**
+ * Pricing Table
+ */
+.columns {
+    flex: 0 30%;
+}
+
+@media only screen and (max-width: 48em) { 
+    .columns {
+        flex: 0 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.space-between {
+    align-content: center;
+}
+
+.price-theme {
+    background-image: linear-gradient(to bottom, #9795f0 0%, #fbc8d4 100%);
+    padding: 2em;
+}
+
+.price {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0;
+    background: #2b2937;
+    color: #f6f2f2;
+}
+
+.price-header {
+    color: fff;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.price-color {
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+.price li {
+    list-style: none;
+    padding: 0.8em;
+    border-bottom: 1px solid #494a5a;
+}
+
+.price li a {
+    text-decoration: none;
+}
+
+li {
+    font-size: 0.7em;
+}
+
+/**
+ * Footer 
+ */
+.footer-text {
+    font-size: 0.7em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 48em) { 
+    .footer-items {
+        flex-direction: column;
+    }
+    .footer-items i {
+        margin: .3em 0;
+    }
+}
+
+
 /***************************
 ****************************
 Theme Styles
@@ -240,8 +343,8 @@ Theme Styles
 }
 
 .background-secondary {
-    background: #2C3B57;
-    color: #fff;
+    background: #2b2937;
+    color: #f6f2f2;
 }
 
 .background-tertiary {
@@ -338,8 +441,53 @@ input[type="button"].button-callout:focus {
 color: #fff;
 background-color: #FF5A09;
 border-color: #FF5A09; }
+
+.button.button-price,
+button.button-price,
+input[type="submit"].button-price,
+input[type="reset"].button-price,
+input[type="button"].button-price {
+color: #fff;
+background-color: #68657d;
+border-color: #68657d; }
+.button.button-price:hover,
+button.button-price:hover,
+input[type="submit"].button-price:hover,
+input[type="reset"].button-price:hover,
+input[type="button"].button-price:hover,
+.button.button-price:focus,
+button.button-price:focus,
+input[type="submit"].button-price:focus,
+input[type="reset"].button-price:focus,
+input[type="button"].button-price:focus {
+color: #fff;
+background-color: #4b485f;
+border-color: #4b485f; }
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.form-col {
+    display: flex;
+}
+
+.form {
+    flex: 2 1 0;
+}
+
+.form-help {
+    flex: 1 1 0;
+    order: 2;
+}
+
+@media only screen and (max-width: 48em) { 
+    .form-col {
+        flex-direction: column;
+    }
+}
+
+.form button.button {
+    display: block;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -423,4 +571,80 @@ form {
     input {
         margin-bottom: 1em;
     }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  width: 60%; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    width: 60%; }
+
+@media only screen and (max-width: 48em) { 
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+      height: 38px;
+      padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+      background-color: #fff;
+      border: 1px solid #D1D1D1;
+      border-radius: 4px;
+      box-shadow: none;
+      box-sizing: border-box; }
+    /* Removes awkward default styles on some inputs for iOS */
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea {
+      width: 100%; }
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+        width: 100%; }
 }
