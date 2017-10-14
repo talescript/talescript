@@ -482,6 +482,9 @@ border-color: #4b485f; }
     .form-col {
         flex-direction: column;
     }
+    .form {
+        margin-bottom: 1em;
+    }
 }
 
 .form button.button {
