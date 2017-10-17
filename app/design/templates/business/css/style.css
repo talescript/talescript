@@ -33,16 +33,23 @@ body {
  * Typography
  */
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* sans serif */
+    font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* sans serif */
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif; /* Serif */
+    font-family: 'Lato', Georgia, 'Times New Roman', Times, serif; /* Serif */
 }
 
 nav ul li a {
-    font-family: Courier New, Courier, monospace;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cursive {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: lightslategrey;
 }
 
 /***************************
@@ -51,7 +58,6 @@ Base Styles
 ****************************
 ***************************/
 body {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     line-height: 1.4;
 }
@@ -68,7 +74,7 @@ h1, h2, h3 {
 
 a {
     color: #2b2937;
-    font-weight: bold;
+    
 }
 
 a:hover {
@@ -117,6 +123,36 @@ img {
 Layout Styles
 ****************************
 ***************************/
+.grid-2, .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 48em) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.6em;
+}
+
+.product-image {
+    background-image: url('../assets/zeller.jpg');
+}
+
 .text-center {
     text-align: center;
 }
@@ -211,19 +247,19 @@ li  {
 }
 
 .overlay {
-    background: rgba(93, 74, 68, 0.5);
+    background: rgba(241, 212, 150, 0.5);
     min-height: 80vh;
 }
 
 .hero-img {
-    background-image: url('../assets/m-utah-mountain.jpeg');
+    background-image: url('../assets/skull.jpg');
     min-height: 80vh;
-    color: #d7a875;
+    color: #a0303d;
 }
 
 @media only screen and (max-width: 48em) { 
     .hero-img {
-        background-image: url('../assets/s-utah-mountain.jpeg');
+        background-image: url('../assets/skull.jpg');
     }
 }
 
@@ -233,13 +269,14 @@ li  {
 }
 
 .card-font {
-    font-size: 0.65em;
+    font-size: 0.85em;
 }
 
 .half-width {
     max-width: 20em;
     margin: 0 auto;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
 }
 
 /**
@@ -344,8 +381,7 @@ Theme Styles
 - brown = 594a42; */
 
 .background-primary {
-    background: #A46C5B;
-    color: #fff;
+    background: #f1d496;
 }
 
 .background-secondary {
@@ -359,14 +395,16 @@ Theme Styles
 }
 
 .background-quaternary {
-    background: #a56cc1;
+    background: #a0303d;
+    color: #fff;
 }
 
 /**
  * Font awesome icons
  */
-.fa-mobile, .fa-html5 {
-    color: #ec7f37;
+.fa-video-camera, .fa-pencil,
+.fa-television {
+    color: #a0303d;
 }
 
 .button,
@@ -390,7 +428,8 @@ input[type="button"] {
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 rgba(241, 212, 150, 0.5), 0 1px 1px rgba(0, 0, 0, 0.2); }
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -410,8 +449,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #a0303d;
+  border-color: #a0303d; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -447,6 +486,15 @@ input[type="button"].button-callout:focus {
 color: #fff;
 background-color: #FF5A09;
 border-color: #FF5A09; }
+
+.button.button-form,
+button.button-form,
+input[type="submit"].button-form,
+input[type="reset"].button-form,
+input[type="button"].button-form {
+color: #fff;
+background-color: #206a5d;
+border-color: #206a5d; }
 
 .button.button-price,
 button.button-price,
@@ -487,9 +535,6 @@ border-color: #4b485f; }
 @media only screen and (max-width: 48em) { 
     .form-col {
         flex-direction: column;
-    }
-    .form {
-        margin-bottom: 1em;
     }
 }
 
@@ -560,7 +605,8 @@ label > .label-body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-family: 'Roboto'; }
 input,
 textarea,
 select,
