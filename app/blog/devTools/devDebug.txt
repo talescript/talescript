@@ -1,0 +1,96 @@
+I was playing around with the CSS animation to see how I could make an element move in a circular motion. Least to say I found the solution in a blog post. But, when I was looking into the performance of the animation (something I'm learning), I opened up the Firefox Dev tools and started to record the performance. Just to start familiarizing myself with it.
+
+Looking into the call tree I noticed several strange js files getting called which was odd. There wasn't any Javascript code in my file. 
+
+![Firefox dev tools console showing mysterious js files getting called][1]
+
+I got my tin hat foil out and placed it on my head. Keep in mind that the picture you are looking at is after a reboot and is somewhat cleaner than what I had first seen, but it is quite close enough. I thought there was no way those Javascript files could show up, since my code was just this.
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title></title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="style.css" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <div class="square"></div>
+            </header>
+        </body>
+    </html>
+
+and for my **CSS**
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    header {
+        height: 100vh;
+        max-width: 30em;
+        margin: 0 auto;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .square {
+        animation-name: xAxis;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    }
+    
+    .square::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #000;
+        animation: yAxis 3s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    }
+    
+    @keyframes xAxis {
+      50% {
+          animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+          transform: translateX(100px);
+      }
+    }
+    
+    @keyframes yAxis {
+        50% {
+            animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+            transform: translateY(-100px);
+        }
+      }
+
+Let's begin with the troubleshooting. 
+
+I opened another browser, which happened to be an older version of FIrefox as well. The Call Tree was the way it should be. No external sources being called.
+
+![firefox dev tools without the js calls in the call tree][2]
+
+All those calls to youtube seemed strange. Remember, the original output was a lot messier than the first picture and, I also entered some questionable websites yesterday, from a different partition trying to find somewhere to watch the game between Germany and England. My tin foil hat was firmly placed on the top of my head.
+
+I asked myself what would happen if I open a new tab to youtube from the second browser?
+
+![firefox dev tools with the JS calls][3]
+
+All in all that didn't explain why it was happening on the first browser since none of my tabs were opened at Youtube. *Which for some odd reason pollutes all the other tabs with calls to home.*
+
+But I did have one tab opened with embedded videos and it was the videos for this course :)
+By navigating away to a page without the course videos, everything went back to normal. Well, besides keeping the FPS at a high rate for the CSS animation, which I still haven't figured out how to do.
+
+![Firefox Dev tools call tree clean of Javascript files][4]
+
+
+  [1]: https://edxuploads.s3.amazonaws.com/15104431784594706.png
+  [2]: https://edxuploads.s3.amazonaws.com/15104438178993975.png
+  [3]: https://edxuploads.s3.amazonaws.com/15104442867401014.png
+  [4]: https://edxuploads.s3.amazonaws.com/15104448612599605.png
