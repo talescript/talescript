@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="teichopsia">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <article>
+            <h2>How to install the latest version of Python on Debian</h2>
+            <p>There is an assumption that a Linux user tends to know what they are doing with their system, which is true to
+                a certain degree. But when we start out, when we are beginners, there is only one possible outcome; we need
+                to reinstall our OS. As we progress we lose that fear and end up writing blog posts about our experience
+                in hopes it will serve someone, or even our future self from some headache. It also helps to get a better
+                understanding of what one is doing.</p>
+
+            <p>This post takes an answer found on Stack Exchange on how to install Python on Debian. But what the answer lacks
+                as many other posts on any number of topics is an explanation from a beginners point of view. However, I
+                do make the assumption that whoever is reading this feels comfortable working from the command line. That
+                you are able to change directories, create files, update your system and so forth.</p>
+
+            <p>For the impatient, the following is the answer found on Stack Exchange. But, as I researched the topic, I found
+                a better way to build the dependencies which will be explained later on in this post.</p>
+
+            <p>tl;dr</p>
+
+            <pre>
+    <code>
+    sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev
+
+    wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
+    tar xvf Python-3.6.4.tar.xz
+    cd Python-3.6.4
+    ./configure --enable-optimizations
+    make -j2
+    sudo make altinstall
+    python3.6
+    </code>
+            </pre>
+
+
+            <h3>Preamble</h3>
+
+            <p>Despite that the title focuses on Debian, the following concepts apply to Linux in general. Besides some differences
+                which I'll mention (superficially) later on, you'll be able to find a link which will give the commands for
+                yum and DNF based systems to build the python dependencies.</p>
+
+            <p>If your system happens to be a fresh installation, chances are you don't have
+                <a href="https://wiki.debian.org/sudo">sudo access</a>. </p>
+
+            <p>
+                There are a few ideas I believe should be mentioned before installing software that isn't part of the package manager. https://en.wikipedia.org/wiki/Package_manager
+                Your first choice should always be to use your packet manager since they will automate the process in a consistent
+                manner.
+            </p>
+
+            <p>But since we are here to learn, we may end up breaking stuff. It is a good idea to have a separate
+                <a href="https://www.debian.org/releases/jessie/amd64/apcs03.html.en">partition</a>
+                for your home folder. The main reason is if something happens to corrupt the file system, or if we mess something up, generally
+                only one partition is affected. Which means you would only need to replace that portion of the system. Or
+                in our case, just delete the appropriate directories since we are going to specify where we are downloading
+                and installing the software.</p>
+
+            <p>Don't worry too much about it. As long as you have your data backed up, it is just a matter of reinstalling and/or
+                copying the files back over. If we don't break stuff, how else are we going to learn? Do keep in mind I'm
+                talking about your personal system and not a production server. But if you have no idea what I'm talking
+                about: research, research, research!</p>
+
+            <p>On the other hand, you could also use a
+                <a href="https://wiki.debian.org/SystemVirtualization">Virtual System</a> to experiment and play around with. If you happen to have the GNOME Desktop Environment,
+                you can install
+                <a href="https://packages.debian.org/jessie/gnome-boxes">gnome-boxes</a>. It' dead simple to use. A simple `sudo apt install gnome-boxes` to get the software. And
+                no, I didn't forget the "-get" in the previous command. It's a different
+                <a href="https://wiki.debian.org/Apt">tool</a>
+                that interacts with the packaging system.</p>
+
+            <p>You should also know there is no need to install the latest version of Python, or any other software for that
+                matter on your system. Even debian's wiki warns against suffering from the
+                <a href="https://wiki.debian.org/DontBreakDebian#Don.27t_suffer_from_Shiny_New_Stuff_Syndrome">shiny new stuff syndrome.</a>
+                Read the wiki and then come back. </p>
+
+            <!-- <p>Seriously, read it. And don't worry, I use rel="noopener noreferrer". https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/
+            </p> -->
+
+            <p>The only reason you would need to install a new version of a given software, besides security updates, is if
+                you need to use a feature that is only available in that software version. I remember this being another
+                point of confusion when I started to learn programming. But in this case it serves as a learning experience.</p>
+
+            <p>With the preamble over, we can start travelling down the rabbit hole.</p>
+
+            <h3>Build environment</h3>
+
+            <p>As I mentioned earlier, before we can compile the Python interpreter, we need to download some dependencies so
+                our system can build the software. The answer on Stack exchange suggested the following dependencies needed
+                to compile Python along with all their modules. If we keep searching, most answers contain a similar answer
+                to the one found originally, which didn't make sense to me. I could not find one that explained how do you
+                know which dependencies are needed?</p>
+
+            <pre>
+    <code>
+    sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev
+    </code>
+</pre>
+
+            <p>This was a tricky part and finding the answer took quite some time. Actually I was unable to find a central place
+                with a list of what is needed, but I did find a better way.</p>
+
+            <p>The CPython interpreter only needs a C compiler to be built. But, some extension modules will need
+                <a href="https://stackoverflow.com/a/2358835/8828479">development headers</a> for additional libraries. From my limited understanding, what this means is that
+                some of the modules
+                <a href="https://docs.python.org/3/py-modindex.html">(Python module index)</a> depend on C files necessary to compile the code against. C is a lower level programming
+                language.
+            </p>
+
+            <p>For example, the zlib python library for compression will need the zlib1g-dev to be able to be built and used.</p>
+
+            <p>In my search for a solution I found Python's
+                <a href=" https://devguide.python.org/setup/#build-dependencies">Developer Guide.</a>
+                An unlikely place a beginner would end up, IMO. As stated in their guide, fortunately each distribuition handles the heavy
+                lifting for us. Instead of listing each dependency for download and installation, we can ask the distribuition
+                to build the dependency against a given Python version</p>
+
+            <pre>
+    <code>
+    sudo apt-get build-dep python3.5
+    </code>
+</pre>
+
+            <p>
+                This command will handle finding, downloading and installing the dependencies needed to build python3.5. But if the given
+                distribution you are using doesn't have python3.5 by default, the command will fail. As it was my case since
+                I'm using Debian Jessie, which comes with Python3.4. Do not worry about the Python versions for now, I'll
+                address them later and also the case if there happens to be a missing dependency.
+            </p>
+
+            <p>
+                Obviously if you are on Debian Stretch, that command will run. But whatever python version your distribuition comes with
+                by default, just increase or decrease the python version. As it was my case, I ran
+            </p>
+
+            <pre>
+    <code>
+    sudo apt-get build-dep python3.4
+    </code>
+</pre>
+
+            <p>
+                Fortunately, when I finished building Python3.6, there weren't any dependencies missing. Tough, I would still like to be
+                able to know explicitely which dependencies are needed before initiating the build process. That will probably
+                come with experience.
+            </p>
+
+            <h3>Download</h3>
+
+            <p>Once we have the build dependencies we can download python and uncompress the file. Find a location where you
+                would like to uncompress it. Once that is done we move into the uncompressed directory. A key idea to remember
+                is the
+                <a href=" https://wiki.debian.org/FilesystemHierarchyStandard">File system Hierarchy</a>. It basically explains where things should go to maintain a certain semblance of
+                order.
+            </p>
+
+            <p>Keep in mind that wget will download in the current working directory. If you open the terminal and you are in
+                your home directory when you execute the command, the program will download in that directory. You can add
+                the "-P" prefix to specify where to download it to.
+                <code>`wget <file.txt> -P /path/to/folder`</code>, or manually change the directory where you would like the file to be downloaded.</p>
+
+            <pre>
+    <code>
+    wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
+    tar xvf Python-3.6.4.tar.xz
+    cd Python-3.6.4
+    </code>
+</pre>
+
+            <p>
+                We could install python in
+                <code>$HOME/.local/</code>, which is merely a personal preference from - I can't recall where I picked it from - place. You can read
+                more about it
+                <a href="https://unix.stackexchange.com/a/264495">here</a>. But if you prefer to let the build script handle it, which we will, we could either call it without
+                explicitely stating the location and the
+                <code>`make altinstall`</code> will install python in
+                <code>/usr/local/bin/</code> by default.
+            </p>
+
+            <pre>
+    <code>
+    ./configure --enable-optimizations
+    </code>
+</pre>
+
+            <p>As I mentioned, if you prefer to install it somewhere else, we can by explicitely stating the location of where
+                it should be built. And if that location is not in your $PATH, we will need to add it later on.</p>
+
+            <pre>
+    <code>
+    ./configure --prefix=/usr/.local/ --enable-optimizations
+    </code>
+</pre>
+
+            <p>
+                <code>./configure</code> does some checking before the software is installed. If all the checks pass it will create a makefile. It
+                can be called without any parameters. You can also call ./configure --help to find what other options can
+                be passed to it. Since Debian already comes with two versions of Python, we need to tell the configuration
+                script not to overwrite the systems primary python executable. </p>
+
+            <p>
+                While
+                <code>--enable-optimization</code> will give you an
+                <a href="https://github.com/python/cpython/blob/3.6/README.rst#build-instructions">optimized build</a> of python Whatever that means.
+            </p>
+
+            <p>Regarding where you should install it, well, that is up to you. It is your personal system but allow me to give
+                you a brief overview.
+                <code>/usr/bin</code> is for distribution-managed normal user programs.
+                <code>/usr/local/bin</code> is for normal user programs not managed by the distribution package manager, e.g. locally compiled packages.
+                You should not install them into
+                <code>/usr/bin</code> because future distribution upgrades may modify or delete them without warning. And here is a
+                <a href="http://lists.busybox.net/pipermail/busybox/2010-December/074114.html">bit of history</a> how all this came about.</p>
+
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Make_(software)">Make</a> is a build automation tool that automatically builds executable programs and libraries from source
+                code. If we were to ask the man pages regarding what options we can pass along make, we can find out what
+                the
+                <code>-j</code> option stands for.</p>
+
+            <pre>
+    <code>
+    -j [jobs], --jobs[=jobs]
+        Specifies  the  number of jobs (commands) to run simultaneously.  If there
+        is more than one -j option, the last one is effective.  If the  -j  option
+        is  given without an argument, make will not limit the number of jobs that
+        can run simultaneously.
+    </code>
+</pre>
+
+            <p>You can read more about how it is implemented
+                <a href="http://make.mad-scientist.net/papers/jobserver-implementation/">here</a>.
+            </p>
+
+            <p>The option passed into the make command will utilize up to 2 CPU cores. You can adjust the number passed into
+                the
+                <code>-j</code> flag to match the
+                <a href="https://devguide.python.org/setup/#unix">number of cores</a> you have on your machine.
+            </p>
+
+            <pre>
+    <code>
+    make -j2
+    </code>
+</pre>
+
+            <p>Up to this make command is all we need to have a working interpreter that can be run in place. The directory
+                where python was built:
+                <code>./python</code>
+            </p>
+
+            <p>In case you are wondering how the python interpreter was started by executing
+                <code>./python</code>, an important concept, which eludes me at times, is that in Linux
+                <a href="https://en.wikipedia.org/wiki/Everything_is_a_file">everything is a file</a>. In this case, that file in particular is an executable file which will invoke Python.</p>
+
+            <p>At this point we run altinstall which will avoid overwriting the systems python binary as opposed to the other
+                command I won't even mention. Finally you can run your new version of python by calling it along with it's
+                version number.</p>
+
+
+            <pre>
+    <code>
+    sudo make altinstall
+    python3.6</code>
+    </pre>
+
+            <p>To recap all the commands for a working built installed in
+                <code>/usr/local</code>:</p>
+
+            <pre>
+    <code>
+    sudo apt-get build-dep python3.4
+    ./configure --enable-optimizations
+    make -s -j2
+    sudo make altinstall
+    </code>
+    </pre>
+
+            <p>If you decide to change it's location and that location is not found in
+                <code>$PATH</code> as in the following example, you'll need to add it to your
+                <code>$PATH</code>
+            </p>
+
+            <pre>
+    <code>
+    sudo apt-get build-dep python3.4
+    ./configure --prefix=$HOME/.local/ --enable-optimizations
+    make -s -j2
+    make altinstall
+    </code>
+    </pre>
+
+            <p># needs to be added to the <a href="https://stackoverflow.com/a/14638025/8828479">path</a> in .bashrc file since the prefix is
+            <code>.local export PATH=$PATH:$HOME/.local/bin</code></p>
+
+            
+            </p>
+        </article>
+        <section>
+                <h4>SOURCES:</h4>
+                <a href="https://github.com/python/cpython/blob/3.6/README.rst https://github.com/pyenv/pyenv/wiki/Common-build-problems">Common build problems</a><br>
+                <a href="https://devguide.python.org/ https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">How to install Python 3.6</a><br>
+                <a href="https://danieleriksson.net/2017/02/08/how-to-install-latest-python-on-centos/">How to install the lastest version of Python on CentOS</a><br>
+                <a href="https://zeth.net/2014/01/11/building_python_from_source_on_debian_or_ubuntu.html">Building Python from source on Debian or Ubuntu</a>
+        </section>
+    </main>
+</body>
+
+</html>
