@@ -42,6 +42,21 @@ h4, h5, h6 {
 }
 
 /**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+    border-style: none;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+/**
  * Nav Styling
  */
 nav ul li {
@@ -51,4 +66,13 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+}
+
+/**
+ * Container / body style
+ */
+body {
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 2em 1em;
 }
