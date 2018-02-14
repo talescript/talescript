@@ -1,20 +1,4 @@
 /**
- * Typography
- */
-:root {
-    font-size: calc(16px + 0.6vw);
-}
-
-body {
-    font-family: sans-serif;
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-    font-family: serif;
-}
-
-/**
  * Base Styles
  */
 html {
@@ -40,3 +24,31 @@ body {
     line-height: 1.45;
 }
 
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(16px + 0.6vw);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/**
+ * Nav Styling
+ */
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}

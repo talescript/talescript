@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     <title>Talescript | How to install the latest version of Python on Debian</title>
     <meta name="description" content="How to install the latest version of Python on Debian. An in depth explanation of all the steps from a beginners point of view">
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../../">Home</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <article>
             <h2>How to install the latest version of Python on Debian</h2>
@@ -60,9 +68,10 @@
                 <a href="https://wiki.debian.org/sudo">sudo access</a>. </p>
 
             <p>
-                There are a few ideas I believe should be mentioned before installing software that isn't part of the <a href="https://en.wikipedia.org/wiki/Package_manager">package manager</a>.
-                Your first choice should always be to use your packet manager since they will automate the process in a consistent
-                manner.
+                There are a few ideas I believe should be mentioned before installing software that isn't part of the
+                <a
+                    href="https://en.wikipedia.org/wiki/Package_manager">package manager</a>. Your first choice should always be to use your packet manager since they will automate
+                    the process in a consistent manner.
             </p>
 
             <p>But since we are here to learn, we may end up breaking stuff. It is a good idea to have a separate
@@ -308,20 +317,26 @@
     </code>
     </pre>
 
-            <p>Since we specificed a different directory, we need to explicitely add the new installation to 
-                the <a href="https://stackoverflow.com/a/14638025/8828479">path</a> in .bashrc file since the prefix is
-            <code>.local export PATH=$PATH:$HOME/.local/bin</code></p>
+            <p>Since we specificed a different directory, we need to explicitely add the new installation to the
+                <a href="https://stackoverflow.com/a/14638025/8828479">path</a> in .bashrc file since the prefix is
+                <code>.local export PATH=$PATH:$HOME/.local/bin</code>
+            </p>
 
-            <p><strong>Note:</strong> There is one caveat. The <code>build-dep</code> may not add all the required dependencies. That will
-            depend if there are any new development headers. When you run <code>make</code> it will say if there any that
-            are missing.</p>
+            <p>
+                <strong>Note:</strong> There is one caveat. The
+                <code>build-dep</code> may not add all the required dependencies. That will depend if there are any new development headers. When
+                you run
+                <code>make</code> it will say if there any that are missing.</p>
         </article>
         <section>
-                <h4>SOURCES:</h4>
-                <a href="https://github.com/python/cpython/blob/3.6/README.rst https://github.com/pyenv/pyenv/wiki/Common-build-problems">Common build problems</a><br>
-                <a href="https://devguide.python.org/ https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">How to install Python 3.6</a><br>
-                <a href="https://danieleriksson.net/2017/02/08/how-to-install-latest-python-on-centos/">How to install the lastest version of Python on CentOS</a><br>
-                <a href="https://zeth.net/2014/01/11/building_python_from_source_on_debian_or_ubuntu.html">Building Python from source on Debian or Ubuntu</a>
+            <h4>SOURCES:</h4>
+            <a href="https://github.com/python/cpython/blob/3.6/README.rst https://github.com/pyenv/pyenv/wiki/Common-build-problems">Common build problems</a>
+            <br>
+            <a href="https://devguide.python.org/ https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">How to install Python 3.6</a>
+            <br>
+            <a href="https://danieleriksson.net/2017/02/08/how-to-install-latest-python-on-centos/">How to install the lastest version of Python on CentOS</a>
+            <br>
+            <a href="https://zeth.net/2014/01/11/building_python_from_source_on_debian_or_ubuntu.html">Building Python from source on Debian or Ubuntu</a>
         </section>
     </main>
 </body>
