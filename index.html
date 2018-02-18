@@ -11,9 +11,12 @@
     <meta name="description" content="Producing high quality front-end development for the small and medium business">
     <title>Talescript Web Development</title>
     <style>
-        section {
-            margin: 1em 0 1em 0;  /* REMEMBER TO DELETE */
-        }
+        section {                 /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ 
+            margin: 1em 0 1em 0;  /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */
+        } /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */
+          /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */
+          /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */
+          /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */ /* REMEMBER TO DELETE */
     </style>
 </head>
 <body>
@@ -25,9 +28,12 @@
         </ul>
     </nav>
     <header>
-        <h1>Front-end Web Developer.</h1>
-        <p>In an ocean of drops, make sure your website ripples the waves.</p>
-        <a href="">I need a website</a>
+        <div class="hero-img imgFadeIn"></div>
+        <div class="hero-txt">
+            <h1>Front-end Web Developer.</h1>
+            <p>In an ocean of drops, make sure your website ripples the waves.</p>
+            <a href="">I need a website</a>
+        </div>
     </header>
     <main>
         <section>
@@ -40,26 +46,46 @@
         <section>
             list some features offered:
 
-            Website Design: Each design is done from a blank canvas around the content to guide layout.
-            Front-end Development: We prefer coding from scratch instead of a framework. This
-                ensures there is no junk code.
-            Responsive Development: Using an effective grid system with progressive enhancement can ensure 
-                a great experience on new and older web browsers alike, well into the future.
-            Deployment: Most freelancers and small businesses don't need a complicated infrastructure.
-                We keep it simple by deploying a static website. Not only is it <b>safer</b>, it also 
-                <b>reduces costs</b>.
+            <h3>Website Design</h3>
+            <p>Each design is done from a blank canvas around the content to guide layout.</p>
+
+            <h3>Front-end Development</h3>
+            <p>We prefer coding from scratch instead of a framework. This ensures there is no junk code.</p>
+
+            <h3>Responsive Development</h3>
+            <p>Using an effective grid system with progressive enhancement can ensure a great 
+                experience on new and older web browsers alike, well into the future.</p>
+            
+            <h3>Deployment</h3>
+            <p>Most freelancers and small businesses don't need complicated infrastructure. We 
+                keep it simple by deploying a static website. Not only is it <b>safer</b>, it also 
+                <b>reduces costs</b>.</p>
+                
         </section>
         <section>
             Selected mockups / projects
             Show, don't tell
         </section>
         <section>
-            add a twitter widget / timeline / maybe - seems complicated.
+            About: maybe........ or widget
+            add a twitter widget / timeline
             
         </section>
         <section>
-            Get in touch
-            I'm currently available
+            <h3>Get in touch</h3>
+            <p>I'm currently available</p>
+            <form action="">
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" required>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="comment">How can we help?</label>
+                <textarea name="comment" id="comment" cols="25" rows="5" required></textarea>
+
+                <button type="submit">Contact</button>
+            </form>
         </section>
     </main>
     <aside class="articles">
@@ -82,5 +108,33 @@
 
         <br>link to github issues
     </footer>
+<!--     <script>
+        let prepend = '../assets/';
+        let imgs = ['green-orange-and-yellow-ink.jpg',
+                    'yellow-and-purple-ink-with-green.jpg',
+                    'red-ink-on-yellow-and-blue.jpg',
+                    'teal-with-red-drops.jpg',
+                    'pink-and-black-ink-drop.jpg',
+                    'purple-ink-cloud-with-black-drops.jpg'
+        ]
+        let img = document.querySelector('.hero-img');
+        
+        function slider(){
+           /*  imgs.forEach(function(el){
+                img.style.backgroundImage = 'url(' + prepend + el + ')';
+            }); */
+            var offset = 0;
+            (imgs).forEach(function(el, offset){
+                setTimeout(function(){
+                    img.classList.toggle('imgFadeIn');
+                    img.style.backgroundImage = 'url(' + prepend + el + ')';
+                    img.classList.toggle('imgFadeIn');
+                }, 2500 * offset);
+            });
+        }
+
+        slider();
+    
+    </script> -->
 </body>
 </html>

@@ -71,8 +71,89 @@ nav ul li a {
 /**
  * Container / body style
  */
-body {
+header, section {
     max-width: 38em;
     margin: 0 auto;
     padding: 2em 1em;
+}
+
+/**
+ * Form
+ */
+
+form {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    grid-gap: .5em;
+}
+
+@media (max-width: 720px){
+    /* design responsive grid */
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button {
+    grid-column: 2 / 3;
+}
+
+/**
+ * Theme
+ */
+/* 
+ #ffd500 orange / yellow
+*/
+body {
+    background: #ffd500;  /* fallback for old browsers */
+}
+
+nav {
+    background-color: #222222;
+}
+
+li a {
+    color: #fff;
+}
+
+header {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.hero-img {
+    /*
+    green-orange-and-yellow-ink.jpg
+    pink-and-black-ink-drop.jpg
+    purple-ink-cloud-with-black-drops.jpg
+    red-ink-on-yellow-and-blue.jpg
+    teal-with-red-drops.jpg
+    yellow-and-purple-ink-with-green.jpg
+    */
+    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 4px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    max-height: 50vh;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+.imgFadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
 }
