@@ -56,9 +56,29 @@ img {
     border: 0;
 }
 
+
+/**
+ * Container / body style
+ */
+ header, section {
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
 /**
  * Nav Styling
  */
+nav {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
 nav ul li {
     list-style: none;
 }
@@ -69,26 +89,76 @@ nav ul li a {
 }
 
 /**
- * Container / body style
+ * Header / Hero
  */
-header, section {
-    max-width: 38em;
-    margin: 0 auto;
-    padding: 2em 1em;
+header {
+/*     min-height: 70vh; */
+    display: grid;
+    grid-template-areas: 
+        "heroTxt"
+        "heroImg";
+    grid-gap: 1em;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+@media (min-width: 768px){
+    /* design responsive grid */
+    header {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "heroTxt heroImg"
+        "heroTxt heroImg";
+    }
+}
+
+.hero-text {
+    grid-area: heroTxt;
+}
+
+.hero-img {
+    grid-area: heroImg;
+}
+
+/**
+ * Hero animation / theme
+ */
+.hero-img {
+    /*
+    green-orange-and-yellow-ink.jpg
+    pink-and-black-ink-drop.jpg
+    purple-ink-cloud-with-black-drops.jpg
+    red-ink-on-yellow-and-blue.jpg
+    teal-with-red-drops.jpg
+    yellow-and-purple-ink-with-green.jpg
+    */
+    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+.imgFadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
 }
 
 /**
  * Form
  */
-
 form {
     display: grid;
     grid-template-columns: 5em 1fr;
     grid-gap: .5em;
-}
-
-@media (max-width: 720px){
-    /* design responsive grid */
 }
 
 label {
@@ -98,6 +168,21 @@ label {
 input,
 button {
     grid-column: 2 / 3;
+}
+
+@media (max-width: 720px){
+    /* design responsive grid */
+    form {
+        grid-template-columns: 1fr;
+    }
+    label {
+        grid-column: 1 / 3;
+    }
+    
+    input,
+    button {
+        grid-column: 1 / 3;
+    }
 }
 
 /**
@@ -116,44 +201,4 @@ nav {
 
 li a {
     color: #fff;
-}
-
-header {
-    min-height: 70vh;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.hero-img {
-    /*
-    green-orange-and-yellow-ink.jpg
-    pink-and-black-ink-drop.jpg
-    purple-ink-cloud-with-black-drops.jpg
-    red-ink-on-yellow-and-blue.jpg
-    teal-with-red-drops.jpg
-    yellow-and-purple-ink-with-green.jpg
-    */
-    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
-    background-size: cover;
-    border-radius: 4px;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    max-height: 50vh;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in;
-}
-
-.imgFadeIn {
-    animation: fadeIn 1s ease-in;
-}
-
-.hero-text {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    50% {opacity: 0.5;}
-    100% {opacity: 1;}
 }
