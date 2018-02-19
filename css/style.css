@@ -88,6 +88,14 @@ nav ul li a {
 }
 
 /**
+ * About section
+ */
+.about {
+    margin-top: 6em;
+    margin-bottom: 2.5em;
+}
+
+/**
  * Header / Hero
  */
 header {
@@ -197,6 +205,9 @@ header h1 {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
+    background: #9a51c0;
+    background: linear-gradient(#9a51c0, #333);  /* fallback for old browsers */
+    color: #fff;
 }
 
 /**
