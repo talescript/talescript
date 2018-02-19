@@ -58,7 +58,7 @@ img {
 /**
  * Container / body style
  */
- header > .hero-txt , section {
+ header > .hero-txt, section {
     max-width: 45em;
     margin: 0 auto;
     padding: 2em 1em;
@@ -70,7 +70,6 @@ img {
 nav {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-
 }
 
 nav ul {
@@ -91,8 +90,8 @@ nav ul li a {
  * About section
  */
 .about {
-    margin-top: 6em;
-    margin-bottom: 2.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 /**
@@ -205,9 +204,8 @@ header h1 {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    background: #9a51c0;
-    background: linear-gradient(#9a51c0, #333);  /* fallback for old browsers */
-    color: #fff;
+    background: #ffd500;
+    color: #000000;
 }
 
 /**
@@ -299,4 +297,11 @@ nav {
 
 li a {
     color: #fff;
+}
+
+/**
+ * Article Grid and styling
+ */
+.articles {
+    
 }
