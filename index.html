@@ -25,11 +25,11 @@
             </li>
         </ul>
     </nav>
-    <header>
+    <header class="hero">
         <div class="hero-img imgFadeIn"></div>
         <div class="hero-txt">
             <h1>Front-end Web Developer.</h1>
-            <p>In an ocean of drops, let your website ripples the waves.</p>
+            <p>In an ocean of drops, let your website ripple the waves.</p>
             <a href="" class="cta btn">I need a website</a>
         </div>
     </header>
@@ -90,24 +90,25 @@
             </form>
         </section>
     </main>
-    <aside class="articles">
-        <h2>Latest articles</h2>
-        <a href="blog/articles/how_to_install_python.html">How to install the latest version of Python on Debian</a>
-    </aside>
     <footer>
-        twitter, github &copy; 2017
-        <script type="text/javascript">
-            // Updates the date automatically
-            // document.write(monthNames[date.getMonth()] + " " + date.getDay() + ", " + date.getFullYear());
-            /* let monthNames = ["January", "February", "March", "April", "May", "June",
-                                "July", "August", "September", "October", "November", "December"
-                                ]; */
-            let date = new Date();
-            document.write("-" + date.getFullYear());
-        </script>
-        <span>Talescript</span>
-
-        <br>link to github issues
+        <ul class="footer-nav">
+            <li><a href="https://twitter.com/talescript">@talescript</a></li>
+            <li><a href="https://github.com/talescript">Github</a></li>
+            <li><a href="https://github.com/talescript/talescript/issues">Github Issues</a></li>
+        </ul>
+        <div class="copyright">
+            &copy; 2017
+            <script type="text/javascript">
+                // Updates the date automatically
+                // document.write(monthNames[date.getMonth()] + " " + date.getDay() + ", " + date.getFullYear());
+                /* let monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December"
+                                    ]; */
+                let date = new Date();
+                document.write("-" + date.getFullYear());
+            </script>
+            Talescript
+        </div>
     </footer>
     <!--     <script>
         let prepend = '../assets/';

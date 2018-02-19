@@ -11,6 +11,15 @@ html {
     box-sizing: inherit;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+
 html,
 nav, ul {
     margin: 0;
@@ -33,7 +42,6 @@ body {
 
 body {
     font-family: 'Raleway', sans-serif;
-    
 }
 
 h1, h2, h3,
@@ -58,7 +66,7 @@ img {
 /**
  * Container / body style
  */
- header > .hero-txt, section {
+ .hero > .hero-txt, section {
     max-width: 45em;
     margin: 0 auto;
     padding: 2em 1em;
@@ -77,7 +85,8 @@ nav ul {
     justify-content: space-around;
 }
 
-nav ul li {
+nav ul li,
+.footer-nav li {
     list-style: none;
 }
 
@@ -97,7 +106,7 @@ nav ul li a {
 /**
  * Header / Hero
  */
-header {
+.hero {
     display: grid;
     grid-template-areas: 
         "heroTxt"
@@ -105,13 +114,13 @@ header {
     grid-gap: 1em;
 }
 
-header h1 {
+h1 {
     margin-top: 0;
 }
 
 @media (min-width: 768px){
     /* design responsive grid */
-    header {
+    .hero {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
         "heroTxt heroImg"
@@ -306,6 +315,46 @@ li a {
 /**
  * Article Grid and styling
  */
-.articles {
+/* .articles {
     
+} */
+
+/**
+ * Footer
+ */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    padding: 1em;
+    background: #333;
+    color: #7f7e7e;
+}
+
+footer > * {
+    max-width: 45em;
+    margin: 0 auto;
+}
+
+/**
+ * Sticky Footer
+ */
+ body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }

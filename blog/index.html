@@ -15,17 +15,50 @@
 </head>
 <nav>
     <ul>
-        <li><a href="../">Talescript</a></li>
-        <li><a href="/blog/index.html">Blog</a></li>
+        <li>
+            <a href="../">Talescript</a>
+        </li>
+        <li>
+            <a href="/blog/index.html">Blog</a>
+        </li>
     </ul>
 </nav>
+
 <body>
+    <header>
+        <h1>Latest articles</h1>
+        <p>Some text and what not</p>
+    </header>
+    <main>
+        <article class="articles">
+            <a href="articles/how_to_install_python.html">How to install the latest version of Python on Debian</a>
+        </article>
+    </main>
     <footer>
-        &copy; 2017<script type="text/javascript">
-            let date = new Date();
-            document.write("-" + date.getFullYear());
-        </script>
-        <span>Talescript</span>
+        <ul class="footer-nav">
+            <li>
+                <a href="https://twitter.com/talescript">@talescript</a>
+            </li>
+            <li>
+                <a href="https://github.com/talescript">Github</a>
+            </li>
+            <li>
+                <a href="https://github.com/talescript/talescript/issues">Github Issues</a>
+            </li>
+        </ul>
+        <div class="copyright">
+            &copy; 2017
+            <script type="text/javascript">
+                // Updates the date automatically
+                // document.write(monthNames[date.getMonth()] + " " + date.getDay() + ", " + date.getFullYear());
+                /* let monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December"
+                                    ]; */
+                let date = new Date();
+                document.write("-" + date.getFullYear());
+            </script> Talescript
+        </div>
     </footer>
 </body>
+
 </html>

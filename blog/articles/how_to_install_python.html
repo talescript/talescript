@@ -19,7 +19,9 @@
         <ul>
             <li>
                 <a href="../../">Talescript</a>
-                <li><a href="/blog/index.html">Blog</a></li>
+                <li>
+                    <a href="/blog/index.html">Blog</a>
+                </li>
             </li>
         </ul>
     </nav>
@@ -28,7 +30,7 @@
     </header>
     <main>
         <article>
-            
+
             <p>There is an assumption that Linux users tend to know what they are doing with their system, which is true to
                 a certain degree. But when we start out, when we are beginners, there is only one possible outcome; we need
                 to reinstall our OS. As we progress we lose that fear and end up writing blog posts about our experience
@@ -60,7 +62,7 @@
     python3.6
     </code>
             </pre>
-    <a href="https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">Stack Exchange - How to install Python 3.6</a>
+            <a href="https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">Stack Exchange - How to install Python 3.6</a>
 
 
             <h3>Preamble</h3>
@@ -74,9 +76,8 @@
 
             <p>
                 There are a few ideas I believe should be mentioned before installing software that isn't part of the
-                <a
-                    href="https://en.wikipedia.org/wiki/Package_manager">package manager</a>. Your first choice should always be to use your packet manager since they will automate
-                    the process in a consistent manner.
+                <a href="https://en.wikipedia.org/wiki/Package_manager">package manager</a>. Your first choice should always be to use your packet manager since they will automate
+                the process in a consistent manner.
             </p>
 
             <p>But since we are here to learn, we may end up breaking stuff. It is a good idea to have a separate
@@ -335,8 +336,10 @@
         </article>
         <section>
             <h4>SOURCES:</h4>
-            <a href="https://devguide.python.org/">Python Developer’s Guide</a><br>
-            <a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems">Common build problems</a><br>
+            <a href="https://devguide.python.org/">Python Developer’s Guide</a>
+            <br>
+            <a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems">Common build problems</a>
+            <br>
             <a href="https://github.com/python/cpython/blob/3.6/README.rst">Python version 3.6.4</a>
             <br>
             <a href="https://unix.stackexchange.com/questions/332641/how-to-install-python-3-6/332658#332658">How to install Python 3.6</a>
@@ -347,11 +350,29 @@
         </section>
     </main>
     <footer>
-        &copy; 2017<script type="text/javascript">
-            let date = new Date();
-            document.write("-" + date.getFullYear());
-        </script>
-        <span>Talescript</span>
+        <ul class="footer-nav">
+            <li>
+                <a href="https://twitter.com/talescript">@talescript</a>
+            </li>
+            <li>
+                <a href="https://github.com/talescript">Github</a>
+            </li>
+            <li>
+                <a href="https://github.com/talescript/talescript/issues">Github Issues</a>
+            </li>
+        </ul>
+        <div class="copyright">
+            &copy; 2017
+            <script type="text/javascript">
+                // Updates the date automatically
+                // document.write(monthNames[date.getMonth()] + " " + date.getDay() + ", " + date.getFullYear());
+                /* let monthNames = ["January", "February", "March", "April", "May", "June",
+                                    "July", "August", "September", "October", "November", "December"
+                                    ]; */
+                let date = new Date();
+                document.write("-" + date.getFullYear());
+            </script> Talescript
+        </div>
     </footer>
 </body>
 
