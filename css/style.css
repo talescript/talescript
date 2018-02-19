@@ -250,6 +250,14 @@ button {
     }
 }
 
+.form {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+}
+
+.form h3 {
+    text-align: center;
+}
 
 /**
 * CTA / Button
