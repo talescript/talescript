@@ -44,9 +44,6 @@ h4, h5, h6 {
 /**
  * Remove the border on images inside links in IE 10-.
  */
-img {
-    border-style: none;
-}
 
 /* Responsive images */
 img {
@@ -54,6 +51,7 @@ img {
     max-width: 100%;
     vertical-align: middle;
     border: 0;
+    border-style: none;
 }
 
 
@@ -138,7 +136,7 @@ header h1 {
     background-size: cover;
     min-height: 50vh;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 2s ease-in;
 }
 
 .imgFadeIn {
@@ -149,6 +147,56 @@ header h1 {
     0% {opacity: 0;}
     50% {opacity: 0.5;}
     100% {opacity: 1;}
+}
+
+/**
+ * Features grid
+ */
+
+/* Fallback */
+.features {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features article {
+    margin: 1rem 0;
+}
+
+@supports (display: grid) {
+    .features {
+        max-width: 1200px;
+    }
+
+    .features article {
+        margin: 0;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+    }
+}
+
+.features article {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Or img, in case I add either one */
+.features article svg {
+    order: -1;
+    align-self: center;
+}
+
+/**
+ * Features styling
+ */
+ .features article {
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
 }
 
 /**
@@ -209,6 +257,12 @@ button {
     color: #fff;
     text-rendering: optimizeLegibility;
     transition: background 0.25s;
+}
+
+@media (max-width: 720px){
+    .cta {
+        font-size: 16px;
+    }
 }
 
 .cta:hover {
