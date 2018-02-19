@@ -137,35 +137,6 @@ h1 {
 }
 
 /**
- * Hero animation / theme
- */
-.hero-img {
-    /*
-    green-orange-and-yellow-ink.jpg
-    pink-and-black-ink-drop.jpg
-    purple-ink-cloud-with-black-drops.jpg
-    red-ink-on-yellow-and-blue.jpg
-    teal-with-red-drops.jpg
-    yellow-and-purple-ink-with-green.jpg
-    */
-    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
-    background-size: cover;
-    min-height: 50vh;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 2s ease-in;
-}
-
-.imgFadeIn {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    50% {opacity: 0.5;}
-    100% {opacity: 1;}
-}
-
-/**
  * Features grid
  */
 
@@ -207,17 +178,6 @@ h1 {
 }
 
 /**
- * Features styling
- */
- .features article {
-    padding: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
-    background: #ffd500;
-    color: #000000;
-}
-
-/**
  * Form
  */
 form {
@@ -250,13 +210,49 @@ button {
     }
 }
 
-.form {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2em;
+/**
+ * Article Grid and styling
+ */
+/* .articles {
+    
+} */
+
+/**
+ * Footer
+ */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
 }
 
-.form h3 {
-    text-align: center;
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    padding: 1em;
+}
+
+footer > * {
+    max-width: 45em;
+    margin: 0 auto;
+}
+
+/**
+ * Sticky Footer
+ */
+ body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 /**
@@ -297,7 +293,6 @@ button {
     transition: background 0.25s;
 }
 
-
 /**
  * Theme
  */
@@ -321,48 +316,73 @@ li a {
 }
 
 /**
- * Article Grid and styling
+ * Hero animation / theme
  */
-/* .articles {
-    
-} */
+ .hero-img {
+    /*
+    green-orange-and-yellow-ink.jpg
+    pink-and-black-ink-drop.jpg
+    purple-ink-cloud-with-black-drops.jpg
+    red-ink-on-yellow-and-blue.jpg
+    teal-with-red-drops.jpg
+    yellow-and-purple-ink-with-green.jpg
+    */
+    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in;
+}
+
+.imgFadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
 
 /**
- * Footer
+ * Features styling
  */
-.footer-nav {
-    display: flex;
-    justify-content: space-between;
+ .features article {
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    background: #ffd500;
+    color: #000000;
 }
 
-.copyright {
-    display: flex;
-    justify-content: flex-end;
+/**
+ Form Style
+ */
+.form {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
 }
 
+input, textarea {
+    box-sizing: border-box;
+}
+
+
+.form h3 {
+    text-align: center;
+}
+
+/**
+ * Footer Style
+ */
 footer {
-    padding: 1em;
     background: #333;
     color: #7f7e7e;
 }
 
-footer > * {
-    max-width: 45em;
-    margin: 0 auto;
-}
-
 /**
- * Sticky Footer
+ * Bold text
  */
- body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-footer {
-    flex-shrink: 0;
+.bold-txt {
+    font-weight: bolder;
 }
