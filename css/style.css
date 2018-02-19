@@ -287,8 +287,12 @@ button {
 /* 
  #ffd500 orange / yellow
 */
+body {
+    background: #fff8e7;
+}
+
 header {
-    background: linear-gradient(#ffd500, #fff);  /* fallback for old browsers */
+    background: linear-gradient(#ffd500, #fff8e7);  /* fallback for old browsers */
 }
 
 nav {
