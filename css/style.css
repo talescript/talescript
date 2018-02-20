@@ -152,7 +152,7 @@ h1 {
 
 @supports (display: grid) {
     .features {
-        max-width: 1200px;
+        max-width: 45em;
     }
 
     .features article {
@@ -214,11 +214,8 @@ button {
  * Blog / Article Grid
  */
 .blog-grid {
+    max-width: 600px;
     margin: 0 auto;
-    max-width: 45em;
-}
-
-.blog-grid {
     padding: 0.5em;
 }
 
@@ -228,9 +225,9 @@ button {
 
 @supports (display: grid) {
     .blog-grid {
-        max-width: none;
-        margin: 0;
+        max-width: 45em;
     }
+
     .blog-grid .articles {
         margin: 0;
     }
@@ -238,7 +235,7 @@ button {
     .blog-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 0.5em;
+        grid-gap: 1em;
     }
 }
 
@@ -250,6 +247,10 @@ button {
 .articles time {
     align-self: end;
 }
+
+/**
+ * Blog article placement
+ */
 
 /**
  * Footer
@@ -390,7 +391,7 @@ li a {
 }
 
 /**
- * Articles styling
+ * Articles / blog styling
  */
 .articles a {
     text-decoration: none;
@@ -413,6 +414,14 @@ li a {
 .box:hover {
     background: #9a51c0;
     transition: 0.5s;
+}
+
+.empty-box {
+    height: 25px;
+    width: 50px;
+    background: purple;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 
 /**
