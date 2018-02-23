@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Slanted</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="header-wrapper">
@@ -15,24 +17,36 @@
             <div class="links">
                 <p>Navigation Menu</p>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portofolio</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Portofolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
                 </ul>
             </div>
             <b class="red-line"></b>
-            <p class="more-examples"><a href="#form">Get in Touch</a></p>
+            <p class="more-examples">
+                <a href="#form">Get in Touch</a>
+            </p>
         </div>
     </header>
     <main>
         <section class="about">
             <p>
-            We create functional, responsive websites from scratch using
-            <span class="bold-txt">modern</span>
-            best practices for freelancers and small businesses. At the same time we enjoy exploring and learning something new with
-            every project.
+                We create functional, responsive websites from scratch using
+                <span class="bold-txt">modern</span>
+                best practices for freelancers and small businesses. At the same time we enjoy exploring and learning something new with
+                every project.
             </p>
         </section>
 
@@ -64,30 +78,33 @@
         </section>
     </main>
 
-    <section class="form" id="form">
-        <div class="form-header">
-            <h3 class="form-title">The usual contact form</h3>
+    <section class="form-container" id="form">
+        <div class="form">
+            <div class="form-header">
+                <h3 class="form-title">Contact us</h3>
+            </div>
+            <form name="Web Design" action="thank-you" netlify netlify-honeypot="bot-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button class="form-cta" type="submit">Contact</button>
+                <p style="display:none;">
+                    <label>You shouldn't fill this out:
+                        <input name="bot-field">
+                    </label>
+                </p>
+            </form>
         </div>
-        <form name="Web Design" action="thank-you" netlify netlify-honeypot="bot-field">
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" required>
-
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" required>
-
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button class="form-cta" type="submit">Contact</button>
-            <p style="display:none;">
-                <label>You shouldn't fill this out:
-                    <input name="bot-field">
-                </label>
-            </p>
-        </form>
     </section>
     <footer>
 
     </footer>
 </body>
+
 </html>

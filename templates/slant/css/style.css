@@ -334,40 +334,9 @@ main {
 }
 
 /**
-* FORM
-*/
-.center-element {
-    display: flex;
-    justify-content: center;
-}
-
-/**
- * Form
- */
-.form {
-    max-width: 38em;
-    margin: 0 auto;
-}
-
-.form h3 {
-    text-align: center;
-}
-
-.form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.form button {
-    margin: 1em 0;
-}
-
-
-/**
  * Styles / THEME
  */
-.features article:first-child {
+ .features article:first-child {
     background: #699EB5;
     color: #fff;
 }
@@ -392,26 +361,132 @@ main {
 }
 
 /**
- * Form
- */
-
-.form-header {
-    min-height: 30vmin;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 100%, 
-                    rgba(0, 0, 0, 0.3) 100%), 
-                    url("../assets/snack-bar.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+* FORM
+*/
+.center-element {
+    display: flex;
+    justify-content: center;
 }
 
+/**
+ * Form
+ */
+.form h3 {
+    text-align: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form button {
+    margin: 1em auto;
+}
+
+/**
+ * Form
+ */
 .form-header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 2em 0;
 }
+
+.form-header {
+    min-height: 20vmin;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 100%, 
+                    rgba(0, 0, 0, 0.4) 100%), 
+                    url("../assets/snack-bar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.form-container {
+    max-width: 40em;
+    margin: 4em auto;
+}
+
+.form {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 12px 12px 0 0;
+}
+
+@media (max-width: 900px) {
+    .form {
+        margin: 1em;
+    }
+}
+
+/* .form form {
+    background-color: #699EB5;
+    padding: 5px 5px;
+} */
 
 .form-title {
     color: #fff;
+    font-size: 40px;
+}
+
+form label {
+    margin: 20px 0 15px 0;
+    font-weight: normal;
+}
+
+.form form {
+    padding: 0 15px;
+    border-radius: 0 0 12px 12px;
+    background: #fff8e7;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #696969;
+}
+
+textarea {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #696969;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.form-cta {
+    font-size: 18px;
+    padding: .5em 1em;
+    border: transparent;
+    border-radius: 2px;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    background: #D95647;
+    color: #fff;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.form-cta:hover {
+    background: rgb(190, 87, 75);
+}
+
+form button {
+    margin: 0 auto;
+}
+
+/**
+ * Cosmic Latte
+ color: #fff8e7;
+ */
+
+footer {
+    margin-top: 5em;
 }
