@@ -289,6 +289,129 @@ header a {
  * Styling for the rest of the page
  */
 main {
-    max-width: 45em;
+    max-width: 40em;
+    margin: 4em auto;
+}
+
+@media (max-width: 900px) {
+    main {
+        margin: 1em;
+    }
+}
+
+.about {
+    margin: 4em 0;
+}
+
+@supports (display: grid) {
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+    }
+
+    @media (min-width: 900px) {
+        .features {
+            grid-gap: 0.2em;
+        }
+
+        /* .features article:first-child {
+            grid-row: 1 / span 2;
+        } */
+    
+        .features article:last-child {
+            grid-column: 2 / span 2;
+            
+        }
+    }
+
+    .features article {
+        padding: 34px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 12px;
+        /* background: linear-gradient(135deg, #fa782e 8%, #c82930 83%); */
+    }
+}
+
+/**
+* FORM
+*/
+.center-element {
+    display: flex;
+    justify-content: center;
+}
+
+/**
+ * Form
+ */
+.form {
+    max-width: 38em;
     margin: 0 auto;
+}
+
+.form h3 {
+    text-align: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form button {
+    margin: 1em 0;
+}
+
+
+/**
+ * Styles / THEME
+ */
+.features article:first-child {
+    background: #699EB5;
+    color: #fff;
+}
+
+.features article:nth-child(2) {
+    background: #699EB5;
+    color: #fff;
+}
+
+.features article:nth-child(3) {
+    background: #699EB5;
+    color: #fff;
+}
+
+.features article:last-child {
+    background: #D95647;
+    color: #fff;
+}
+
+.bold-txt {
+    font-weight: 700;
+}
+
+/**
+ * Form
+ */
+
+.form-header {
+    min-height: 30vmin;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 100%, 
+                    rgba(0, 0, 0, 0.3) 100%), 
+                    url("../assets/snack-bar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-title {
+    color: #fff;
 }

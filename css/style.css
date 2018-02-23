@@ -342,6 +342,10 @@ footer {
     transition: background 0.25s;
 }
 
+section img {
+    width: 50%;
+}
+
 /**
  * Theme
  */
@@ -457,6 +461,26 @@ input, textarea {
     text-align: center;
 }
 
+.form-cta {
+    background: #c2224a;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 6px 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all .15s ease;
+    max-width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    -moz-user-select: none;
+    user-select: none;
+}
 /**
  * Footer Style
  */

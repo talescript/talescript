@@ -23,12 +23,71 @@
                 </ul>
             </div>
             <b class="red-line"></b>
-            <p class="more-examples"><a href="#">Get in Touch</a></p>
+            <p class="more-examples"><a href="#form">Get in Touch</a></p>
         </div>
     </header>
     <main>
-        <h2>Secondary section</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facere distinctio suscipit id aliquid est assumenda numquam exercitationem aut iste! Ipsa nihil labore aspernatur possimus tenetur dolores cumque, qui error.</p>
+        <section class="about">
+            <p>
+            We create functional, responsive websites from scratch using
+            <span class="bold-txt">modern</span>
+            best practices for freelancers and small businesses. At the same time we enjoy exploring and learning something new with
+            every project.
+            </p>
+        </section>
+
+        <section class="features">
+
+            <article>
+                <h3>Website Design</h3>
+                <p>Each design is done from a blank canvas around the content to guide layout.</p>
+            </article>
+
+            <article>
+                <h3>Front-end Development</h3>
+                <p>We prefer coding from scratch instead of a framework. This ensures there is no junk code.</p>
+            </article>
+
+            <article>
+                <h3>Responsive Development</h3>
+                <p>Using an effective grid system with progressive enhancement can ensure a great experience on new and older
+                    web browsers alike, well into the future.</p>
+            </article>
+
+            <article>
+                <h3>Deployment</h3>
+                <p>Most freelancers and small businesses don't need complicated infrastructure. We keep it simple by deploying
+                    a static website. Not only is it
+                    <span class="bold-txt">safer</span>, it also
+                    <span class="bold-txt">reduces costs</span>.</p>
+            </article>
+        </section>
     </main>
+
+    <section class="form" id="form">
+        <div class="form-header">
+            <h3 class="form-title">The usual contact form</h3>
+        </div>
+        <form name="Web Design" action="thank-you" netlify netlify-honeypot="bot-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button class="form-cta" type="submit">Contact</button>
+            <p style="display:none;">
+                <label>You shouldn't fill this out:
+                    <input name="bot-field">
+                </label>
+            </p>
+        </form>
+    </section>
+    <footer>
+
+    </footer>
 </body>
 </html>
