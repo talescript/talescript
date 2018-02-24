@@ -280,7 +280,12 @@ header a {
         @media (min-width: 1800px) {
             header {
                 padding-bottom: 30rem;
-            }
+            }   
+        }
+        @media (min-width: 1800px) {
+            .header-wrapper {
+                padding-bottom: 8rem;
+            }   
         }
     }
 }
@@ -413,7 +418,7 @@ main {
 
 .form {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
 }
 
 @media (max-width: 900px) {
@@ -445,21 +450,40 @@ form label {
 
 input[type="text"],
 input[type="email"] {
-    border: 0;
+    /* border: 0;
     background-color: transparent;
-    border-bottom: 1px solid #696969;
+    border-bottom: 1px solid #696969; */
+    padding: 15px 0px 15px 8px;
+    border-radius: 5px;
+    box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 240, 201, 0.7);
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    margin-bottom: 10px;    
 }
 
 textarea {
-    border: 0;
+    /* border: 0;
     background-color: transparent;
     border-bottom: 1px solid #696969;
     padding: 8px 0;
-    width: 100%;
+    width: 100%; */
+    padding: 15px 0px 15px 8px;
+    border-radius: 5px;
+    box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 240, 201, 0.7);
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    color: #6E6E6E;
+    text-shadow: #000 0px 1px 5px;
+
 }
 
 .form-cta {
-    font-size: 18px;
+/*     font-size: 18px;
     padding: .5em 1em;
     border: transparent;
     border-radius: 2px;
@@ -471,11 +495,22 @@ textarea {
     -moz-user-select: none;
     user-select: none;
     line-height: normal;
+    text-transform: uppercase; */
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+    font: 14px;
+    color: #FFF;
     text-transform: uppercase;
+    border: 1px solid #000;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
 }
 
 .form-cta:hover {
-    background: rgb(190, 87, 75);
+    background: #1A878F;
 }
 
 form button {
