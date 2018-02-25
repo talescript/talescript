@@ -404,11 +404,34 @@ main {
     min-height: 20vmin;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 100%, 
                     rgba(0, 0, 0, 0.4) 100%), 
-                    url("../assets/snack-bar.jpg");
+                    url("../assets/s-mountains.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px 12px 0 0;
+}
+
+
+@media (min-width: 800px) {
+    .form-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4) 100%, 
+                    rgba(0, 0, 0, 0.4) 100%), 
+                    url("../assets/m-mountains.jpeg");
+    }
+}
+
+@media (min-width: 1000px) {
+    .form-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4) 100%, 
+                    rgba(0, 0, 0, 0.4) 100%), 
+                    url("../assets/l-mountains.jpeg");
+    }
+}
+
+@media (max-width: 900px) {
+    .form {
+        margin: 1em;
+    }
 }
 
 .form-container {
