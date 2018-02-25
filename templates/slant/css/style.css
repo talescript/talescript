@@ -538,6 +538,26 @@ form button {
 }
 
 /**
+ * Prevent auto-zoom on mobile
+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width){
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
+        background: #333;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width){
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/**
  * Cosmic Latte
  color: #fff8e7;
  */
