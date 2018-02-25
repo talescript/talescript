@@ -540,7 +540,7 @@ form button {
 /**
  * Prevent auto-zoom on mobile
  */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width){
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024){
     select:focus,
     textarea:focus,
     input:focus {
@@ -549,7 +549,7 @@ form button {
     }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width){
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024){
     input[type='text'],
     input[type='email'],
     textarea {
