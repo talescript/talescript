@@ -540,7 +540,7 @@ form button {
 /**
  * Prevent auto-zoom on mobile
  */
-@media (max-width: 800px) {
+@media (max-width: 415px) {
     input[type='text'],
     input[type='email'],
     textarea {
