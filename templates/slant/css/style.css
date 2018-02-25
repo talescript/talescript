@@ -540,22 +540,14 @@ form button {
 /**
  * Prevent auto-zoom on mobile
  */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024){
-    select:focus,
-    textarea:focus,
-    input:focus {
-        font-size: 16px;
-        background: #333;
-    }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024){
+@media (max-width: 800px) {
     input[type='text'],
     input[type='email'],
     textarea {
         font-size: 16px;
     }
 }
+
 
 /**
  * Cosmic Latte
