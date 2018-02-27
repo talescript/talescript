@@ -66,11 +66,17 @@ img {
 /**
  * Container / body style
  */
- .hero > .hero-txt, section {
-    max-width: 45em;
+.container {
+    max-width: 38em;
     margin: 0 auto;
-    padding: 2em 1em;
+    padding: 1em 1em;
 }
+
+/* @media (max-width: 768px){ 
+    .container {
+        
+    }    
+}  */
 
 /**
  * Nav Styling
@@ -96,45 +102,28 @@ nav ul li a {
 }
 
 /**
- * About section
- */
-.about {
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-/**
  * Header / Hero
  */
-.hero {
-    display: grid;
-    grid-template-areas: 
-        "heroTxt"
-        "heroImg";
-    grid-gap: 1em;
-}
 
-h1 {
-    margin-top: 0;
-}
-
-@media (min-width: 768px){
+/* @media (min-width: 768px){ */
     /* design responsive grid */
-    .hero {
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas: 
-        "heroTxt heroImg"
-        "heroTxt heroImg";
-    }
+    /* 
+} */
+.hero, .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-text {
-    grid-area: heroTxt;
+.hero {
+    padding: 0 1em;
+    min-height: 85vh;
 }
 
-.hero-img {
-    grid-area: heroImg;
+.blog-hero-size {
+    min-height: 40vh;
 }
+
 
 /**
  * Features grid
@@ -142,8 +131,8 @@ h1 {
 
 /* Fallback */
 .features {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 38em;
+    margin: 2em auto;
 }
 
 .features article {
@@ -152,7 +141,7 @@ h1 {
 
 @supports (display: grid) {
     .features {
-        max-width: 45em;
+        max-width: 38em;
     }
 
     .features article {
@@ -215,8 +204,9 @@ button {
  */
 .blog-grid {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 2em auto 0 auto;
     padding: 0.5em;
+    min-height: 60vh;
 }
 
 .blog-grid .articles {
@@ -284,7 +274,7 @@ footer {
 }
 
 footer > * {
-    max-width: 45em;
+    max-width: 38em;
     margin: 0 auto;
 }
 
@@ -352,26 +342,40 @@ section img {
 /* 
  #ffd500 orange / yellow
 */
-body {
-    background: #fff8e7;
-}
-
-header {
-    background: linear-gradient(#ffd500, #fff8e7);  /* fallback for old browsers */
-}
-
 nav {
-    background-color: #222222;
+    background-color: #0078d7;
 }
 
 li a {
     color: #fff;
 }
 
+
+body {
+    /* background: #fff8e7; */
+    background: snow;
+}
+
+.hero {
+    background: #0078d7;
+    color: #fff;
+}
+
+.hero-txt > p {
+    color: hsla(0, 0%, 100%, .8);
+    text-align: center;
+}
+
+.about {
+    min-height: 60vh;
+    background-color: #222;
+    color: #fff;
+}
+
 /**
  * Hero animation / theme
  */
- .hero-img {
+/*  .hero-img { */
     /*
     green-orange-and-yellow-ink.jpg
     pink-and-black-ink-drop.jpg
@@ -380,12 +384,12 @@ li a {
     teal-with-red-drops.jpg
     yellow-and-purple-ink-with-green.jpg
     */
-    background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
+/*     background: url("../assets/purple-ink-cloud-with-black-drops.jpg") no-repeat center center;
     background-size: cover;
     min-height: 50vh;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     animation: fadeIn 2s ease-in;
-}
+} */
 
 .imgFadeIn {
     animation: fadeIn 1s ease-in;
@@ -404,8 +408,8 @@ li a {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    background: #ffd500;
-    color: #000000;
+    background: #0078d7;
+    color: #fff;
 }
 
 /**
@@ -417,20 +421,20 @@ li a {
 }
 
 .articles time {
-    color: #460468;
+    color: #00599d;
 }
 
 .box {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    background-color: #7309aa;
+    background-color: #00599d;
     min-height: 100px;
     transition: 0.5s;
 }
 
 .box:hover {
-    background: #9a51c0;
+    background: #1c76bb;
     transition: 0.5s;
 }
 
@@ -485,7 +489,7 @@ input, textarea {
  * Footer Style
  */
 footer {
-    background: #333;
+    background-color: #222;
     color: #7f7e7e;
 }
 
