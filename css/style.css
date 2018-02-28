@@ -115,6 +115,10 @@ nav ul li a {
     align-items: center;
 }
 
+/* @media (min-width: 720px){
+    
+} */
+
 .hero {
     padding: 0 1em;
     min-height: 85vh;
@@ -173,6 +177,53 @@ nav ul li a {
 }
 
 /**
+ * Template layout
+ */
+
+/* Fallback */
+.template-grid {
+    max-width: 38em;
+    margin: 2em auto;
+}
+
+@media (max-width: 768px){
+    .template-grid {
+        padding: 0 0.5em;
+    }
+}
+
+.template-grid .template-item {
+    margin: 1rem 0;
+}
+
+@supports (display: grid) {
+    .template-grid {
+        max-width: 38em;
+    }
+
+    .template-grid .template-item {
+        margin: 0;
+    }
+
+    .template-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+    }
+}
+
+.template-grid .template-item {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Or img, in case I add either one */
+.template-grid article svg {
+    order: -1;
+    align-self: center;
+}
+
+/**
  * Blog / Article Grid
  */
 .blog-grid {
@@ -210,10 +261,6 @@ nav ul li a {
 .articles time {
     align-self: end;
 }
-
-/**
- * Blog article placement
- */
 
 /**
  * Footer
@@ -305,10 +352,6 @@ footer {
     transition: background 0.25s;
 }
 
-section img {
-    width: 50%;
-}
-
 /**
  * Theme
  */
@@ -334,15 +377,48 @@ body {
     color: #fff;
 }
 
+.hero-txt h1 {
+    margin-top: -1.5em;
+}
+
 .hero-txt > p {
     color: hsla(0, 0%, 100%, .8);
     text-align: center;
 }
 
 .about {
-    min-height: 60vh;
+    min-height: 45vh;
     background-color: #222;
     color: #fff;
+}
+
+/**
+ * Templates styling
+ */
+.templates {
+    background: #222;
+}
+
+.templates h3 {
+    text-align: right;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.template-item a img {
+    border-radius: 4px;
+    border: 5px solid white;
+}
+
+/**
+ * Limit the height of the grid-item
+ * img.
+ * When with other items it will
+ * be smaller
+ */
+#limit-height {
+    max-height: 30em;
 }
 
 /**
