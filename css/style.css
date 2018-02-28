@@ -135,6 +135,12 @@ nav ul li a {
     margin: 2em auto;
 }
 
+@media (max-width: 768px){
+    .features {
+        padding: 0 0.5em;
+    }
+}
+
 .features article {
     margin: 1rem 0;
 }
@@ -164,39 +170,6 @@ nav ul li a {
 .features article svg {
     order: -1;
     align-self: center;
-}
-
-/**
- * Form
- */
-form {
-    display: grid;
-    grid-template-columns: 5em 1fr;
-    grid-gap: .5em;
-}
-
-label {
-    grid-column: 1 / 2;
-}
-
-input,
-button {
-    grid-column: 2 / 3;
-}
-
-@media (max-width: 720px){
-    /* design responsive grid */
-    form {
-        grid-template-columns: 1fr;
-    }
-    label {
-        grid-column: 1 / 3;
-    }
-    
-    input,
-    button {
-        grid-column: 1 / 3;
-    }
 }
 
 /**
@@ -373,6 +346,63 @@ body {
 }
 
 /**
+ * Form
+ */
+ .form {
+    margin: 2em auto 2em auto;
+    max-width: 38em;
+
+    padding: 1em 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+@media (max-width: 720px){
+    .form {
+        padding: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.form h3 {
+    text-align: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form button {
+    margin: 1.5em auto;
+}
+
+form label {
+    margin: 20px 0 15px 0;
+    font-weight: normal;
+}
+
+input, textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+/**
+ * Prevent auto-zoom on mobile
+ */
+ @media (max-width: 415px) {
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/**
  * Hero animation / theme
  */
 /*  .hero-img { */
@@ -450,23 +480,12 @@ body {
  Form Style
  */
 .form {
-    margin-bottom: 2em;
-    padding: 2em 1em;
-}
-
-input, textarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-width: 100%;
-}
-
-.form h3 {
-    text-align: center;
+    background: #00599d;
+    color: #fff;
 }
 
 .form-cta {
-    background: #c2224a;
+    background: #1f191a;
     color: #fff;
     white-space: nowrap;
     display: inline-block;
