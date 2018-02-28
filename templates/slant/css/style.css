@@ -553,7 +553,23 @@ form button {
  * Cosmic Latte
  color: #fff8e7;
  */
-
 footer {
-    margin-top: 5em;
+    min-height: 20vmin;
+}
+
+.footer-grid {
+    min-height: inherit;
+    max-width: 40em;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/**
+ * Footer styles
+ */
+footer {
+    background: #222;
 }
