@@ -267,15 +267,12 @@ nav ul li a {
  */
 .footer-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 1em;
 }
 
 @media (max-width: 720px){
-    .footer-nav {
-        display: block;
-    }
     .footer-nav li {
         margin-bottom: 1em;
     }
