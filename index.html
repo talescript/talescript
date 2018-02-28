@@ -29,7 +29,7 @@
         <div class="hero-txt">
             <h1>Front-end Web Developer.</h1>
             <p>In an ocean of drops, let your website ripple the waves.</p>
-            <a href="" class="cta btn">I need a website</a>
+            <a href="#form" class="cta btn">Get started</a>
         </div>
     </header>
     <main>
@@ -86,19 +86,20 @@
             </div>
 
         </section>
-        <section class="form">
-            <h3>Get in touch</h3>
+        <section class="form" id="form">
+            <h3>We care about your bliss!</h3>
+            <p>If you need help, don't overthink it. We're here for you!</p>
             <form name="Web Design" action="thank-you" netlify netlify-honeypot="bot-field" method="POST">
                 <label for="name">Name</label>
-                <input id="name" type="text" name="name" required>
+                <input id="name" type="text" name="name" required placeholder="Jane Doe">
 
                 <label for="email">Email</label>
-                <input id="email" type="email" name="email" required>
+                <input id="email" type="email" name="email" required placeholder="jane.doe@mywebsite.com">
 
-                <label for="message">How can we help?</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, needs, and timeline."></textarea>
 
-                <button class="form-cta" type="submit">Contact</button>
+                <button class="form-cta" type="submit">Get your landing page started</button>
                 <p style="display:none;">
                     <label>You shouldn't fill this out:
                         <input name="bot-field">
