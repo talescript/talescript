@@ -38,7 +38,7 @@ html, body {
 }
 
 .hero {
-    color: #6b1a01;
+    color: #000;
 }
 
 @media only screen and (max-width: 500px){
