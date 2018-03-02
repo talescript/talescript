@@ -352,6 +352,26 @@
 
         </section>
     </main>
+    <section class="form" id="form">
+        <h3>Add comment</h3>
+        <form name="Install the latest version of Python" action="thank-you" netlify netlify-honeypot="bot-field" method="POST">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required placeholder="John Doe (required)">
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="john@doe.com (optional)">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Comments are moderated and may take a day or two to appear."></textarea>
+
+            <button class="form-cta" type="submit">Submit</button>
+            <p style="display:none;">
+                <label>You shouldn't fill this out:
+                    <input name="bot-field">
+                </label>
+            </p>
+        </form>
+    </section>
     <footer>
         <ul class="footer-nav">
             <li>

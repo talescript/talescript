@@ -22,3 +22,13 @@ pre {
     overflow-y: auto;
     font-size: 16px;
 }
+
+.form {
+    padding: 0 0.5em;
+    background: #007ad7;
+    color: #fff;
+}
+
+.form-cta {
+    background: #00467b;
+}
