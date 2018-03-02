@@ -6,26 +6,27 @@ html, body {
 /* linear-gradient(to right, rgba(201, 160, 110, .6), rgba(250, 241, 200, 0) 70.71%),  */
 /* linear-gradient(to right, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0) 70.71%), */
 .hero {
-    background-image: linear-gradient(to right, rgba(114, 54, 31, .6), rgba(235, 237, 238, 0) 70.71%),
+    background-image: linear-gradient(to right, rgba(223, 233, 243, 0.5), rgba(255, 255, 255, 0.1)),
                       url(../assets/cover-photo-l.jpeg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-
 @media only screen and (max-width: 900px){
     .hero {
-        background-image: linear-gradient(to right, rgba(255,0,0,.6), rgba(255,0,0,0) 70.71%),  
+        background-image: linear-gradient(to right, rgba(223, 233, 243, 0.7), rgba(255, 255, 255, 0.1)),
                           url(../assets/cover-photo-m.jpeg);
+        background-position: center center;
     }
 }
 
 @media only screen and (max-width: 500px){
     .hero {
-        background-image: linear-gradient(to right, rgba(114, 54, 31, .8), rgba(235, 237, 238, 0) 70.71%),
+        background-image: linear-gradient(to right, rgba(223, 233, 243, 0.7), rgba(255, 255, 255, 0.1)),
                           url(../assets/cover-photo-s.jpeg);
+        background-position: 80% center;
     }
 }
 
@@ -37,7 +38,7 @@ html, body {
 }
 
 .hero {
-    color: #faf1c8;
+    color: #000;
 }
 
 @media only screen and (max-width: 500px){
@@ -59,7 +60,18 @@ body {
 .hero p {
     font-size: 2.3em;
     margin-top: 0.1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media only screen and (max-width: 900px){
+    .hero h1 {
+        font-size: 4.8em;
+    }
+
+    .hero p {
+        font-size: 1.8em;
+    }   
+
 }
 
 
@@ -75,10 +87,10 @@ body {
 
 
 .btn {
-    border: 1px solid #f3dfa6;
+    border: 1px solid #000;
     cursor: pointer;
-    background: transparent;
-    color: #f3dfa6;
+    background: #000;
+    color: #fff;
     white-space: nowrap;
     height: 40px;
     line-height: 40px;
@@ -94,20 +106,20 @@ body {
 }
 
 .btn:hover {
-    background: #f3dfa6;
-    color: #261a0e;
+    background: #fff;
+    color: #000;
 }
 
 
 @media only screen and (max-width: 900px){
     .btn {
         border: 1px solid #261a0e;
-        background: #faf1c8;
-        color: #261a0e;
+        background: #000;
+        color: #fff;
     }
 
     .btn:hover {
-        background: #e4d48d;
-        color: #261a0e;
+        background: #fff;
+        color: #000;
     }
 }
