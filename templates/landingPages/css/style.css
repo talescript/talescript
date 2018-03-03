@@ -1,6 +1,27 @@
+html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.45;
+}
+
+:root {
+    font-size: calc(16px + 0.6vw);
 }
 
 .hero {
@@ -52,18 +73,17 @@ body {
 
 .hero h1 {
     margin: 0;
-    font-size: 5.4em;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    font-size: 2.5em;
 }
 
 .hero p {
-    font-size: 2.3em;
     margin-top: 0.1em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-width: 900px){
+/* @media only screen and (max-width: 900px){
     .hero h1 {
         font-size: 4.1em;
     }
@@ -72,35 +92,34 @@ body {
         font-size: 1.8em;
     }   
 
-}
+} */
 
 
 @media only screen and (max-width: 500px){
     .hero h1 {
-        font-size: 2.8em;
+        line-height: 1.0005;
     }
 
     .hero p {
-        font-size: 1.5em;
+        margin-top: 0.5em;
+        text-align: center;
     }
 }
 
 
 .btn {
+    font-family: 'Roboto', sans-serif;
     border: 1px solid #0074D9;
     cursor: pointer;
     background: #0074D9;
     color: #fff;
     white-space: nowrap;
     max-width: 20rem;
-    height: 3rem;
     line-height: 40px;
     padding: 0 1.75em;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
                 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
-    font-size: 0.925em;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.25em;
     transition: all .35s ease;
