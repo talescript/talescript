@@ -4,7 +4,7 @@ html, body {
 }
 
 .hero {
-    background-image: linear-gradient(to right, rgba(223, 233, 243, 0.5), rgba(255, 255, 255, 0.1)),
+    background-image: linear-gradient(to top, rgba(24,29,33,0.741), rgba(24,29,33,0.741)),
                       url(../assets/cover-photo-l.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ html, body {
 
 @media only screen and (max-width: 900px){
     .hero {
-        background-image: linear-gradient(to right, rgba(223, 233, 243, 0.7), rgba(255, 255, 255, 0.1)),
+        background-image: linear-gradient(to top, rgba(24,29,33,0.741), rgba(24,29,33,0.741)),
                           url(../assets/cover-photo-m.jpeg);
         background-position: center center;
     }
@@ -22,7 +22,7 @@ html, body {
 
 @media only screen and (max-width: 500px){
     .hero {
-        background-image: linear-gradient(to right, rgba(223, 233, 243, 0.7), rgba(255, 255, 255, 0.1)),
+        background-image: linear-gradient(to top, rgba(24,29,33,0.741), rgba(24,29,33,0.741)),
                           url(../assets/cover-photo-s.jpeg);
         background-position: 80% center;
     }
@@ -36,8 +36,9 @@ html, body {
 }
 
 .hero {
-    color: #000;
+    color: #FF4136;
 }
+
 
 @media only screen and (max-width: 500px){
     .hero {
@@ -51,8 +52,9 @@ body {
 
 .hero h1 {
     margin: 0;
-    font-size: 6.8em;
+    font-size: 5.4em;
     font-family: sans-serif;
+    text-transform: uppercase;
 }
 
 .hero p {
@@ -63,7 +65,7 @@ body {
 
 @media only screen and (max-width: 900px){
     .hero h1 {
-        font-size: 4.8em;
+        font-size: 4.1em;
     }
 
     .hero p {
@@ -75,7 +77,7 @@ body {
 
 @media only screen and (max-width: 500px){
     .hero h1 {
-        font-size: 3.2em;
+        font-size: 2.8em;
     }
 
     .hero p {
@@ -85,39 +87,26 @@ body {
 
 
 .btn {
-    border: 1px solid #000;
+    border: 1px solid #0074D9;
     cursor: pointer;
-    background: #000;
+    background: #0074D9;
     color: #fff;
     white-space: nowrap;
-    height: 40px;
+    max-width: 20rem;
+    height: 3rem;
     line-height: 40px;
-    padding: 0 14px;
+    padding: 0 1.75em;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
                 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 0.925em;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.25em;
     transition: all .35s ease;
 }
 
 .btn:hover {
-    background: #fff;
-    color: #000;
-}
-
-
-@media only screen and (max-width: 900px){
-    .btn {
-        border: 1px solid #261a0e;
-        background: #000;
-        color: #fff;
-    }
-
-    .btn:hover {
-        background: #fff;
-        color: #000;
-    }
+    background: rgb(26, 92, 150);
+    color: #fff;
 }
