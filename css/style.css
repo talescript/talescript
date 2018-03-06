@@ -148,7 +148,7 @@ nav ul li a {
    */
   @media screen and (device-aspect-ratio: 40/71) {
     .hero {
-      height: 450px;
+      height: 460px;
     }
   }
 
