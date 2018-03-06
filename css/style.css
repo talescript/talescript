@@ -208,7 +208,7 @@ nav ul li a {
     .template-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 0.25em;
+        grid-gap: 1em;
     }
 }
 
