@@ -258,9 +258,6 @@ nav ul li a {
 .user-feedback {
     padding-bottom: 2em;
 }
-.user-feedback {
-    padding-top: 2em;
-}
 
 .form {
     margin: 4em auto 4em auto;
@@ -283,6 +280,11 @@ nav ul li a {
 /**
  * USER FEEDBACK STYLING
  */
+.feedback-title {
+    color: #fff;
+    text-align: center;
+}
+
 .feedback-color {
     background-color: #0078d7;
     color: #e9eff3;
