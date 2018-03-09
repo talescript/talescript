@@ -256,10 +256,10 @@ nav ul li a {
  */
 .templates,
 .user-feedback {
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 .user-feedback {
-    padding-top: 4em;
+    padding-top: 2em;
 }
 
 .form {
@@ -291,6 +291,13 @@ nav ul li a {
 .user-feedback blockquote {
     border-bottom: 1px solid white;
     padding: 1em 0;
+}
+
+@media (min-width: 360px){
+    .user-feedback blockquote {
+        max-width: 80%;
+        margin: 0;
+    }
 }
 
 @supports (display: grid) {
