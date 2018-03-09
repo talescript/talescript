@@ -293,9 +293,9 @@ nav ul li a {
     padding: 1em 0;
 }
 
-@media (min-width: 360px){
+@media (max-width: 360px){
     .user-feedback blockquote {
-        max-width: 80%;
+        max-width: 70%;
         margin: 0;
     }
 }
