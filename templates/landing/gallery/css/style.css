@@ -1,0 +1,85 @@
+/**
+ * Base Styles
+ */
+ html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+
+html,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.45;
+    background: #ECEFF1;
+}
+
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(16px + 0.6vw);
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    border-style: none;
+}
+
+figure {
+    margin: 0.7em 0;
+    
+}
+
+img {
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+@supports (display: grid) {
+    figure {
+        margin: 0;
+    }
+
+    main section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 0.4em;
+        grid-auto-flow: dense;
+    }
+
+    .align-e {
+        align-self: end;
+    }
+
+    .align-m {
+        align-self: center;
+    }
+    
+    .align-s {
+        align-self: start;
+    }
+}

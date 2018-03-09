@@ -164,7 +164,7 @@ nav ul li a {
 /* Fallback */
 .features {
     max-width: 38em;
-    margin: 2em auto;
+    margin: 4em auto;
 }
 
 @media (max-width: 768px){
@@ -249,6 +249,56 @@ nav ul li a {
 .template-grid article svg {
     order: -1;
     align-self: center;
+}
+
+/**
+ * Section spacing
+ */
+.templates,
+.user-feedback {
+    padding-bottom: 4em;
+}
+.user-feedback {
+    padding-top: 4em;
+}
+
+.form {
+    margin: 4em auto 4em auto;
+}
+
+@media (min-width: 720px){
+    .form {
+        margin: 6em auto 6em auto;
+    }
+}
+
+/**
+ * USER FEEDBACK
+ */
+
+.user-feedback p {
+    margin-top: 0;
+}
+
+/**
+ * USER FEEDBACK STYLING
+ */
+.feedback-color {
+    background-color: #0078d7;
+    color: #e9eff3;
+}
+
+.user-feedback blockquote {
+    border-bottom: 1px solid white;
+    padding: 1em 0;
+}
+
+@supports (display: grid) {
+    .user-feedback {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 1em;
+    }
 }
 
 /**
@@ -443,19 +493,11 @@ body {
     border: 1px solid white;
 }
 
-/**
- * Limit the height of the grid-item
- * img.
- * When with other items it will
- * be smaller
- */
-
 
 /**
  * Form
  */
  .form {
-    margin: 2em auto 2em auto;
     max-width: 38em;
 
     padding: 1em 2em;
