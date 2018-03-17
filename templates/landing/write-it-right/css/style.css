@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/**
+ * Base Styles
+ */
+ html {
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+
+html, body,
+nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: 400;
+    text-align: left;
+    font-kerning: normal;
+    line-height: 1.4;
+}
+
+/* Responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    border-style: none;
+}
+
+/**
+ * Typography
+ */
+:root {
+    font-size: calc(16px + 0.6vw);
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+/**
+ * Link Styles and list Styles
+ */
+/* a {
+    text-decoration: none;
+} */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+ul > li {
+    padding: 0;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * Nav
+ */
+nav {
+    padding: 0.5em 0;
+    background: #23212c;
+}
+
+nav ul {
+    display: flex;
+    margin: 0 0 0 2em;
+}
+
+nav ul li a {
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 0;
+    color: #fff;
+}
+
+
+/**
+ * Layout
+ */
+.container {
+    max-width: 42em;
+    margin: 0 auto;
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 0 0.5em;
+    }
+}
+
+/*********************
+****** Styling *******
+*********************/
+
+/**
+ * HEADER
+ */
+.hero-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.hero {
+    height: 400px;
+    text-align: center;
+}
+
+.hero h1,
+.hero p {
+    margin: 0.5em 0;
+}
+
+@supports (display: grid) {
+    .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: 100vh;
+        text-align: left;
+    }
+    
+    .hero-grid h1 {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        align-self: end;
+    }
+    
+    .hero-grid p {
+        grid-column: 2 / span 3;
+        grid-row: 3;
+        align-self: start;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    @media (max-width: 750px) {
+        .hero-grid h1 {
+            align-self: start;
+        }
+        
+        .hero-grid p {
+            align-self: end;
+        }
+
+        .hero-grid h1,
+        .hero-grid p {
+            margin: 0;
+        }
+    }
+}
+
+/** 
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .hero,
+    .hero-grid {
+      height: 1024px;
+    }
+}
+  
+  /** 
+   * iPad with landscape orientation.
+   */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .hero,
+    .hero-grid {
+      height: 768px;
+    }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+    .hero,
+    .hero-grid {
+      height: 500px;
+    }
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 2em;
+}
+
+@media (max-width: 750px) {
+    .hero h1, .hero p {
+        line-height: 1;
+    }
+}
+
+.hero h1, .hero p {
+    color: #fff;
+}
+/* rgba(49,151,214,0.741) blue bg */
+.hero {
+    background-image: linear-gradient(to top, rgba(183, 28, 28, 0.59),
+                    rgba(24,29,33,0.741)), 
+                    url(../assets/header-s.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .hero {
+        background-image: linear-gradient(to top, rgba(183, 28, 28, 0.59),
+                        rgba(24,29,33,0.741)), 
+                          url(../assets/header-m.jpeg);
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .hero {
+        background-image: linear-gradient(to top, rgba(183, 28, 28, 0.59),
+                        rgba(24,29,33,0.741)), 
+                          url(../assets/header.jpeg);
+    }
+}
+
+/**
+ * Spacing between sections
+ */
+.about {
+    text-align: center;
+    background: #fdfcfb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #e2d1c3, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #e2d1c3, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #000;
+}
+
+/**
+ * About
+ */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.about p {
+    margin: 0;
+}
+
+.features h2 {
+    text-align: center;
+}
+
+.about-item {
+    font-size: 1.5em;
+}
+
+/* .features:before {
+    content: " ";
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+} */
+
+/* img {
+    border-radius: 4px;
+    box-shadow: 2px 4px 4px #000;
+} */
+
+@media (max-width: 905px) {
+    img {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .about-item {
+        margin: 0 0.5em;
+        font-size: 1.2em;
+    }
+}
+
+/* @supports (display: grrrid) {
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        grid-gap: 1em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-item {
+        text-align: left;
+    }
+
+    @media (max-width: 750px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+        }
+        .about-item {
+            padding: 0 0.5em;
+        }
+        .about-item {
+            text-align: center;
+        }
+    }
+} */
+
+/**
+ * Features
+ */
+.features-container {
+    padding: 1em;
+    box-shadow: 0 5px 20px rgba(183, 28, 28, 0.19), 0 6px 6px rgba(183, 28, 28, 0.23);
+}
+
+.features-container svg,
+.story-container svg {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.features-container,
+.story-container {
+    text-align: center;
+}
+
+.remove-styling {
+    box-shadow: none;
+    margin: 2em auto;
+}
+
+@supports (display: grid) {
+    .features .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .item-3 {
+        grid-column: 1 / span 2;
+    }
+
+    .features-container {
+        margin-top: 1em;
+    }
+
+    @media (max-width: 750px) {
+        .features .container {
+            grid-template-columns: 1fr;
+        }
+        .item-3 {
+            grid-column: 1;
+        }
+    }
+}
+
+span {
+    font-weight: 800;
+    font-size: 1.05em;
+}
+
+/**
+ * Story
+ */
+
+
+/**
+ * CTA CONTAINER
+ */
+.cta-container {
+    margin: 3em auto 4em auto;
+    text-align: center;
+}
+
+.cta-container p {
+    font-size: 1.5em;
+}
+
+/**
+ * REMOVE PARAGRAPH MARGINS
+ */
+
+.cta {
+    text-align: center;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+}
+
+/**
+ * Footer
+ */
+footer {
+    background: #fff;
+    height: 50px;
+    display: none;
+}
+
+.attri {
+    font-size: 10px;
+    min-height: 50px;
+    color: #fff;
+    text-align: right;
+}
+
+.attri a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/**
+ * Form
+ */
+.form {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background: #0d9aa2;
+    color: #fff;
+
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 4px 4px;
+}
+
+.form form {
+    min-width: 80%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form input {
+    margin-bottom: 0.6rem;
+}
+
+form button {
+    margin: 1em auto;
+}
+
+/** 
+ * iPad with portrait orientation.
+ */
+ @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .form {
+      height: 1024px;
+    }
+}
+
+/** 
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .form {
+      height: 768px;
+    }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+    .form {
+      height: 500px;
+    }
+}
+
+.cta {
+    background: #0078e7;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 6px 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all .15s ease;
+
+}
+
+.cta:hover {
+    background: #277ecf;
+}
+
+.form-btn {
+    font-size: 18px;
+    padding: .5em 1em;
+    border: transparent;
+    border-radius: 2px;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    background: rgba(183, 28, 28, 0.79);
+    color: #fff;
+    -moz-user-select: none;
+    user-select: none;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.form-btn:hover {
+    background: rgba(183, 28, 28, 0.69);
+}
+
+
+.form-btn-color {
+    background: #045f6b;
+}
+
+.form-btn-color:hover {
+    background: #108696;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
