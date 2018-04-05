@@ -1179,10 +1179,6 @@ body.base-modal.open {
     text-align: center;
 }
 
-span {
-    font-weight: 800;
-}
-
 .base-modal--content,
 .base-modal--content .form,
 .base-modal--content .form form {
