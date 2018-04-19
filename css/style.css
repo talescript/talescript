@@ -286,7 +286,7 @@ nav ul li a {
 }
 
 .feedback-color {
-    background-color: #0078d7;
+    background-color: #2626f7;
     color: #e9eff3;
 }
 
@@ -442,7 +442,7 @@ footer {
  #ffd500 orange / yellow
 */
 nav {
-    background-color: #0078d7;
+    background-color: #2626f7;
 }
 
 li a {
@@ -456,7 +456,7 @@ body {
 }
 
 .hero {
-    background: #0078d7;
+    background: #2626f7;
     color: #fff;
 }
 
@@ -596,7 +596,7 @@ input, textarea {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    background: #0078d7;
+    background: #2626f7;
     color: #fff;
 }
 
@@ -609,14 +609,14 @@ input, textarea {
 }
 
 .articles time {
-    color: #00599d;
+    color: #0606b3;
 }
 
 .box {
     padding: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    background-color: #00599d;
+    background-color: #0606b3;
     min-height: 100px;
     transition: 0.5s;
 }
@@ -638,7 +638,7 @@ input, textarea {
  Form Style
  */
 .form {
-    background: #00599d;
+    background: #0606b3;
     color: #fff;
 }
 
