@@ -115,6 +115,21 @@ p {
     margin-bottom: 6rem;
 }
 
+@media only screen and (max-width: 600px) {
+    .product-tagline {
+        margin: 0 auto 2.5rem auto;
+    }
+    .product-items .product-card:not(:first-child) {
+        border-top: 1px solid #eee;
+    }
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    .product-media {
+        margin-top: 2.8rem;
+    }
+}
+
 .product-media {
     margin-bottom: 2.8rem;
 }
