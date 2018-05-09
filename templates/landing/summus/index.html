@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind+Madurai|Lora|Montserrat" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
 
 <body>
@@ -26,6 +27,20 @@
                     <a href="#">Nav 3</a>
                 </li>
             </ul>
+            <button id="menu" class="btn-menu" aria-pressed="false">
+                <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"
+                     class="svg-menu" width="38" height="38" viewBox="0 0 38 38" >
+                    <title>Open</title>
+                    <!-- <line x1="10" x2="25" y1="10" y2="10" stroke="black" stroke-width="2"/>
+                    <line x1="10" x2="25" y1="15" y2="15" stroke="black" stroke-width="2"/>
+                    <line x1="10" x2="25" y1="20" y2="20" stroke="black" stroke-width="2"/> -->
+                    <path class="h t" d="M10.5 10l17 0"/>
+                    <path d="M10.5 19l17 0"/>
+                    <path class="h b" d="M10.5 28l17 0"/>
+                    <path class="x" d="M19 10.5l0 17"/>
+                </svg>
+                <span>Menu</span>
+            </button>
         </div>
     </nav>
     <header class="hero">
@@ -137,7 +152,19 @@
             </div>
         </div>
     </footer>
-
+    <div class="nav-modal">
+        <ul class="nav-modal-links">
+            <li>
+                <a href="#">Nav</a>
+            </li>
+            <li>
+                <a href="#">Nav 2</a>
+            </li>
+            <li>
+                <a href="#">Nav 3</a>
+            </li>
+        </ul>
+    </div>
     <script src="js/main.js"></script>
 </body>
 
