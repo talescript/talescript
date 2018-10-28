@@ -69,3 +69,7 @@ card.card-cascade.narrower {
     height: 400px;
     border: 1px solid black;
 }
+
+.darken-4-text {
+    color: #0d47a1;
+}
