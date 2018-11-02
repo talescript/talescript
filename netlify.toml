@@ -1,7 +1,0 @@
-# COMMENT: Redirect Rules
-[[redirects]]
-from = "/es/*"
-to = "/es"
-status = 302
-force = false
-conditions = {Language = "es"}
