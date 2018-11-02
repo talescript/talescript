@@ -1,1 +1,1 @@
-/es/index.html      /es  302  Language=es
+/es/*      /es/:splat  302  Language=es
