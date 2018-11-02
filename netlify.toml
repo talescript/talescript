@@ -1,6 +1,4 @@
 # COMMENT: Redirect Rules
-
-# COMMENT: Redirect all spanish users to spanish pages
 [[redirects]]
 from = "/es/*"
 to = "/es"
