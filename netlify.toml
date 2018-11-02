@@ -1,9 +1,9 @@
-# Redirect Rules
+# COMMENT: Redirect Rules
 
-# Redirect all spanish users to spanish pages
+# COMMENT: Redirect all spanish users to spanish pages
 [[redirects]]
 from = "/es/*"
-to = ["/es"]
+to = "/es"
 status = 302
 force = false
 conditions = {Language = "es"}
