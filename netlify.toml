@@ -3,4 +3,4 @@
   to = "/es/:splat"
   status = 302
   force = false
-  conditions = {Language = "es"}
+  conditions = {Language = ["es"]}
