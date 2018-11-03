@@ -1,0 +1,6 @@
+[[redirects]]
+from = "/es/*"
+to = "/es/:splat"
+status = 302
+force = false
+conditions = {Language = "es"}
