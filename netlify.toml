@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/index.html"
+  from = "/"
   to = "/es/index.html"
   status = 302
   force = false
