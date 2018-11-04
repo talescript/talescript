@@ -4,3 +4,9 @@
   status = 302
   force = false
   conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/es/index.html"
+  to = "/es/"
+  status = 302
+  force = false
