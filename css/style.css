@@ -73,3 +73,17 @@ card.card-cascade.narrower {
 .darken-4-text {
     color: #0d47a1;
 }
+
+/* [data-scroll] {
+    transition: all 2s;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-200px);
+} */

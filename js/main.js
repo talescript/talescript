@@ -24,3 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // map is the id of our div element and the other options are
     // lattitude, longitude and zoom
 });
+
+// scroll detection
+ScrollOut({
+    /* options */
+});
