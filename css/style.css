@@ -78,6 +78,14 @@ card.card-cascade.narrower {
     color: #0d47a1;
 }
 
+/* Pricing table color */
+.card-header-price {
+    background-color: unset;
+    border-bottom-width: 80%; 
+    /* border-bottom: unset; */
+}
+
+
 /* [data-scroll] {
     transition: all 2s;
 }
