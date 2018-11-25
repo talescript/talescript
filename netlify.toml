@@ -6,7 +6,13 @@
   conditions = {Language = ["es"]}
 
 [[redirects]]
-  from = "/es/*"
-  to = "/es/:splat"
+  from = "/es/index.html"
+  to = "/es/"
+  status = 302
+  force = false
+
+  [[redirects]]
+  from = "/es/precios/precio.html"
+  to = "/es/precios"
   status = 302
   force = false
