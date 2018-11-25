@@ -11,7 +11,7 @@
   status = 302
   force = false
 
-  [[redirects]]
+[[redirects]]
   from = "/es/precios/precio.html"
   to = "/es/precios/"
   status = 302
