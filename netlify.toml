@@ -23,9 +23,3 @@
   status = 302
   force = false
   conditions = {Language = ["es-mx"]}
-
-[[redirects]]
-  from = "/es/precios/preciomx.html"
-  to = "/es/precios/mx"
-  status = 302
-  force = false
