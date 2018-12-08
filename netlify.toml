@@ -16,3 +16,16 @@
   to = "/es/precios/"
   status = 302
   force = false
+
+[[redirects]]
+  from = "/es/precios/precio.html"
+  to = "/es/precios/preciomx.html"
+  status = 302
+  force = false
+  conditions = {Language = ["MX"]}
+
+[[redirects]]
+  from = "/es/precios/preciomx.html"
+  to = "/es/precios/"
+  status = 302
+  force = false
