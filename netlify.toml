@@ -26,6 +26,6 @@
 
 [[redirects]]
   from = "/es/precios/preciomx.html"
-  to = "/es/precios/"
+  to = "/es/precios/mx"
   status = 302
   force = false
