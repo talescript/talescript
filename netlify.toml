@@ -22,7 +22,7 @@
   to = "/es/precios/preciomx.html"
   status = 302
   force = false
-  conditions = {Language = ["MX"]}
+  conditions = {Language = ["es-mx"]}
 
 [[redirects]]
   from = "/es/precios/preciomx.html"
