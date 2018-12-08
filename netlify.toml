@@ -1,4 +1,11 @@
 [[redirects]]
+  from = "/es/precios/precio.html"
+  to = "/es/precios/preciomx.html"
+  status = 302
+  force = false
+  conditions = {Language = ["es-mx"]}
+
+[[redirects]]
   from = "/"
   to = "/es/index.html"
   status = 302
@@ -17,9 +24,3 @@
   status = 302
   force = false
 
-[[redirects]]
-  from = "/es/precios/precio.html"
-  to = "/es/precios/preciomx.html"
-  status = 302
-  force = false
-  conditions = {Language = ["es-mx"]}
