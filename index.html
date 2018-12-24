@@ -663,7 +663,7 @@
                 <div class="row justify-content-center mt--300">
                     <div class="col-lg-8">
                         <div class="card bg-gradient-secondary shadow">
-                            <form class="card-body p-lg-5" id="main_form">
+                            <form class="card-body p-lg-5" id="main_form" name="Get in touch" netlify>
                                 <h4 class="mb-1">Want to work with us?</h4>
                                 <p class="mt-0">Collaboration starts here. If you think we’d be a good fit for your
                                     next project please inquire with us by filling out the form.</p>
@@ -707,6 +707,7 @@
                                         placeholder="Project description..." required></textarea>
                                 </div>
                                 <div>
+                                    <div data-netlify-recaptcha></div>
                                     <button type="submit" class="btn btn-default btn-round btn-block btn-lg">Send</button>
                                 </div>
                             </form>
@@ -940,7 +941,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="Get in touch" netlify>
+                    <form name="We'd love to help" netlify>
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" class="form-control" id="name" placeholder="John Doe">
