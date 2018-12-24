@@ -1,0 +1,100 @@
+.feather-icon {
+    width: 80px;
+}
+
+@media (max-width: 991px) { 
+    .medium-text-center {
+        text-align: center;
+    }
+ }
+
+ .font-size-s {
+     font-size: 0.8rem;
+ }
+
+.faded-grey-bg {
+    background-color: #f5f5f5;
+}
+
+.remove-mg {
+    margin: unset;
+}
+
+/*** FONT AWESOME ***/
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; }
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.fa-xs {
+  font-size: .75em; }
+
+.fa-sm {
+  font-size: .875em; }
+
+.fa-1x {
+  font-size: 1em; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-6x {
+  font-size: 6em; }
+
+.fa-7x {
+  font-size: 7em; }
+
+.fa-8x {
+  font-size: 8em; }
+
+.fa-9x {
+  font-size: 9em; }
+
+.fa-10x {
+  font-size: 10em; }
+
+.fa-lock:before {
+    content: "\f023"; }
+
+.fa-cc-amex:before {
+    content: "\f1f3"; }
+
+.fa-cc-diners-club:before {
+    content: "\f24c"; }
+    
+.fa-cc-discover:before {
+    content: "\f1f2"; }
+    
+.fa-cc-jcb:before {
+    content: "\f24b"; }
+    
+.fa-cc-mastercard:before {
+    content: "\f1f1"; }
+    
+.fa-cc-paypal:before {
+    content: "\f1f4"; }
+    
+.fa-cc-visa:before {
+    content: "\f1f0"; }
