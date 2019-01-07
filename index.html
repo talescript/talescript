@@ -943,10 +943,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form name="love to help" id="help_form" netlify>
+                    <form name="love to help" id="help_form" netlify netlify-honeypot="netlify-honey">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" class="form-control" id="name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group netlify-honey">
+                            <label for="netlify-honey">Don't fill this out if you are human.</label>
+                            <input name="netlify-honey" type="text" id="netlify-honey" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>

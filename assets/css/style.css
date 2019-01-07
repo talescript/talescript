@@ -45,6 +45,11 @@
   text-decoration: underline;
   text-decoration-color: orangered;
 }
+
+/** Netlify honeypot hide field **/
+.netlify-honey {
+  display: none;
+}
 /*** FONT AWESOME ***/
 .fa,
 .fas,
