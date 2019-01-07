@@ -20,6 +20,31 @@
     margin: unset;
 }
 
+/** OR separator EMAIL PRICING**/
+.or-separator {
+  display: flex;
+  flex-direction: row;
+}
+
+.or-separator span {
+  padding: 0 10px;
+}
+
+.or-separator::before, .or-separator::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid silver;
+  margin: auto;
+}
+
+.pb-email {
+  padding: 27px 0;
+}
+
+.text-overline {
+  text-decoration: underline;
+  text-decoration-color: orangered;
+}
 /*** FONT AWESOME ***/
 .fa,
 .fas,
