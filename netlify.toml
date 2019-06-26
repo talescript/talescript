@@ -1,21 +1,21 @@
-[[redirects]]
-  from = "/"
-  to = "/es/index.html"
-  status = 302
-  force = false
-  conditions = {Language = ["es"]}
+#[[redirects]]
+#  from = "/"
+#  to = "/es/index.html"
+#  status = 302
+#  force = false
+#  conditions = {Language = ["es"]}
 
-[[redirects]]
-  from = "/es/index.html"
-  to = "/es/"
-  status = 302
-  force = false
+#[[redirects]]
+#  from = "/es/index.html"
+#  to = "/es/"
+#  status = 302
+#  force = false
 
-[[redirects]]
-  from = "/es/precios/precio.html"
-  to = "/es/precios/"
-  status = 302
-  force = false
+#[[redirects]]
+#  from = "/es/precios/precio.html"
+#  to = "/es/precios/"
+#  status = 302
+#  force = false
 
 # Mexican redirect (not working)
 #[[redirects]]
