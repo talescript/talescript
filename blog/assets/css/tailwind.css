@@ -1,0 +1,16 @@
+@tailwind base;
+
+p {
+    @apply mb-4;
+}
+
+ul {
+    @apply pl-6 mb-2 list-disc
+}
+
+code {
+    @apply m-6;
+}
+
+@tailwind components;
+@tailwind utilities;

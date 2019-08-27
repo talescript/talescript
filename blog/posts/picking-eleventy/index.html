@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    
+    <link rel="stylesheet" href="/blog/assets/css/style.css">
+    <title>
+        
+            Why I chose eleventy
+        
+    </title>
+</head>
+<body class="antialiased bg-gray-100 text-gray-900"> 
+    <nav class="flex items-center justify-between flex-wrap p-6 bg-gray-200">
+  <div class="flex items-center flex-shrink-0 mr-6">
+    <span class="font-semibold text-xl tracking-tight">Talescript</span>
+  </div>
+
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="text-sm lg:flex-grow">
+      <a href=" /blog " class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-600">
+        Blog
+      </a>
+    </div>
+  </div>
+</nav>
+
+    <div class="container mx-auto px-4 md:px-12 mb-16">
+        
+<article class="my-12 lg:my-24">
+  <h1 class="font-sans text-3xl md:text-4xl md:text-center font-thin md:font-medium leading-tight">Why I chose eleventy</h1> 
+  <div class="flex justify-end w-2/3">
+    <time class="text-gray-600 text-xs uppercase font-semibold tracking-wide" datetime="2019-08-26T00:00:00.000Z">August 25, 2019</time> 
+  </div>
+  <div class="mt-6">
+    <div class="md:w-2/3 font-serif mt-8 text-gray-700 text-lg md:text-2xl">
+    <!-- Excerpt Start -->
+<p>I won't rehash what has already been said between the differences of a static site and a dynamic one. There is already a lot of info on the subject.</p>
+<!-- Excerpt End --> But I will say that managing a static site is both cheaper and easier, but it is geared towards people with a modicum of technical experience. Unless there is something you would like to change, the default settings can get you pretty far - which in turn deminishes the amount of technical experience needed.  
+<p>We have the usual recommendations:</p>
+<ul>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="https://blog.getpelican.com/">Pelican</a></li>
+</ul>
+<p>Each has it's pro's and cons, and each written in a different programming language. Each with their learning curve. Just like Wordpress. If you've never used Wordpress, you end up in pretty much what is the wild west.
+It's a difficult place to navigate with so many people trying to grab your attention.</p>
+<p>After having gone through the different stages, first looking through Wordpress, followed by the usual
+static recommendations, I ended up chosing eleventy.</p>
+<p>At the moment Eleventy has the right trade-offs. It's small enough to get out of your way and comes with sensible defaults. But it does require some configuring. But this is what, from a personal level, enjoy about this static site generator. It's ideal for beginners to get their hands dirty and start figuring things out. With older static site generators that have been around for a while, you end up reading the documentation. And then comes the coin toss, whether that documentation is digestible or not.</p>
+<p>All in all, <a href="https://www.11ty.io/">Eleventy</a> is as easy as:</p>
+<pre><code>npm init -y
+npm install @11ty/eleventy --save-dev
+echo '# Page header' &gt; README.md
+npx @11ty/eleventy
+</code></pre>
+<p>Eleventy will build the pages under <code>_site/README/index.html</code></p>
+<p>You can view them using in your localhost running the command <code>npx @11ty/eleventy --serve</code></p>
+<p>And as easy as that you can get quite creative on what you create.</p>
+
+  </div>
+  </div>
+</article>
+
+
+    </div>
+
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+</body>
+</html>
